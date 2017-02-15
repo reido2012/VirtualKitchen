@@ -9,25 +9,76 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.oreid.virtualkitchen.MainActivity">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation = "vertical">
-    <TextView
-        android:id="@+id/status_text_view"
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="" />
-    <com.google.android.gms.common.SignInButton
-        android:id="@+id/sign_in_button"
-        android:layout_width = "wrap_content"
-        android:layout_height="wrap_content"
-        />
-    <Button
-        android:id="@+id/sign_out_button"
-        android:layout_width="110dp"
-        android:layout_height="wrap_content"
-        android:text = "Sign Out"
-        />
-</LinearLayout>
+        android:orientation = "vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="11dp"
+        android:layout_marginEnd="11dp">
+
+        <TextView
+            android:id="@+id/status_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="@string/hint_email"
+            android:ems="10"
+            android:id="@+id/email_edit_text" />
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="@string/hint_password"
+            android:ems="10"
+            android:id="@+id/password_edit_text" />
+
+        <Button
+            android:text="@string/email_sign_in_button"
+            android:layout_width="match_parent"
+            android:id="@+id/email_sign_in_button"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="Register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/registration_button" />
+
+        <RelativeLayout android:id="@+id/RelativeLayout01"
+            android:layout_width="fill_parent"
+            android:layout_height="333dp"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/sign_in_button"
+                android:layout_width = "wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true">
+
+            </com.google.android.gms.common.SignInButton>
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/sign_out_button"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text = "Sign Out"
+            />
+
+    </LinearLayout>
 </RelativeLayout>
