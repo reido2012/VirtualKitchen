@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "240865901307",
+    "firebase_url": "https://virtualkitchen-1f080.firebaseio.com",
+    "project_id": "virtualkitchen-1f080",
+    "storage_bucket": "virtualkitchen-1f080.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:240865901307:android:2488d4d734af89be",
+        "android_client_info": {
+          "package_name": "com.example.oreid.virtualkitchen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "240865901307-m6k0e1c34jdifbul97s7lbai8i65do7a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZe2DNTzZ700D5EA2LkTVsQ2Qo5z-mbso"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "240865901307-m6k0e1c34jdifbul97s7lbai8i65do7a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
