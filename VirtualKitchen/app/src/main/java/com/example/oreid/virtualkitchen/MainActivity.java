@@ -226,8 +226,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
             firebaseAuthWithGoogle(acct);
             
         }else{
-            //Login failed 
-            // TODO: 15/02/2017 Find a way to smoothly handle bad logins
+
         }
     }
 
