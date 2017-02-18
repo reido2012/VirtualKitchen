@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">Virtual Kitchen</string>
-	<string name="edit_message">Enter a message</string>
+    <string name="edit_message">Enter a message</string>
     <string name="hint_email">E-Mail</string>
     <string name="hint_password">Password</string>
     <string name="email_sign_in_button">Sign in Via Email</string>
     <string name="login_or_text">Or</string>
     <string name="auth_failed">Failed Sign In</string>
+    <string name="title_activity_main_kitchen">MainKitchenActivity</string>
 </resources>
