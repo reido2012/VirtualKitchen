@@ -6,4 +6,6 @@
     <string name="email_sign_in_button">Sign in Via Email</string>
     <string name="login_or_text">Or</string>
     <string name="auth_failed">Failed Sign In</string>
+    <string name="search">Search</string>
+
 </resources>
