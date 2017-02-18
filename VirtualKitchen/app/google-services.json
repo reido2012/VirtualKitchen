@@ -1,0 +1,71 @@
+{
+  "project_info": {
+    "project_number": "240865901307",
+    "firebase_url": "https://virtualkitchen-1f080.firebaseio.com",
+    "project_id": "virtualkitchen-1f080",
+    "storage_bucket": "virtualkitchen-1f080.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:240865901307:android:2488d4d734af89be",
+        "android_client_info": {
+          "package_name": "com.example.oreid.virtualkitchen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "240865901307-ispomalg183amo1ki0sd7q3afdklatih.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.oreid.virtualkitchen",
+            "certificate_hash": "F739B1E4A0B34D92B1C89E8ECBB311B46CC05093"
+          }
+        },
+        {
+          "client_id": "240865901307-3ema9uqq3a9hq1822pmtau2k65pc712m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.oreid.virtualkitchen",
+            "certificate_hash": "A01CABB7C5BD3686162F9C366B3A0D06842A9E97"
+          }
+        },
+        {
+          "client_id": "240865901307-ukphnrcohkl8cc5o38a3hrh76kh70jgj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.oreid.virtualkitchen",
+            "certificate_hash": "CE14FA1CBF10C0BA436D10F19B5C13DC0AB82CF0"
+          }
+        },
+        {
+          "client_id": "240865901307-m6k0e1c34jdifbul97s7lbai8i65do7a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZe2DNTzZ700D5EA2LkTVsQ2Qo5z-mbso"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "240865901307-m6k0e1c34jdifbul97s7lbai8i65do7a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
