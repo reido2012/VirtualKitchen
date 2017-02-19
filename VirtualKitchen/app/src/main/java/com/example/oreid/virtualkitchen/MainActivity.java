@@ -37,10 +37,13 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
 
     private static final String TAG = "MainActivity";
+    public final static String  PASS_ACCT = "com.example.oreid.ACCT_SEND";
     private static final int RC_SIGN_IN = 9001;
 
     EditText emailField;
     EditText passwordField;
+    EditText firstName;
+    EditText lastName;
     SignInButton signInButton;
     TextView statusTextView;
     Button signOutButton;
@@ -72,9 +75,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                 if (user != null) {
                     // User is signed in
                     Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
-                    // open up main kitchen activity
-                    Intent intent = new Intent(MainActivity.this, MainKitchenActivity.class);
-                    startActivity(intent);
+
                 } else {
                     // User is signed out
                     Log.d(TAG, "onAuthStateChanged:signed_out");
@@ -83,6 +84,10 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
             }
         };
 
+        initialiseComponents();
+    }
+
+    public void initialiseComponents(){
         statusTextView = (TextView) findViewById(R.id.status_text_view);
 
         signInButton = (SignInButton) findViewById(R.id.sign_in_button);
@@ -93,6 +98,9 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
         emailSignIn = (Button) findViewById(R.id.email_sign_in_button);
         emailSignIn.setOnClickListener(this);
+
+        lastName = (EditText) findViewById(R.id.last_name_edit_text);
+        firstName = (EditText) findViewById(R.id.first_name_edit_text);
 
         emailRegister = (Button) findViewById(R.id.registration_button);
         emailRegister.setOnClickListener(this);
@@ -173,7 +181,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
 
-    private void emailSignIn(String email, String password){
+    private void emailSignIn(final String email, final String password, final String fname, final String lname){
         Log.d(TAG, "signIn:" + email);
         if (!validateForm()) {
             return;
@@ -195,11 +203,16 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                             Log.w(TAG, "signInWithEmail:failed", task.getException());
                             Toast.makeText(MainActivity.this, R.string.auth_failed,
                                     Toast.LENGTH_SHORT).show();
-                        }
+                        }else {
+                            //TODO: Create VirtualKitchenProfile with Information on User + Storage
+                            //TODO: Check if account already exists. On registration we need to put profile in DB
+                            Intent intent = new Intent(MainActivity.this, MainKitchenActivity.class);
+                            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-                        // [START_EXCLUDE]
-                        if (!task.isSuccessful()) {
-                            statusTextView.setText(R.string.auth_failed);
+                            VirtualKitchenProfile profile = new VirtualKitchenProfile(user, firstName.getText().toString(), lastName.getText().toString());
+                            intent.putExtra(PASS_ACCT, profile);
+                            startActivity(intent);
+                            updateUser();
                         }
 //                        hideProgressDialog();
                         // [END_EXCLUDE]
@@ -225,19 +238,22 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
             GoogleSignInAccount acct = result.getSignInAccount();
             statusTextView.setText("Hello, "+ acct.getDisplayName());
             firebaseAuthWithGoogle(acct);
-            
+            Intent intent = new Intent(MainActivity.this, MainKitchenActivity.class);
+            VirtualKitchenProfile profile = new VirtualKitchenProfile(acct);
+            intent.putExtra(PASS_ACCT, profile);
+            startActivity(intent);
         }else{
 
         }
     }
 
-    private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
+    private void firebaseAuthWithGoogle(final GoogleSignInAccount acct) {
         Log.d(TAG, "firebaseAuthWithGoogle:" + acct.getId());
         // [START_EXCLUDE silent]
 //        showProgressDialog();
         // [END_EXCLUDE]
 
-        AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
+        final AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
         mAuth.signInWithCredential(credential)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -278,10 +294,12 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
     @Override
     public void onClick(View v) {
+
         switch (v.getId()){
             case R.id.sign_in_button:
                 signIn();
                 //Possibly switch activity to get a new view
+                // open up main kitchen activity
                 break;
             case R.id.sign_out_button:
                 signOut();
@@ -290,8 +308,9 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                 createAccount(emailField.getText().toString(), passwordField.getText().toString());
                 break;
             case R.id.email_sign_in_button:
-                emailSignIn(emailField.getText().toString(), passwordField.getText().toString());
-                updateUser();
+                emailSignIn(emailField.getText().toString(), passwordField.getText().toString(), firstName.getText().toString(), lastName.getText().toString() );
+                // open up main kitchen activity
+
                 break;
         }
     }
