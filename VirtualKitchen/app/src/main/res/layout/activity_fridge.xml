@@ -48,7 +48,7 @@
                 android:layout_height="match_parent">
 
                 <LinearLayout
-                    android:id="@+id/A-Z"
+                    android:id="@+id/AtoZ"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
