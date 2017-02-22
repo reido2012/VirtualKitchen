@@ -13,10 +13,15 @@ public class FreezerTab extends KitchenTab {
     public static final String TAG = "A_TO_Z_TAB";
 
     public void onCreate(Bundle savedInstanceState) {
+        setTabName("Freezer");
         super.onCreate(savedInstanceState);
         super.setListData(VKData.getInstance().getFreezerFoodItems());
         updateUI();
     }
 
+    public void updateUI() {
+        setListData(VKData.getInstance().getFreezerFoodItems());
+        super.updateUI();
+    }
 
 }

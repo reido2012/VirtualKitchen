@@ -13,10 +13,14 @@ public class CupboardTab extends KitchenTab {
     public static final String TAG = "A_TO_Z_TAB";
 
     public void onCreate(Bundle savedInstanceState) {
+        setTabName("Cupboard");
         super.onCreate(savedInstanceState);
         super.setListData(VKData.getInstance().getCupboardFoodItems());
         updateUI();
     }
 
-
+    public void updateUI() {
+        setListData(VKData.getInstance().getCupboardFoodItems());
+        super.updateUI();
+    }
 }
