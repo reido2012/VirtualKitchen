@@ -22,13 +22,26 @@ public class VKData {
     public ArrayList<FoodItem> getFoodItems() { return foodItems; }
 
     public ArrayList<FoodItem> getSortedFoodItems() {
-        ArrayList<FoodItem> sortedFood = (ArrayList<FoodItem>)foodItems.clone();
-        Collections.sort(sortedFood, new Comparator<FoodItem>() {
+        return sort(new Comparator<FoodItem>() {
             @Override
             public int compare(FoodItem f1, FoodItem f2) {
                 return  f1.getName().compareTo(f2.getName());
             }
         });
+    }
+
+    public ArrayList<FoodItem> getFoodItemsSortedByExipry() {
+        return sort(new Comparator<FoodItem>() {
+            @Override
+            public int compare(FoodItem f1, FoodItem f2) {
+                return f1.getDaysLeft() - f2.getDaysLeft();
+            }
+        });
+    }
+
+    private ArrayList<FoodItem> sort(Comparator c) {
+        ArrayList<FoodItem> sortedFood = (ArrayList<FoodItem>)foodItems.clone();
+        Collections.sort(sortedFood, c);
         return sortedFood;
     }
 

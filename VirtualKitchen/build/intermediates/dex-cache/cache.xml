@@ -97,7 +97,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.0"
-        sha1="26d029b0eaaf7e329e95b7ae01ae0f9b54ab359c">
+        sha1="120ed6796945a0b6c6a244bf0afcf4f634ab2185">
         <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_d754a288d5a99fc15340f5488d1b8532910395c4/classes.dex" />
     </item>
     <item
@@ -178,7 +178,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.0"
-        sha1="e51f823cb45376b2dc9b2ff7d6dea4b135125126">
+        sha1="21d5d72c69a059532bce10f76be2bfef4605f621">
         <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_87b7c9f7eb704aaf40daaa194f9beeff083d2869/classes.dex" />
     </item>
     <item

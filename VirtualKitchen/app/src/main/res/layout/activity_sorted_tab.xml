@@ -1,25 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_tab_tester"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="com.example.oreid.virtualkitchen.KitchenTab">
 
-    <Spinner
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/sorting_spinner" />
+        android:orientation="horizontal">
 
+        <TextView
+            android:text="Sort by"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sorting_spinner" />
+
+    </LinearLayout>
 
     <ListView
         android:id="@+id/list_view_sorted"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
 
     <!--<android.support.design.widget.FloatingActionButton-->
     <!--android:layout_width="wrap_content"-->
@@ -31,4 +42,4 @@
     <!--app:layout_anchorGravity="bottom|right|end" />-->
 
 
-</RelativeLayout>
+</LinearLayout>
