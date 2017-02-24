@@ -20,33 +20,33 @@ public class MainKitchenActivity extends TabActivity {
     }
 
     private void setupTabs() {
-
+        VKData.getInstance().addTestFoodItems();
         TabHost th = getTabHost();
-        Intent testerIntent = new Intent(MainKitchenActivity.this, TabTester.class);
 
-        TabSpec specAZ = th.newTabSpec("A-Z");
-        specAZ.setContent(testerIntent);
-        specAZ.setIndicator("A-Z");
-        specAZ.setContent(testerIntent);
+        TabSpec specAZ = th.newTabSpec("All");
+        Intent azIntent = new Intent(MainKitchenActivity.this, SortedTab.class);
+        specAZ.setContent(azIntent);
+        specAZ.setIndicator("All");
         th.addTab(specAZ);
 
         TabSpec specFridge = th.newTabSpec("Fridge");
-        specFridge.setContent(testerIntent);
+        Intent fridgeIntent = new Intent(MainKitchenActivity.this, FridgeTab.class);
+        specFridge.setContent(fridgeIntent);
         specFridge.setIndicator("Fridge");
-        specFridge.setContent(testerIntent);
         th.addTab(specFridge);
 
         TabSpec specFreezer = th.newTabSpec("Freezer");
-        specFreezer.setContent(testerIntent);
+        Intent freezerIntent = new Intent(MainKitchenActivity.this, FreezerTab.class);
+        specFreezer.setContent(freezerIntent);
         specFreezer.setIndicator("Freezer");
-        specFreezer.setContent(testerIntent);
         th.addTab(specFreezer);
 
         TabSpec specCupboard = th.newTabSpec("Pantry");
-        specFridge.setContent(testerIntent);
+        Intent cupboardIntent = new Intent(MainKitchenActivity.this, CupboardTab.class);
+        specCupboard.setContent(cupboardIntent);
         specCupboard.setIndicator("Pantry");
-        specCupboard.setContent(testerIntent);
         th.addTab(specCupboard);
+
     }
 
 
