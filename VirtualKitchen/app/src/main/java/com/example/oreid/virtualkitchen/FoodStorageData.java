@@ -89,6 +89,71 @@ public class FoodStorageData {
         }
     }
 
+    public FoodItem remove(int index, StorageArea s) {
+
+        if (s == null) {
+           Log.d(TAG, "Storage area not specified, not enough information to remove an item.");
+        }
+
+        FoodItem f = null;
+
+        switch(s) {
+            case FRIDGE:
+                f = this.fridge.get(index);
+                this.fridge.remove(index);
+                break;
+            case FREEZER:
+                f = this.freezer.get(index);
+                this.freezer.remove(index);
+                break;
+            case CUPBOARD:
+                f = this.cupboard.get(index);
+                this.cupboard.remove(index);
+            default:
+                // nothing
+        }
+
+        return f;
+    }
+
+    public FoodItem decrement(int index, StorageArea s) {
+
+        if (s == null) {
+            Log.d(TAG, "Storage area not specified, not enough information to remove an item.");
+        }
+
+        FoodItem f = null;
+
+        switch(s) {
+            case FRIDGE:
+                f = this.fridge.get(index);
+                break;
+            case FREEZER:
+                f = this.freezer.get(index);
+                break;
+            case CUPBOARD:
+                f = this.cupboard.get(index);
+            default:
+                // nothing
+        }
+
+        if (f == null) {
+            return null; // not found
+        }
+
+        FoodItem toReturn = (FoodItem)f.clone();
+        int qty = f.getQty();
+        if (qty == 1) {
+            remove(index,s);
+        } else {
+            f.setQty(qty - 1); // decrement quantity
+        }
+
+        return toReturn;
+    }
+
+
+
     /**
      * Sorts an arrayList of foods using the given comparator.
      * @param food list of food to sort

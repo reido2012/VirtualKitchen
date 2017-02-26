@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -97,6 +98,25 @@ public class KitchenTab extends AppCompatActivity {
                 .setNegativeButton("Cancel", null)
                 .create();
         dialog.show();
+    }
+
+    public void deleteButtonHandler(View v) {
+
+        // index of where the item can be found in the list's data.
+        int position = listView.getPositionForView((View)v.getParent());
+
+        FoodItem removed = db.decrement(position, this.storageArea);
+
+        String message;
+        if (f.getQty() == 1) {
+            message = "Removing " + f.getName() + " from your " + f.getLocation();
+        } else {
+            message = "Removing 1 " + f.getName() + " from your " + f.getLocation();
+        }
+        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
+
+        updateUI();
+
     }
 
     public void setContentViewId(int id) {

@@ -7,14 +7,20 @@ import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 import android.widget.Toast;
 
+import static com.example.oreid.virtualkitchen.StorageArea.FRIDGE;
+
 public class MainKitchenActivity extends TabActivity {
 
     private static final String TAG = "MainKitchenActivity";
 
     private TabHost tabHost;
 
+    // Information about the tabs
     private final int NUM_TABS = 4;
-    private final String[] TAB_NAMES = {"All", "Fridge", "Freezer", "Pantry"};
+    private final String[] TAB_NAMES = {"All",
+                                        StorageArea.FRIDGE.toString(),
+                                        StorageArea.FREEZER.toString(),
+                                        StorageArea.CUPBOARD.toString()};
     private final Class[] TAB_ACTIVITIES = {SortedTab.class,
                                             FridgeTab.class,
                                             FreezerTab.class,
@@ -40,8 +46,8 @@ public class MainKitchenActivity extends TabActivity {
     private void addSampleData() {
         FoodStorageData fsd = VKData.getInstance().getFoodDB();
 
-        fsd.add(new FoodItem("Chicken", 1, StorageArea.FRIDGE, 3));
-        fsd.add(new FoodItem("Eggs", 6, StorageArea.FRIDGE, 10));
+        fsd.add(new FoodItem("Chicken", 1, FRIDGE, 3));
+        fsd.add(new FoodItem("Eggs", 6, FRIDGE, 10));
         fsd.add(new FoodItem("Bananas", 3, StorageArea.CUPBOARD, 6));
         fsd.add(new FoodItem("Ice Cream", 2, StorageArea.FREEZER, 60));
 
