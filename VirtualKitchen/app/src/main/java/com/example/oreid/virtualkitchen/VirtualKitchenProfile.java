@@ -52,7 +52,7 @@ public class VirtualKitchenProfile implements Parcelable {
         return foodDB;
     }
 
-    public void setFoodDb(FoodStorageData fsd) {
+    public void setFoodDB(FoodStorageData fsd) {
         this.foodDB = fsd;
     }
 

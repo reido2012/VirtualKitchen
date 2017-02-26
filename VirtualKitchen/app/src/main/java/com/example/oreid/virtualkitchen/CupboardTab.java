@@ -15,12 +15,12 @@ public class CupboardTab extends KitchenTab {
     public void onCreate(Bundle savedInstanceState) {
         setTabName("Cupboard");
         super.onCreate(savedInstanceState);
-        super.setListData(VKData.getInstance().getCupboardFoodItems());
+        super.setStorageArea(StorageArea.CUPBOARD, true);
         updateUI();
     }
 
     public void updateUI() {
-        setListData(VKData.getInstance().getCupboardFoodItems());
+        updateListData();
         super.updateUI();
     }
 }

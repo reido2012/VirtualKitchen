@@ -3,6 +3,8 @@ package com.example.oreid.virtualkitchen;
 import android.util.Log;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 /**
  * This class manages storage of items in the virtual kitchen.
@@ -13,6 +15,24 @@ import java.util.ArrayList;
  */
 
 public class FoodStorageData {
+
+    /**
+     * A convenient method to get items the items from a specific storage area
+     * @param storageArea storage area to get items from.
+     * @return items stored in this storage area
+     */
+    public ArrayList<FoodItem> get(StorageArea storageArea) {
+        switch(storageArea) {
+            case FRIDGE:
+                return getFridgeItems();
+            case FREEZER:
+                return getFreezerItems();
+            case CUPBOARD:
+                return getCupboardItems();
+            default:
+                return null;
+        }
+    }
 
     public ArrayList<FoodItem> getFridgeItems() {
         return this.fridge;
@@ -35,7 +55,7 @@ public class FoodStorageData {
     }
 
     public void addToCupboard(FoodItem f) {
-        this.fridge.add(f);
+        this.cupboard.add(f);
     }
 
     public ArrayList<FoodItem> getAllItems() {
@@ -67,6 +87,17 @@ public class FoodStorageData {
                 Log.d(TAG, "Unable to add item because of invalid storage area \'" + f.getLocation() + "\'.");
 
         }
+    }
+
+    /**
+     * Sorts an arrayList of foods using the given comparator.
+     * @param food list of food to sort
+     * @param sortBy comparator indicating a method to sort by
+     * @return
+     */
+    public static ArrayList<FoodItem> sort(ArrayList<FoodItem> food, Comparator sortBy) {
+        Collections.sort(food, sortBy);
+        return food;
     }
 
     public static final String TAG = "FoodStorageData";

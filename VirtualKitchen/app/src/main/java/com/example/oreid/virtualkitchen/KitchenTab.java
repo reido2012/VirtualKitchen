@@ -4,7 +4,6 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -24,9 +23,12 @@ public class KitchenTab extends AppCompatActivity {
 
     private static final String TAG = "KitchenTab";
 
+    protected FoodStorageData db;
+
     private int contentViewId = R.layout.activity_kitchen_tab;
     private int listViewId  = R.id.list_view;
     private String tabName = "Kitchen";
+    private StorageArea storageArea = null;
 
     private ArrayList<FoodItem> listData = new ArrayList<FoodItem>();
 
@@ -38,7 +40,8 @@ public class KitchenTab extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(contentViewId);
 
-        Log.d(TAG, Integer.toString(listViewId));
+        db = VKData.getInstance().getFoodDB();
+
         listView = (ListView)findViewById(listViewId);
         listAdapter = new FoodItemAdapter(this,
                 R.layout.food_list_item,
@@ -53,6 +56,17 @@ public class KitchenTab extends AppCompatActivity {
      */
     public void setListData(ArrayList<FoodItem> d) {
         this.listData = d;
+    }
+
+    /**
+     * Updates list data based on the specified storage area. If null, then all items are retrieved.
+     */
+    public void updateListData() {
+        if (this.storageArea == null) {
+            this.setListData(db.getAllItems());
+        } else { // get items based on specified storage area.
+            this.setListData(db.get(this.storageArea));
+        }
     }
 
     /**
@@ -76,7 +90,7 @@ public class KitchenTab extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         String name = String.valueOf(txtField.getText());
-                        VKData.getInstance().addFoodItem(new FoodItem(name, 1, tabName, 3));
+                        db.add(new FoodItem(name, 1, storageArea, 3));
                         updateUI();
                     }
                 })
@@ -96,5 +110,26 @@ public class KitchenTab extends AppCompatActivity {
     public void setTabName(String name) {
         tabName = name;
     }
+
+    /**
+     * Sets storage area associated with this tab. Also updates the list based on this data,
+     * depending on the boolean passed in.
+     * @param sa storage area associated with this tab
+     * @param updateList update the list based on the storage area?
+     */
+    public void setStorageArea(StorageArea sa, boolean updateList) {
+        this.storageArea = sa;
+        if (updateList) {
+            this.updateListData();
+        }
+    }
+
+    // activity is resumed when it's tab is selected.
+    // Lists may have changed while in another tab, so update them.
+    public void onResume() {
+        super.onResume();
+        updateUI();
+    }
+
 
 }

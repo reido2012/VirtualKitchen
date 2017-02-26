@@ -21,12 +21,13 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
         android:layout_margin="16dp"
-        android:src="@android:drawable/ic_menu_add"
+        android:src="@drawable/floating_add"
         app:layout_anchor="@id/list_view"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         app:layout_anchorGravity="bottom|right|end"
-        android:onClick="addFood"/>
+        android:onClick="addFood"
+        app:backgroundTint="@android:color/white" />
 
 
 </RelativeLayout>
