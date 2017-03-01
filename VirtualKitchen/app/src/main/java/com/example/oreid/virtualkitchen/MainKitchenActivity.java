@@ -47,6 +47,8 @@ public class MainKitchenActivity extends TabActivity {
         specCupboard.setIndicator("Pantry");
         th.addTab(specCupboard);
 
+        TabSpec shoppingList = th.newTabSpec("List");
+
     }
 
 
