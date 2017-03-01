@@ -15,7 +15,7 @@ public class CupboardTab extends KitchenTab {
     public void onCreate(Bundle savedInstanceState) {
         setTabName("Cupboard");
         super.onCreate(savedInstanceState);
-        super.setStorageArea(StorageArea.CUPBOARD, true);
+        setStorageArea(StorageArea.CUPBOARD, true);
         updateUI();
     }
 

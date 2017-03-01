@@ -89,76 +89,87 @@ public class FoodStorageData {
         }
     }
 
-    public FoodItem remove(int index, StorageArea s) {
+    public void remove(int index, StorageArea s) {
 
-        if (s == null) {
-           Log.d(TAG, "Storage area not specified, not enough information to remove an item.");
+        ArrayList<FoodItem> area = get(s);
+
+        if (area == null) {
+            return;
         }
 
-        FoodItem f = null;
+        area.remove(index);
 
-        switch(s) {
-            case FRIDGE:
-                f = this.fridge.get(index);
-                this.fridge.remove(index);
-                break;
-            case FREEZER:
-                f = this.freezer.get(index);
-                this.freezer.remove(index);
-                break;
-            case CUPBOARD:
-                f = this.cupboard.get(index);
-                this.cupboard.remove(index);
-            default:
-                // nothing
-        }
-
-        return f;
     }
 
-    public FoodItem decrement(int index, StorageArea s) {
+    public void decrement(int index, StorageArea s) {
 
-        if (s == null) {
-            Log.d(TAG, "Storage area not specified, not enough information to remove an item.");
+        ArrayList<FoodItem> area = get(s);
+
+        if (area == null) {
+            return;
         }
 
-        FoodItem f = null;
+        FoodItem f = area.get(index);
 
-        switch(s) {
-            case FRIDGE:
-                f = this.fridge.get(index);
-                break;
-            case FREEZER:
-                f = this.freezer.get(index);
-                break;
-            case CUPBOARD:
-                f = this.cupboard.get(index);
-            default:
-                // nothing
-        }
-
-        if (f == null) {
-            return null; // not found
-        }
-
-        FoodItem toReturn = (FoodItem)f.clone();
         int qty = f.getQty();
         if (qty == 1) {
             remove(index,s);
         } else {
             f.setQty(qty - 1); // decrement quantity
         }
+    }
 
-        return toReturn;
+    public void remove(FoodItem f) {
+        StorageArea s = f.getLocation();
+        ArrayList area = get(s);
+
+        if (s == null) {
+            return;
+        }
+
+        int index = area.indexOf(f);
+
+        decrement(index,s);
+    }
+
+    public void decrement(FoodItem f) {
+        StorageArea s = f.getLocation();
+        ArrayList area = get(s);
+
+        if (s == null) {
+            return;
+        }
+
+        int index = area.indexOf(f);
+
+        decrement(index,s);
     }
 
 
+
+    public ArrayList<FoodItem> findByName(String query) {
+        // very basic approach where it goes through all items and finds all with the given string in the name.
+        ArrayList<FoodItem> allItems = getAllItems();
+        ArrayList<FoodItem> searchResults = new ArrayList<FoodItem>();
+
+        query =
+                query.toUpperCase();
+
+        for (int i = 0; i < allItems.size(); i++) {
+            FoodItem currentItem = allItems.get(i);
+            String itemName = currentItem.getName().toUpperCase();
+            if (itemName.contains(query)) {
+                searchResults.add(currentItem);
+            }
+        }
+        return searchResults;
+    }
 
     /**
      * Sorts an arrayList of foods using the given comparator.
      * @param food list of food to sort
      * @param sortBy comparator indicating a method to sort by
-     * @return
+     * @return the passed ArrayList, sorted.
      */
     public static ArrayList<FoodItem> sort(ArrayList<FoodItem> food, Comparator sortBy) {
         Collections.sort(food, sortBy);

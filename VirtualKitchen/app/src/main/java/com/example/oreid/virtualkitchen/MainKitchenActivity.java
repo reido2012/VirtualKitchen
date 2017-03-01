@@ -1,15 +1,24 @@
 package com.example.oreid.virtualkitchen;
 
-import android.app.TabActivity;
+import android.app.LocalActivityManager;
+import android.app.SearchManager;
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.view.MenuItemCompat;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.widget.SearchView;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
-import android.widget.Toast;
 
 import static com.example.oreid.virtualkitchen.StorageArea.FRIDGE;
 
-public class MainKitchenActivity extends TabActivity {
+public class MainKitchenActivity extends AppCompatActivity {
 
     private static final String TAG = "MainKitchenActivity";
 
@@ -29,18 +38,25 @@ public class MainKitchenActivity extends TabActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kitchen);
-        // Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        // setSupportActionBar(toolbar);
+        setContentView(R.layout.activity_main_kitchen);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         // tab activity doesn't support action bar
 
-        VKData.getInstance().getProfile().setFoodDB(new FoodStorageData());
+        VirtualKitchenProfile vkp = VKData.getInstance().getProfile();
+
+        if (vkp.getFoodDB() == null) {
+            vkp.setFoodDB(new FoodStorageData());
+            addSampleData();
+        }
+
+        tabHost = (TabHost)findViewById(R.id.tabhost);
+        LocalActivityManager mLocalActivityManager = new LocalActivityManager(this, false);
+        mLocalActivityManager.dispatchCreate(savedInstanceState);
+        tabHost.setup(mLocalActivityManager);
+
         setupTabs();
 
-        addSampleData();
-
-        String name = VKData.getInstance().getProfile().getFirstName();
-        Toast.makeText(getApplicationContext(), "Hi, " + name + "! Welcome to your virtual kitchen.", Toast.LENGTH_LONG).show();
     }
 
     private void addSampleData() {
@@ -64,12 +80,33 @@ public class MainKitchenActivity extends TabActivity {
 
     private void setupTabs() {
 
-        tabHost = getTabHost();
+        // tabhost has already been set up.
 
         for (int i = 0; i < NUM_TABS; i++) {
             setupTab(i);
         }
 
     }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.kitchen_menu, menu);
+
+        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        SearchView searchView = (SearchView)MenuItemCompat.getActionView(menu.findItem(R.id.search));
+        Log.d(TAG, "search view: " + searchView.toString());
+
+        Log.d(TAG, "search item: " + menu.findItem(R.id.search).toString());
+
+        //searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(
+                new ComponentName(getApplicationContext(), KitchenSearchActivity.class)));
+
+
+        return true;
+    }
+
+
+
 
 }

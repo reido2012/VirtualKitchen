@@ -77,4 +77,18 @@ public class SortedTab extends KitchenTab {
         super.updateUI();
     }
 
+    public void deleteButtonHandler(View v) {
+
+        // index of where the item can be found in the list's data.
+        int position = listView.getPositionForView((View)v.getParent());
+
+        // get the item from the list and let the database figure out where to delete it from.
+        FoodItem toDecrement = getListData().get(position);
+
+        db.decrement(toDecrement);
+
+        updateUI();
+
+    }
+
 }
