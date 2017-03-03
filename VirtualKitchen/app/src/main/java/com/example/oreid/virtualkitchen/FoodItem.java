@@ -2,6 +2,7 @@ package com.example.oreid.virtualkitchen;
 
 import java.io.Serializable;
 import java.util.Calendar;
+import java.util.Comparator;
 import java.util.Date;
 
 /**
@@ -16,7 +17,7 @@ import java.util.Date;
 
 public class FoodItem implements Serializable {
 
-    public FoodItem(String name, int qty, String storedWhere, int shelfLife) {
+    public FoodItem(String name, int qty, StorageArea storedWhere, int shelfLife) {
         this.name = name;
         this.qty = qty;
         this.storedWhere = storedWhere;
@@ -52,7 +53,7 @@ public class FoodItem implements Serializable {
         return shelfLife;
     }
 
-    public String getLocation() {
+    public StorageArea getLocation() {
         return storedWhere;
     }
 
@@ -68,7 +69,7 @@ public class FoodItem implements Serializable {
         this.qty = qty;
     }
 
-    public void setLocation(String storedWhere) {
+    public void setLocation(StorageArea storedWhere) {
         this.storedWhere = storedWhere;
     }
 
@@ -79,6 +80,28 @@ public class FoodItem implements Serializable {
         this.shelfLife = shelfLife;
     }
 
+    /**
+     * Comparator, used in sorting, that allows items to be sorted by name.
+     * Compares item names lexicographically to sort in alphabetical order.
+     */
+    public static final Comparator nameComparator = new Comparator<FoodItem>() {
+        @Override
+        public int compare(FoodItem f1, FoodItem f2) {
+            return f1.getName().compareTo(f2.getName());
+        }
+    };
+
+    /**
+     * Comparator, used in sorting, that allows items to be sorted by number of days until expiry.
+     * Compares days left so items are sorted in ascending order of days until expiry.
+     */
+    public static final Comparator expiryDateComparator = new Comparator<FoodItem>() {
+        @Override
+        public int compare(FoodItem f1, FoodItem f2) {
+            return f1.getDaysLeft() - f2.getDaysLeft();
+        }
+    };
+
     // From stackoverflow: http://stackoverflow.com/questions/7103064/java-calculate-the-number-of-days-between-two-dates
     private int daysBetween(Date d1, Date d2){
         return (int)( (d2.getTime() - d1.getTime()) / (1000 * 60 * 60 * 24));
@@ -88,7 +111,7 @@ public class FoodItem implements Serializable {
     private int qty;
     private Date dateAdded;
     private int shelfLife;
-    private String storedWhere;
+    private StorageArea storedWhere;
     // TODO 17/02/17 add photo
 
 }

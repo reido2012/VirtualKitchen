@@ -7,6 +7,8 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+import java.util.ArrayList;
+
 
 /**
  * A-Z view in kitchen view
@@ -30,7 +32,7 @@ public class SortedTab extends KitchenTab {
         setListViewId(R.id.list_view_sorted);
         super.onCreate(savedInstanceState);
 
-        setListData(VKData.getInstance().getSortedFoodItems());
+        updateListData(); // ALL ITEMS - TODO sort them!
         updateUI();
 
         // set up spinner
@@ -59,18 +61,34 @@ public class SortedTab extends KitchenTab {
     }
 
     public void updateUI() {
+        ArrayList<FoodItem> data = db.getAllItems();
         switch(sortingType) {
             case 0:
-                setListData(VKData.getInstance().getSortedFoodItems());
+                FoodStorageData.sort(data,FoodItem.nameComparator);
                 break;
             case 1:
-                setListData(VKData.getInstance().getFoodItemsSortedByExipry());
+                FoodStorageData.sort(data,FoodItem.expiryDateComparator);
                 break;
             default:
                 return;
         }
 
+        setListData(data);
         super.updateUI();
+    }
+
+    public void deleteButtonHandler(View v) {
+
+        // index of where the item can be found in the list's data.
+        int position = listView.getPositionForView((View)v.getParent());
+
+        // get the item from the list and let the database figure out where to delete it from.
+        FoodItem toDecrement = getListData().get(position);
+
+        db.decrement(toDecrement);
+
+        updateUI();
+
     }
 
 }

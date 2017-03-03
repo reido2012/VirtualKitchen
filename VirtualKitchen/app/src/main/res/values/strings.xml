@@ -10,4 +10,5 @@
     <string name="title_activity_main_kitchen">MainKitchenActivity</string>
     <string name="first_name">First Name - Registration Only</string>
     <string name="last_name">Last Name - Registration Only</string>
+    <string name="search_kitchen_hint">Search your kitchen</string>
 </resources>

@@ -15,12 +15,12 @@ public class FridgeTab extends KitchenTab {
     public void onCreate(Bundle savedInstanceState) {
         setTabName("Fridge");
         super.onCreate(savedInstanceState);
-        super.setListData(VKData.getInstance().getFridgeFoodItems());
+        super.setStorageArea(StorageArea.FRIDGE,true);
         updateUI();
     }
 
     public void updateUI() {
-        setListData(VKData.getInstance().getFridgeFoodItems());
+        updateListData();
         super.updateUI();
     }
 
