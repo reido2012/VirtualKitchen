@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,6 +22,8 @@ import java.util.ArrayList;
  */
 
 public class FoodItemAdapter extends ArrayAdapter {
+
+    private static final String TAG = "FoodItemAdapter";
 
     public FoodItemAdapter(Context context, int layoutResourceId, ArrayList<FoodItem> data) {
         super(context, layoutResourceId, data);
@@ -43,6 +46,8 @@ public class FoodItemAdapter extends ArrayAdapter {
             holder.imgIcon = (ImageView)row.findViewById(R.id.list_image);
             holder.txtTitle = (TextView)row.findViewById(R.id.list_title);
             holder.txtSubtitle = (TextView)row.findViewById(R.id.list_subtitle);
+            holder.btnShoppingList = (ImageButton)row.findViewById(R.id.list_btn_shoppinglist);
+            holder.btnDelete = (ImageButton)row.findViewById(R.id.list_btn_deletefood);
 
             row.setTag(holder);
         }
@@ -65,6 +70,11 @@ public class FoodItemAdapter extends ArrayAdapter {
         h.txtSubtitle.setText(subtitle);
     }
 
+    private void removeItemAtIndex(int i) {
+        this.data.remove(i);
+        this.notifyDataSetChanged();
+    }
+
     Context context;
     int layoutResourceId;
     ArrayList<FoodItem> data = null;
@@ -77,6 +87,8 @@ public class FoodItemAdapter extends ArrayAdapter {
         ImageView imgIcon;
         TextView txtTitle;
         TextView txtSubtitle;
+        ImageButton btnShoppingList;
+        ImageButton btnDelete;
     }
 
 }
