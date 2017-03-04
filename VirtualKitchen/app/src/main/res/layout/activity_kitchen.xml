@@ -24,6 +24,7 @@
 
     </LinearLayout>
 
+
     <TabHost
         android:id="@android:id/tabhost"
         android:layout_width="match_parent"
@@ -36,14 +37,8 @@
 
             <TabWidget
                 android:id="@android:id/tabs"
-<<<<<<< HEAD
-
-                android:layout_width="356dp"
-                android:layout_height="wrap_content" />
-=======
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
->>>>>>> refs/remotes/reido2012/master
 
             <FrameLayout
                 android:id="@android:id/tabcontent"
@@ -55,12 +50,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/textView1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Tab 1 Content" />
 
                 </LinearLayout>
 
