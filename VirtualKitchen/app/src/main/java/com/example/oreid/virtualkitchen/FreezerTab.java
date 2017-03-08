@@ -10,17 +10,16 @@ import android.os.Bundle;
 
 public class FreezerTab extends KitchenTab {
 
-    public static final String TAG = "A_TO_Z_TAB";
-
     public void onCreate(Bundle savedInstanceState) {
         setTabName("Freezer");
         super.onCreate(savedInstanceState);
-        super.setListData(VKData.getInstance().getFreezerFoodItems());
+        super.setStorageArea(StorageArea.FREEZER, false);
+
         updateUI();
     }
 
     public void updateUI() {
-        setListData(VKData.getInstance().getFreezerFoodItems());
+        updateListData();
         super.updateUI();
     }
 

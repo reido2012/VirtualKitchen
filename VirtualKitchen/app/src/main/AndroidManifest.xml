@@ -35,12 +35,37 @@
         <activity
             android:name=".MainKitchenActivity"
             android:label="@string/title_activity_main_kitchen"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".SortedTab"></activity>
-        <activity android:name=".FridgeTab"></activity>
-        <activity android:name=".FreezerTab"></activity>
-        <activity android:name=".CupboardTab"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
 
+        </activity>
+
+
+        <activity
+            android:name=".SortedTab"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FridgeTab"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FreezerTab"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CupboardTab"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ItemDetailActivity" />
+        <activity android:name=".KitchenSearchActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName=".MainKitchenActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+
+        </activity>
     </application>
 
 </manifest>

@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
 
     private static final String TAG = "MainActivity";
-    public final static String  PASS_ACCT = "com.example.oreid.ACCT_SEND";
+    public final static String PASS_ACCT = "com.example.oreid.ACCT_SEND";
     private static final int RC_SIGN_IN = 9001;
 
     EditText emailField;
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         initialiseComponents();
     }
 
-    public void initialiseComponents(){
+    public void initialiseComponents() {
         statusTextView = (TextView) findViewById(R.id.status_text_view);
 
         signInButton = (SignInButton) findViewById(R.id.sign_in_button);
@@ -124,10 +124,10 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         }
     }
 
-    private void createAccount(String email, String password){
+    private void createAccount(String email, String password) {
         Log.d(TAG, "createAcccount:" + email);
 
-        if(!validateForm()){
+        if (!validateForm()) {
             return;
         }
 
@@ -154,7 +154,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         // [END create_user_with_email]
     }
 
-    private Boolean validateForm(){
+    private Boolean validateForm() {
         boolean valid = true;
 
         String email = emailField.getText().toString();
@@ -176,12 +176,12 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         return valid;
     }
 
-    private void signIn(){
+    private void signIn() {
         Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
 
-    private void emailSignIn(final String email, final String password, final String fname, final String lname){
+    private void emailSignIn(final String email, final String password, final String fname, final String lname) {
         Log.d(TAG, "signIn:" + email);
         if (!validateForm()) {
             return;
@@ -203,16 +203,16 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                             Log.w(TAG, "signInWithEmail:failed", task.getException());
                             Toast.makeText(MainActivity.this, R.string.auth_failed,
                                     Toast.LENGTH_SHORT).show();
-                        }else {
+                        } else {
                             //TODO: Create VirtualKitchenProfile with Information on User + Storage
                             //TODO: Check if account already exists. On registration we need to put profile in DB
-                            Intent intent = new Intent(MainActivity.this, MainKitchenActivity.class);
                             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
                             VirtualKitchenProfile profile = new VirtualKitchenProfile(user, firstName.getText().toString(), lastName.getText().toString());
-                            intent.putExtra(PASS_ACCT, profile);
-                            startActivity(intent);
+
                             updateUser();
+
+                            startMainKitchen(profile); // store the profile and start main kitchen activity
                         }
 //                        hideProgressDialog();
                         // [END_EXCLUDE]
@@ -220,12 +220,12 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                 });
         // [END sign_in_with_email]
     }
-    
-    public void onActivityResult(int requestCode, int resultCode, Intent data){
+
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        
+
         //Result returned from launching the Intent from Google's api
-        if(requestCode == RC_SIGN_IN){
+        if (requestCode == RC_SIGN_IN) {
             GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
             handleSignInResult(result);
         }
@@ -233,16 +233,17 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
     private void handleSignInResult(GoogleSignInResult result) {
         Log.d(TAG, "handleSignInResult: " + result.isSuccess());
-        if(result.isSuccess()){
+        if (result.isSuccess()) {
             //Signed in successfully, show authenticated UI
             GoogleSignInAccount acct = result.getSignInAccount();
-            statusTextView.setText("Hello, "+ acct.getDisplayName());
+            statusTextView.setText("Hello, " + acct.getDisplayName());
             firebaseAuthWithGoogle(acct);
             Intent intent = new Intent(MainActivity.this, MainKitchenActivity.class);
             VirtualKitchenProfile profile = new VirtualKitchenProfile(acct);
-            intent.putExtra(PASS_ACCT, profile);
-            startActivity(intent);
-        }else{
+
+            startMainKitchen(profile); // start main kitchen activity
+
+        } else {
 
         }
     }
@@ -295,7 +296,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     @Override
     public void onClick(View v) {
 
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.sign_in_button:
                 signIn();
                 //Possibly switch activity to get a new view
@@ -308,7 +309,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                 createAccount(emailField.getText().toString(), passwordField.getText().toString());
                 break;
             case R.id.email_sign_in_button:
-                emailSignIn(emailField.getText().toString(), passwordField.getText().toString(), firstName.getText().toString(), lastName.getText().toString() );
+                emailSignIn(emailField.getText().toString(), passwordField.getText().toString(), firstName.getText().toString(), lastName.getText().toString());
                 // open up main kitchen activity
 
                 break;
@@ -326,12 +327,21 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
             // The user's ID, unique to the Firebase project. Do NOT use this value to
             // authenticate with your backend server, if you have one. Use
             // FirebaseUser.getToken() instead.
-            if(name == null){
+            if (name == null) {
                 statusTextView.setText("Hello, " + email);
-            }else{
+            } else {
                 statusTextView.setText("Hello, " + name);
             }
         }
+    }
+
+    private void startMainKitchen(VirtualKitchenProfile profile) {
+        Intent intent = new Intent(MainActivity.this, MainKitchenActivity.class);
+
+        VKData.getInstance().setProfile(profile);
+
+        intent.putExtra(PASS_ACCT, profile);
+        startActivity(intent);
     }
 
 }
