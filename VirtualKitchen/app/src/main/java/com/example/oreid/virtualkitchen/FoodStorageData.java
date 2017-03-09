@@ -148,6 +148,9 @@ public class FoodStorageData {
 
 
     public ArrayList<FoodItem> findByName(String query) {
+        if (query.equals("")) { // no query gets empty list.
+            return new ArrayList<FoodItem>();
+        }
         // very basic approach where it goes through all items and finds all with the given string in the name.
         ArrayList<FoodItem> allItems = getAllItems();
         ArrayList<FoodItem> searchResults = new ArrayList<FoodItem>();
