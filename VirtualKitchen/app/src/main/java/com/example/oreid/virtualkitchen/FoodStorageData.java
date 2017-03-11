@@ -29,6 +29,8 @@ public class FoodStorageData {
                 return getFreezerItems();
             case CUPBOARD:
                 return getCupboardItems();
+            case SHOPPINGLIST:
+                return getShoppingListItems();
             default:
                 return null;
         }
@@ -58,6 +60,20 @@ public class FoodStorageData {
         this.cupboard.add(f);
     }
 
+    public ArrayList<FoodItem> getShoppingListItems() {
+        return this.shoppingList;
+    }
+
+    public void addToShoppingList(FoodItem f) {
+        this.shoppingList.add(f);
+    }
+
+    //removes item from shopping list and adds to correct storage on button rpess
+    public void shoppingListToStorage() {
+
+    }
+
+
     public ArrayList<FoodItem> getAllItems() {
         ArrayList<FoodItem> allItems = new ArrayList<FoodItem>();
         allItems.addAll(getFridgeItems());
@@ -81,6 +97,9 @@ public class FoodStorageData {
                 break;
             case CUPBOARD:
                 addToCupboard(f);
+                break;
+            case SHOPPINGLIST:
+                addToShoppingList(f);
                 break;
             default:
                 // ERROR - storage area is not recognised.
@@ -180,5 +199,6 @@ public class FoodStorageData {
     private ArrayList<FoodItem> fridge = new ArrayList<FoodItem>();
     private ArrayList<FoodItem> freezer = new ArrayList<FoodItem>();
     private ArrayList<FoodItem> cupboard = new ArrayList<FoodItem>();
+    private ArrayList<FoodItem> shoppingList = new ArrayList<FoodItem>();
 
 }

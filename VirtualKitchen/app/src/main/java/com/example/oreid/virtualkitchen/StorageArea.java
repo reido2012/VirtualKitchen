@@ -9,7 +9,8 @@ package com.example.oreid.virtualkitchen;
 public enum StorageArea {
     FRIDGE("Fridge"),
     FREEZER("Freezer"),
-    CUPBOARD("Pantry");
+    CUPBOARD("Pantry"),
+    SHOPPINGLIST("Shopping List");
 
     private final String storageName;
 

@@ -25,15 +25,18 @@ public class MainKitchenActivity extends AppCompatActivity {
     private TabHost tabHost;
 
     // Information about the tabs
-    private final int NUM_TABS = 4;
+    private final int NUM_TABS = 5;
     private final String[] TAB_NAMES = {"All",
-                                        StorageArea.FRIDGE.toString(),
-                                        StorageArea.FREEZER.toString(),
-                                        StorageArea.CUPBOARD.toString()};
+            StorageArea.FRIDGE.toString(),
+            StorageArea.FREEZER.toString(),
+            StorageArea.CUPBOARD.toString(),
+            StorageArea.SHOPPINGLIST.toString()};
+
     private final Class[] TAB_ACTIVITIES = {SortedTab.class,
-                                            FridgeTab.class,
-                                            FreezerTab.class,
-                                            CupboardTab.class};
+            FridgeTab.class,
+            FreezerTab.class,
+            CupboardTab.class,
+            ShoppingListTab.class};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,8 +88,6 @@ public class MainKitchenActivity extends AppCompatActivity {
         for (int i = 0; i < NUM_TABS; i++) {
             setupTab(i);
         }
-
-        TabSpec shoppingList = th.newTabSpec("List");
 
     }
 

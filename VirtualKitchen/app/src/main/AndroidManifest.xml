@@ -52,6 +52,9 @@
         <activity
             android:name=".CupboardTab"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ShoppingListTab"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ItemDetailActivity" />
         <activity android:name=".KitchenSearchActivity"
             android:launchMode="singleTop"
