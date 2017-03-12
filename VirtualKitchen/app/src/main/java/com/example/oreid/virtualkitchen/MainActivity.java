@@ -28,12 +28,24 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
 
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
     private GoogleApiClient mGoogleApiClient;
+
+//    private final FirebaseDatabase database = FirebaseDatabase.getInstance();
+//    DatabaseReference ref = database.getReference();
+
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference();
+
 
 
     private static final String TAG = "MainActivity";
@@ -130,7 +142,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         if (!validateForm()) {
             return;
         }
-
         // [START create_user_with_email]
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -203,18 +214,15 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                             Log.w(TAG, "signInWithEmail:failed", task.getException());
                             Toast.makeText(MainActivity.this, R.string.auth_failed,
                                     Toast.LENGTH_SHORT).show();
-                        } else {
+                        }else{
                             //TODO: Create VirtualKitchenProfile with Information on User + Storage
                             //TODO: Check if account already exists. On registration we need to put profile in DB
                             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-
                             VirtualKitchenProfile profile = new VirtualKitchenProfile(user, firstName.getText().toString(), lastName.getText().toString());
+                            handleVirtualKitchenProfile(profile);
 
                             updateUser();
-
-                            startMainKitchen(profile); // store the profile and start main kitchen activity
                         }
-//                        hideProgressDialog();
                         // [END_EXCLUDE]
                     }
                 });
@@ -238,15 +246,45 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
             GoogleSignInAccount acct = result.getSignInAccount();
             statusTextView.setText("Hello, " + acct.getDisplayName());
             firebaseAuthWithGoogle(acct);
-            Intent intent = new Intent(MainActivity.this, MainKitchenActivity.class);
+
             VirtualKitchenProfile profile = new VirtualKitchenProfile(acct);
-
-            startMainKitchen(profile); // start main kitchen activity
-
+            handleVirtualKitchenProfile(profile);
         } else {
-
+            statusTextView.setText("Sign-in Failed");
         }
     }
+
+    private void handleVirtualKitchenProfile(final VirtualKitchenProfile profile) {
+        myRef.child("users").child(profile.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot snapshot) {
+                if (snapshot.exists()) {
+                    // TODO: handle the case where the data already exists
+                    //Get data from the database
+                    VirtualKitchenProfile profile1 = snapshot.getValue(VirtualKitchenProfile.class);
+                    startMainKitchen(profile1); // start main kitchen activity
+                }
+                else {
+                    // TODO: handle the case where the data does not yet exist
+                    myRef.child("users").child(profile.getUid()).setValue(profile);
+                    startMainKitchen(profile); // start main kitchen activity
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w(TAG, "Failed to read value.", error.toException());
+            }
+        });
+        //Writes a new profile
+        FoodStorageData foodDB = profile.getFoodDB();
+
+
+        //get food db store under users
+        System.out.println("Handle Virtual Kitchen Profile");
+    }
+
 
     private void firebaseAuthWithGoogle(final GoogleSignInAccount acct) {
         Log.d(TAG, "firebaseAuthWithGoogle:" + acct.getId());
@@ -337,7 +375,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
     private void startMainKitchen(VirtualKitchenProfile profile) {
         Intent intent = new Intent(MainActivity.this, MainKitchenActivity.class);
-
         VKData.getInstance().setProfile(profile);
 
         intent.putExtra(PASS_ACCT, profile);

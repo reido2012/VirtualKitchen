@@ -19,6 +19,7 @@ public class VirtualKitchenProfile implements Parcelable {
         this.email = acct.getEmail();
         this.firstName = fname;
         this.lastName = lname;
+        this.foodDB = new FoodStorageData();
         this.uID = acct.getUid();
     }
 
@@ -26,8 +27,14 @@ public class VirtualKitchenProfile implements Parcelable {
         this.email = acct.getEmail();
         this.firstName = acct.getGivenName();
         this.lastName = acct.getFamilyName();
+        this.foodDB = new FoodStorageData();
         this.uID = acct.getId();
     }
+
+    public VirtualKitchenProfile(){
+        //Default constructor needed for snapshot
+    }
+
 
     protected VirtualKitchenProfile(Parcel in) {
     }
