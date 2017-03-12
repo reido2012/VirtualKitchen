@@ -279,7 +279,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
             }
         });
         //Writes a new profile
-        FoodStorageData foodDB = profile.getFoodDB();
 
 
         //get food db store under users

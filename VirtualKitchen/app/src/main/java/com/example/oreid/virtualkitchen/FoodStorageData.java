@@ -7,6 +7,8 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -40,20 +42,22 @@ public class FoodStorageData implements ChildEventListener {
         }
     }
 
-
-    @Override
-    public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-        FoodItem f = dataSnapshot.getValue(FoodItem.class);
-        kitchen.get(f.getLocation()).add(f);
-        Log.d(TAG, "Adding food " + f.getName() + " to " + f.getLocation());
-        HasListView lv = listUpdate.get(f.getLocation().toString());
+    private void updateLists(StorageArea s) {
+        HasListView lv = listUpdate.get(s.toString());
         if (lv != null) {
-            lv.setUpdatedList(get(f.getLocation()));
+            lv.setUpdatedList(get(s));
         }
         lv = listUpdate.get("All"); // if we have an all, update that too.
         if (lv != null) {
             lv.setUpdatedList(getAllItems());
         }
+    }
+
+    @Override
+    public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+        FoodItem f = dataSnapshot.getValue(FoodItem.class);
+        kitchen.get(f.getLocation()).add(f);
+        updateLists(f.getLocation());
     }
 
     @Override
@@ -128,57 +132,61 @@ public class FoodStorageData implements ChildEventListener {
         dbRef.child("users").child(userId).child(f.getLocation().toString()).push().setValue(f);
     }
 
+    private void removeFromFirebase(String foodName, String storageName) {
+        // Query firebase for the data
+        Query removeQuery = dbRef.child("users").child(userId).child(storageName).orderByChild("name").equalTo(foodName);
+
+        removeQuery.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for (DataSnapshot s: dataSnapshot.getChildren()) {
+                    s.getRef().removeValue();
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Log.e(TAG, "onCancelled", databaseError.toException());
+            }
+        });
+    }
+
     public void remove(int index, StorageArea s) {
+        FoodItem f = get(s).get(index);
 
-        ArrayList<FoodItem> area = get(s);
+        removeFromFirebase(f.getName(), s.toString());
+        get(s).remove(index);
 
-        if (area == null) {
-            return;
-        }
-
-        area.remove(index);
-
+        updateLists(s);
     }
 
     public void decrement(int index, StorageArea s) {
 
         ArrayList<FoodItem> area = get(s);
-
-        if (area == null) {
-            return;
-        }
-
         FoodItem f = area.get(index);
 
         int qty = f.getQty();
         if (qty == 1) {
             remove(index,s);
         } else {
-            f.setQty(qty - 1); // decrement quantity
+            // f.setQty(qty - 1); // decrement quantity
+            Log.d(TAG, "TODO Implement decrementing");
         }
+
     }
 
     public void remove(FoodItem f) {
         StorageArea s = f.getLocation();
         ArrayList area = get(s);
 
-        if (s == null) {
-            return;
-        }
-
         int index = area.indexOf(f);
 
-        decrement(index,s);
+        remove(index,s);
     }
 
     public void decrement(FoodItem f) {
         StorageArea s = f.getLocation();
         ArrayList area = get(s);
-
-        if (s == null) {
-            return;
-        }
-
         int index = area.indexOf(f);
 
         decrement(index,s);

@@ -4,7 +4,6 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -24,7 +23,7 @@ public class KitchenTab extends AppCompatActivity implements HasListView {
 
     private static final String TAG = "KitchenTab";
 
-    protected FoodStorageData db;
+    protected FoodStorageData db = VKData.getInstance().getFoodDB();;
 
     private int contentViewId = R.layout.activity_kitchen_tab;
     private int listViewId  = R.id.list_view;
@@ -40,8 +39,6 @@ public class KitchenTab extends AppCompatActivity implements HasListView {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(contentViewId);
-
-        db = VKData.getInstance().getFoodDB();
 
         listView = (ListView)findViewById(listViewId);
         listAdapter = new FoodItemAdapter(this,
@@ -61,7 +58,6 @@ public class KitchenTab extends AppCompatActivity implements HasListView {
     public ArrayList<FoodItem> getListData() { return this.listData; }
 
     public void setUpdatedList(ArrayList<FoodItem> newFood) {
-        Log.d(TAG, "list being updated by database.");
         setListData(newFood);
         updateUI();
     }
@@ -124,18 +120,12 @@ public class KitchenTab extends AppCompatActivity implements HasListView {
      * @param sa storage area associated with this tab
      * @param updateList update the list based on the storage area?
      */
-    public void setStorageArea(StorageArea sa, boolean updateList) {
+    public void setStorageArea(StorageArea sa) {
         this.storageArea = sa;
         db.setListUpdater(this.storageArea, this);
-
     }
 
-    // activity is resumed when it's tab is selected.
-    // Lists may have changed while in another tab, so update them.
-    public void onResume() {
-        super.onResume();
-        updateUI();
+    public StorageArea getStorageArea() {
+        return this.storageArea;
     }
-
-
 }

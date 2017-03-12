@@ -13,10 +13,12 @@ package com.example.oreid.virtualkitchen;
 public class VKData {
 
     private VirtualKitchenProfile profile;
+    private FoodStorageData db;
     private static final VKData holder = new VKData(); // static singleton class needs this
 
     public void setProfile(VirtualKitchenProfile p) {
         this.profile = p;
+        this.db = new FoodStorageData(profile.getUid());
     }
 
     public VirtualKitchenProfile getProfile() {
@@ -24,10 +26,6 @@ public class VKData {
     }
 
     public FoodStorageData getFoodDB() {
-        FoodStorageData db = this.getProfile().getFoodDB();
-        if (db == null) { // create new one with user's UID
-            db = new FoodStorageData(this.getProfile().getUid());
-        }
         return db;
     }
 

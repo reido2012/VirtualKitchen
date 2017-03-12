@@ -88,8 +88,6 @@ public class SortedTab extends KitchenTab {
 
         db.decrement(toDecrement);
 
-        updateUI();
-
     }
 
 }
