@@ -18,9 +18,4 @@ public class CupboardTab extends KitchenTab {
         setStorageArea(StorageArea.CUPBOARD, true);
         updateUI();
     }
-
-    public void updateUI() {
-        updateListData();
-        super.updateUI();
-    }
 }

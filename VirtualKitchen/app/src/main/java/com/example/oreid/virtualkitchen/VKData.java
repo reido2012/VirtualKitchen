@@ -24,7 +24,11 @@ public class VKData {
     }
 
     public FoodStorageData getFoodDB() {
-        return this.getProfile().getFoodDB();
+        FoodStorageData db = this.getProfile().getFoodDB();
+        if (db == null) { // create new one with user's UID
+            db = new FoodStorageData(this.getProfile().getUid());
+        }
+        return db;
     }
 
     // return instance of VKData to work with.

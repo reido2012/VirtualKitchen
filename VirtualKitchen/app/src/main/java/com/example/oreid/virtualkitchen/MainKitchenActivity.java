@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.widget.SearchView;
@@ -42,13 +41,6 @@ public class MainKitchenActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         // tab activity doesn't support action bar
-
-        VirtualKitchenProfile vkp = VKData.getInstance().getProfile();
-
-        if (vkp.getFoodDB() == null) {
-            vkp.setFoodDB(new FoodStorageData());
-            addSampleData();
-        }
 
         tabHost = (TabHost)findViewById(R.id.tabhost);
         LocalActivityManager mLocalActivityManager = new LocalActivityManager(this, false);
@@ -94,9 +86,6 @@ public class MainKitchenActivity extends AppCompatActivity {
 
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
         SearchView searchView = (SearchView)MenuItemCompat.getActionView(menu.findItem(R.id.search));
-        Log.d(TAG, "search view: " + searchView.toString());
-
-        Log.d(TAG, "search item: " + menu.findItem(R.id.search).toString());
 
         //searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
         searchView.setSearchableInfo(searchManager.getSearchableInfo(

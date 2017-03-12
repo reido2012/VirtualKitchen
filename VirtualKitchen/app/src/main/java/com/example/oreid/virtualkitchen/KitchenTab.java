@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -19,7 +20,7 @@ import java.util.ArrayList;
  *
  */
 
-public class KitchenTab extends AppCompatActivity {
+public class KitchenTab extends AppCompatActivity implements HasListView {
 
     private static final String TAG = "KitchenTab";
 
@@ -59,15 +60,10 @@ public class KitchenTab extends AppCompatActivity {
     }
     public ArrayList<FoodItem> getListData() { return this.listData; }
 
-    /**
-     * Updates list data based on the specified storage area. If null, then all items are retrieved.
-     */
-    public void updateListData() {
-        if (this.storageArea == null) {
-            this.setListData(db.getAllItems());
-        } else { // get items based on specified storage area.
-            this.setListData(db.get(this.storageArea));
-        }
+    public void setUpdatedList(ArrayList<FoodItem> newFood) {
+        Log.d(TAG, "list being updated by database.");
+        setListData(newFood);
+        updateUI();
     }
 
     /**
@@ -92,7 +88,6 @@ public class KitchenTab extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         String name = String.valueOf(txtField.getText());
                         db.add(new FoodItem(name, 1, storageArea, 3));
-                        updateUI();
                     }
                 })
                 .setNegativeButton("Cancel", null)
@@ -131,9 +126,8 @@ public class KitchenTab extends AppCompatActivity {
      */
     public void setStorageArea(StorageArea sa, boolean updateList) {
         this.storageArea = sa;
-        if (updateList) {
-            this.updateListData();
-        }
+        db.setListUpdater(this.storageArea, this);
+
     }
 
     // activity is resumed when it's tab is selected.

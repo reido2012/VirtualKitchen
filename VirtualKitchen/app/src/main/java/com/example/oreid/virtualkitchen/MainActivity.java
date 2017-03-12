@@ -262,6 +262,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                     // TODO: handle the case where the data already exists
                     //Get data from the database
                     VirtualKitchenProfile profile1 = snapshot.getValue(VirtualKitchenProfile.class);
+
                     startMainKitchen(profile1); // start main kitchen activity
                 }
                 else {
@@ -378,6 +379,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         VKData.getInstance().setProfile(profile);
 
         intent.putExtra(PASS_ACCT, profile);
+        Log.d(TAG, "UID = " + profile.getUid());
         startActivity(intent);
     }
 

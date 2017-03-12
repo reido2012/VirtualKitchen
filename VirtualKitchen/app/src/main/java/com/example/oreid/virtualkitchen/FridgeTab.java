@@ -19,9 +19,5 @@ public class FridgeTab extends KitchenTab {
         updateUI();
     }
 
-    public void updateUI() {
-        updateListData();
-        super.updateUI();
-    }
 
 }

@@ -19,16 +19,16 @@ public class VirtualKitchenProfile implements Parcelable {
         this.email = acct.getEmail();
         this.firstName = fname;
         this.lastName = lname;
-        this.foodDB = new FoodStorageData();
         this.uID = acct.getUid();
+        this.foodDB = new FoodStorageData(this.uID);
     }
 
     public VirtualKitchenProfile(GoogleSignInAccount acct) {
         this.email = acct.getEmail();
         this.firstName = acct.getGivenName();
         this.lastName = acct.getFamilyName();
-        this.foodDB = new FoodStorageData();
         this.uID = acct.getId();
+        this.foodDB = new FoodStorageData(this.uID);
     }
 
     public VirtualKitchenProfile(){
@@ -43,16 +43,32 @@ public class VirtualKitchenProfile implements Parcelable {
         return email;
     }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public String getFirstName() {
         return firstName;
+    }
+
+    public void setFirstName(String fname) {
+        this.firstName = fname;
     }
 
     public String getLastName() {
         return lastName;
     }
 
+    public void setLastName(String lname) {
+        this.lastName = lname;
+    }
+
     public String getUid() {
         return uID;
+    }
+
+    public void setUid(String uid) {
+        this.uID = uid;
     }
 
     public FoodStorageData getFoodDB() {

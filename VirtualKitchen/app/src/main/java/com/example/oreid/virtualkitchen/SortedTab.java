@@ -32,7 +32,6 @@ public class SortedTab extends KitchenTab {
         setListViewId(R.id.list_view_sorted);
         super.onCreate(savedInstanceState);
 
-        updateListData(); // ALL ITEMS - TODO sort them!
         updateUI();
 
         // set up spinner
@@ -57,6 +56,8 @@ public class SortedTab extends KitchenTab {
             }
 
         });
+
+        db.setListUpdater(null, this);
 
     }
 

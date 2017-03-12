@@ -17,12 +17,18 @@ import java.util.Date;
 
 public class FoodItem implements Serializable {
 
+    public FoodItem() {}
+
     public FoodItem(String name, int qty, StorageArea storedWhere, int shelfLife) {
         this.name = name;
         this.qty = qty;
         this.storedWhere = storedWhere;
         this.shelfLife = shelfLife;
         this.dateAdded = new Date(); // now
+    }
+
+    public void setDateAdded(Date dateAdded) {
+        this.dateAdded = dateAdded;
     }
 
     public int getQty() {
