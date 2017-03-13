@@ -19,11 +19,11 @@ import java.util.ArrayList;
  *
  */
 
-public class KitchenTab extends AppCompatActivity {
+public class KitchenTab extends AppCompatActivity implements HasListView {
 
     private static final String TAG = "KitchenTab";
 
-    protected FoodStorageData db;
+    protected FoodStorageData db = VKData.getInstance().getFoodDB();;
 
     private int contentViewId = R.layout.activity_kitchen_tab;
     private int listViewId  = R.id.list_view;
@@ -39,8 +39,6 @@ public class KitchenTab extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(contentViewId);
-
-        db = VKData.getInstance().getFoodDB();
 
         listView = (ListView)findViewById(listViewId);
         listAdapter = new FoodItemAdapter(this,
@@ -59,15 +57,9 @@ public class KitchenTab extends AppCompatActivity {
     }
     public ArrayList<FoodItem> getListData() { return this.listData; }
 
-    /**
-     * Updates list data based on the specified storage area. If null, then all items are retrieved.
-     */
-    public void updateListData() {
-        if (this.storageArea == null) {
-            this.setListData(db.getAllItems());
-        } else { // get items based on specified storage area.
-            this.setListData(db.get(this.storageArea));
-        }
+    public void setUpdatedList(ArrayList<FoodItem> newFood) {
+        setListData(newFood);
+        updateUI();
     }
 
     /**
@@ -92,7 +84,6 @@ public class KitchenTab extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         String name = String.valueOf(txtField.getText());
                         db.add(new FoodItem(name, 1, storageArea, 3));
-                        updateUI();
                     }
                 })
                 .setNegativeButton("Cancel", null)
@@ -129,19 +120,12 @@ public class KitchenTab extends AppCompatActivity {
      * @param sa storage area associated with this tab
      * @param updateList update the list based on the storage area?
      */
-    public void setStorageArea(StorageArea sa, boolean updateList) {
+    public void setStorageArea(StorageArea sa) {
         this.storageArea = sa;
-        if (updateList) {
-            this.updateListData();
-        }
+        db.setListUpdater(this.storageArea, this);
     }
 
-    // activity is resumed when it's tab is selected.
-    // Lists may have changed while in another tab, so update them.
-    public void onResume() {
-        super.onResume();
-        updateUI();
+    public StorageArea getStorageArea() {
+        return this.storageArea;
     }
-
-
 }

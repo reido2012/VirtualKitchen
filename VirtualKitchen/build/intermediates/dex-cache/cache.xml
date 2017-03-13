@@ -3,12 +3,156 @@
 
     <item
         is-multidex="true"
-        jar="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        jar="/Users/hollie/.android/build-cache/e4121c8f05933b19b9bfd3567f4a1b3d1cf8fae8/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.0"
+        revision="25.0.0"
+        sha1="9cca2818594cc5348806d6662133491e7ea0fa8d">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_576f368809efab6d764a9e38220426e1bcbae6f2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.1_e80707c00537c0a6b23ac1796844eddb7ccb03a4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/e4f66832f6140f038b733116f99cd2e42321f1bb/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b31976fc1a90d1fad3a9c591771bbad789fa0fdf/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/e6a13d5da5ac5b8303d240476153be96ea6924b7/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d20672631818754557255886d3feb43e7fe75a66">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4f47e7bcf64f7d720f03c9ae89571732adb463bf/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/46b4a5fda5b8a45471dd1d71d038b211ee4ac014/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e96c6974cf924e7ee3b230e6847d5731423388c9">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_708c9a7ecb204565137cc85e097fb03297f97ed4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/35fb7a9bd70974a2a64791582e3aa2840b55dbf4/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4963ce8582f2bdec44ef3fd9561c0b597c290040/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/35fb7a9bd70974a2a64791582e3aa2840b55dbf4/output/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_01b29771926c404db789000df9260d89d13eb60c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/9e10807f89a77c0656cb150b9770c20b13fdb15b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8f128aeeb7e31271b28a7adb9dac1f3a6ed9f5e7">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e476e7fd9765189cd87913614271462ffc7d64b5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/a1d0032e43055c6964ae9831e43ac507fcacaf31/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="756f6297eef79784f5e356dcd4f39865028b2bd0">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c4c3b6aa78a72ec00f14bab190127567ae759e17/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.0/constraint-layout-solver-1.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="90493f2ea15ff3f57416368123e5d4d180e0c6fd">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/constraint-layout-solver-1.0.0_ff4d0b636c9d747ab46bdd67cd6d47fedc861792/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/e86f0202e6ae950d6759bacc080a4326102996b7/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0360d7379058097d88ca2267f8e7b537bf0d9792/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/efba53c4a11e9913174685b32bc06a8e29fe7a0f/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="eb0d830e3eabb9deb9ec44869cf7ac7ea1ad794c">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_864d8c1f386c085d15354c6aab003d2df4510cf0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/9d50ebb7c6421fea9699061e36364ab5ecfc3897/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a8f61e59bde6bf6e713272d10123761ef26541c1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/c9b3ea43f528d71adde479d512556ea269eba615/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6addaba208e21c6da776d0ca75b6b23a6ccd5499">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_2be2789ae8657423e9edf7f44e8131c32ecc3691/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/487cb6d1f81d1a74bd68b88ec07bcf0fcf0eceff/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
         sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
-        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.1_1ee78814f6b6f62992e53c64bac643d9dbabda5c/classes.dex" />
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c4e5599e84d10d15f5793b54268c5bff697ed759/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/9d50ebb7c6421fea9699061e36364ab5ecfc3897/output/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_ce410a6a0b9b446aff1c1fa82ee77b1461c3ef68/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/07088dee794d9d4ae423a1227487e9adcf6863df/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="433f4d6aa5f21f19552afe0e6c5eff0fedba73ad">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_452b05720ba50ff37dc4cca310479fb8a4abdea0/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -21,111 +165,39 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.0.1/jars/classes.jar"
+        jar="/Users/hollie/.android/build-cache/1242039f0e99b815a7faabc3d22eaeb4a0cbd5c8/output/jars/libs/internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.0"
-        sha1="756f6297eef79784f5e356dcd4f39865028b2bd0">
-        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-10.0.1_655eabb3477f4e1c4fbf9131f42c65cdd9f9ef46/classes.dex" />
+        revision="25.0.0"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_0741b01d0471ff89e6c1da41d96c4c47c6edc5cb/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/10.0.1/jars/classes.jar"
+        jar="/Users/hollie/.android/build-cache/d1b5efe44abdeaae2324ba00b6a4a16ca4a56504/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.0"
-        sha1="e2185aff89caeb337b1ffc36d5e525d8318e7cfe">
-        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-auth-10.0.1_1d9350479c195e0d22ea1689b59bf5941f96872c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_84e068ed5618c50b66daf543ba0ca5120e2a4174/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database-connection/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
+        revision="25.0.0"
         sha1="8010ae6ed32828a145b25ec97bc07b7a83c6318f">
-        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-connection-10.0.1_f2a37d322bbe9496f2428353da941c96203a2c95/classes.dex" />
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7ea0b410183a55940743b94301ce00170fc03250/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jar="/Users/hollie/.android/build-cache/6133694af88fd987ded5af74b1d83dab8b78a74b/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.0"
-        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
-        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_88ecb9b02271f14dc4db319e423b189addf247af/classes.dex" />
+        revision="25.0.0"
+        sha1="e2185aff89caeb337b1ffc36d5e525d8318e7cfe">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_08594bc5e6eefef21fb7c61fe20ac164a4c9d10a/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/jars/classes.jar"
+        jar="/Users/hollie/.android/build-cache/e8cfd146355a42d3ac01dfaa2a87da427ab4a900/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.0"
+        revision="25.0.0"
         sha1="25438f55fc6d906a0e72f30b21487541430ede43">
-        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-10.0.1_6e66293a41f068c9e9fbd792e2df696ffd0ac205/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
-        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.1_d14ced0f2fd665eb528d60bd46a507e9f2db2e53/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
-        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.1_91b741b12608d764197f26e4c166447cfee8d054/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
-        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.1_755b74d788f833f0e48d9aa047cb232a16f2f019/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="4b17463c814bdc562fb0392fa3494063623a0904">
-        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-messaging-10.0.1_972740a69be50896390321dce3c5d16cdf5db42a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="e96c6974cf924e7ee3b230e6847d5731423388c9">
-        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-auth-base-10.0.1_5631f6183da487ddbe67a1de405287a58371fe96/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="486371f97baad8e607f332f20fee1d3dd00a731a">
-        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-iid-10.0.1_3db98380ac1576579027fa6224720e0178a4248c/classes.dex" />
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_5c0360e5db091580897b3f3ea1f179dc4ede2f01/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -138,174 +210,120 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/exploded-aar/com.android.support.constraint/constraint-layout/1.0.0/jars/classes.jar"
+        jar="/Users/hollie/.android/build-cache/498046c9f007d01c6ded5044682444e731a14916/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.0"
-        sha1="d20672631818754557255886d3feb43e7fe75a66">
-        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support.constraint-constraint-layout-1.0.0_85e788d484f50d9ae4672dc52daed8bd57160c2c/classes.dex" />
+        revision="25.0.0"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0358338cf1c2d04098ebb98e11cbf59f39985ce7/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/10.0.1/jars/classes.jar"
+        jar="/Users/hollie/.android/build-cache/ddbc2e2158018c690df5f48ba6980c92001c5d3d/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.0"
-        sha1="6116e0e7069de7fc259aac8e08b84f32c2038231">
-        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-impl-10.0.1_fcf3ce8d09d5b185ced1523c30754509f0447ccc/classes.dex" />
+        revision="25.0.0"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_471b14cbccf0953d41894e582032439168849f66/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth/10.0.1/jars/classes.jar"
+        jar="/Users/hollie/.android/build-cache/c7602053e7e01ef05b75dd966bdcefb369c03b94/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.0"
-        sha1="9cca2818594cc5348806d6662133491e7ea0fa8d">
-        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-10.0.1_61e71ef03ff8512b216eefff624d3e5148a0d866/classes.dex" />
+        revision="25.0.0"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7aca25757003964762101b4fa073c61c1da41ad9/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database/10.0.1/jars/classes.jar"
+        jar="/Users/hollie/.android/build-cache/387d9dd565dd7c69ae5334d0225431bd7ebb525e/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.0"
-        sha1="8f128aeeb7e31271b28a7adb9dac1f3a6ed9f5e7">
-        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-10.0.1_0126fdc8a9e48000baf0420e02ab4965bf027af2/classes.dex" />
+        revision="25.0.0"
+        sha1="4b17463c814bdc562fb0392fa3494063623a0904">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_65bc6637b7e0771e0efb02fd6f330c9a46526d81/classes.dex" />
     </item>
     <item
         is-multidex="true"
         jar="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.0"
-        sha1="781eeb7ca305bbd487a2962469460b3a732a7753">
-        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_d754a288d5a99fc15340f5488d1b8532910395c4/classes.dex" />
+        revision="25.0.0"
+        sha1="270103f429b4958556443bf9b02d635da110d84e">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_d754a288d5a99fc15340f5488d1b8532910395c4/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.1/jars/classes.jar"
+        jar="/Users/hollie/.android/build-cache/8e03b658d592ce4caf1bee926053f51cdca2b09c/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.0"
-        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
-        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-24.2.1_2e5cea2de33ce4ecbdf3fec1e5fd254ee19ff20c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="6addaba208e21c6da776d0ca75b6b23a6ccd5499">
-        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tasks-10.0.1_e331a0cb5c3685941312d846658c9e22c91e1d9d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="867dad63c33388ff8c7644b236579355036d075f">
-        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_02f7583ee896f8314efd19270937caa7f13f7e28/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="eb0d830e3eabb9deb9ec44869cf7ac7ea1ad794c">
-        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-common-10.0.1_061e032fb5130fb0054d587b3fb23e1f558c1e5d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
+        revision="25.0.0"
         sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
-        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.1_d6adee25a2a22ddd5246db80567f88b1c370a0bd/classes.dex" />
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8c27a686b73805f09c178682141ea89cf3ff8d78/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/jars/classes.jar"
+        jar="/Users/hollie/.android/build-cache/1242039f0e99b815a7faabc3d22eaeb4a0cbd5c8/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.0"
+        revision="25.0.0"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1e654c6c4422434b8e2a93a32b3d5aa4b28dd111/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/8e03b658d592ce4caf1bee926053f51cdca2b09c/output/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_1323c4f8098b95b5b3af4af01e38375277467d10/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/04524e46438a2e95369cffa363343b346a716d47/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6116e0e7069de7fc259aac8e08b84f32c2038231">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_123c0d6a52fb27936e07a8a55b3893b3aa61f1ed/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/487cb6d1f81d1a74bd68b88ec07bcf0fcf0eceff/output/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_7c93a32d74868f95a33a19560f92175d65465fdb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/6cd599cf7088836addc6d3396fc9100eedb2659b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
         sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
-        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-24.2.1_080286f92d8ad819f93cc38e6e1804eafde859c2/classes.dex" />
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b8fc16e8a76260863df9c7dde71b9998012770a4/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jar="/Users/hollie/.android/build-cache/bee5659f861d54a2fb8effbca0182a7dbbddac0d/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.0"
-        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
-        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_597c3948c33d4731f5fc01f391cef1cec86cdf06/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
-        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_0ba59ba7dd7fbc5410a9834d33378cda5e62fc67/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
-        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.2.1_6ad2b11d3c3a70d161989c8a4af5cc7a46d882dc/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="433f4d6aa5f21f19552afe0e6c5eff0fedba73ad">
-        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-10.0.1_ca041ebe79d636edc8aca308f43aafbc2e914a8c/classes.dex" />
+        revision="25.0.0"
+        sha1="486371f97baad8e607f332f20fee1d3dd00a731a">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ecb7bae70de9ed0e2ad136aac0067720a1811bba/classes.dex" />
     </item>
     <item
         is-multidex="true"
         jar="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.0"
-        sha1="64a1756ee40e2709ab15d2d3392a79ae7c81f90a">
-        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_87b7c9f7eb704aaf40daaa194f9beeff083d2869/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
-        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_edba0e2b131b04cd57a86902e6d0b7b935d890e8/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
-        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_42884e5242d63142bf1e703cc42980c3a0d07192/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.1_ed5ef1ed8378fe82c204268e021e7eb2c065b598/classes.dex" />
+        revision="25.0.0"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_87b7c9f7eb704aaf40daaa194f9beeff083d2869/classes.dex" />
     </item>
 
 </items>

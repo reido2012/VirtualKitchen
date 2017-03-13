@@ -2,9 +2,22 @@ package com.example.oreid.virtualkitchen;
 
 import android.util.Log;
 
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
+
+import static com.example.oreid.virtualkitchen.StorageArea.CUPBOARD;
+import static com.example.oreid.virtualkitchen.StorageArea.FREEZER;
+import static com.example.oreid.virtualkitchen.StorageArea.FRIDGE;
 
 /**
  * This class manages storage of items in the virtual kitchen.
@@ -14,48 +27,92 @@ import java.util.Comparator;
  * Created by hollie on 25/02/2017.
  */
 
-public class FoodStorageData {
+public class FoodStorageData implements ChildEventListener {
 
     /**
-     * A convenient method to get items the items from a specific storage area
+     * Attach a class with list view so it can be updated when a storage area is updated.
+     * @param s storage area associated with the tab.
+     * @param l page with list view.
+     */
+    public void setListUpdater(StorageArea s, HasListView l) {
+        if (s == null) { // none specified, use all.
+            listUpdate.put("All",l);
+        } else {
+            listUpdate.put(s.toString(),l);
+        }
+    }
+
+    private void updateLists(StorageArea s) {
+        HasListView lv = listUpdate.get(s.toString());
+        if (lv != null) {
+            lv.setUpdatedList(get(s));
+        }
+        lv = listUpdate.get("All"); // if we have an all, update that too.
+        if (lv != null) {
+            lv.setUpdatedList(getAllItems());
+        }
+    }
+
+    @Override
+    public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+        FoodItem f = dataSnapshot.getValue(FoodItem.class);
+        kitchen.get(f.getLocation()).add(f);
+        updateLists(f.getLocation());
+    }
+
+    @Override
+    public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+    }
+
+    @Override
+    public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+    }
+
+    @Override
+    public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+    }
+
+    @Override
+    public void onCancelled(DatabaseError databaseError) {
+
+    }
+
+    /**
+     * A convenient method to get the items from a specific storage area
      * @param storageArea storage area to get items from.
      * @return items stored in this storage area
      */
     public ArrayList<FoodItem> get(StorageArea storageArea) {
-        switch(storageArea) {
-            case FRIDGE:
-                return getFridgeItems();
-            case FREEZER:
-                return getFreezerItems();
-            case CUPBOARD:
-                return getCupboardItems();
-            default:
-                return null;
-        }
+        return kitchen.get(storageArea);
     }
 
     public ArrayList<FoodItem> getFridgeItems() {
-        return this.fridge;
+        return kitchen.get(FRIDGE);
     }
 
     public void addToFridge(FoodItem f) {
-        this.fridge.add(f);
+        dbRef.child("users").child(userId).child(FRIDGE.toString()).push().setValue(f);
     }
 
     public ArrayList<FoodItem> getFreezerItems() {
-        return this.freezer;
+        return kitchen.get(FREEZER);
     }
 
     public void addToFreezer(FoodItem f) {
-        this.freezer.add(f);
+        dbRef.child("users").child(userId).child(FREEZER.toString()).push().setValue(f);
+
     }
 
     public ArrayList<FoodItem> getCupboardItems() {
-        return this.cupboard;
+        return kitchen.get(CUPBOARD);
     }
 
     public void addToCupboard(FoodItem f) {
-        this.cupboard.add(f);
+        dbRef.child("users").child(userId).child(CUPBOARD.toString()).push().setValue(f);
+
     }
 
     public ArrayList<FoodItem> getAllItems() {
@@ -72,74 +129,64 @@ public class FoodStorageData {
      * @param f item to add
      */
     public void add(FoodItem f) {
-        switch(f.getLocation()) {
-            case FRIDGE:
-                addToFridge(f);
-                break;
-            case FREEZER:
-                addToFreezer(f);
-                break;
-            case CUPBOARD:
-                addToCupboard(f);
-                break;
-            default:
-                // ERROR - storage area is not recognised.
-                Log.d(TAG, "Unable to add item because of invalid storage area \'" + f.getLocation() + "\'.");
+        dbRef.child("users").child(userId).child(f.getLocation().toString()).push().setValue(f);
+    }
 
-        }
+    private void removeFromFirebase(String foodName, String storageName) {
+        // Query firebase for the data
+        Query removeQuery = dbRef.child("users").child(userId).child(storageName).orderByChild("name").equalTo(foodName);
+
+        removeQuery.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for (DataSnapshot s: dataSnapshot.getChildren()) {
+                    s.getRef().removeValue();
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Log.e(TAG, "onCancelled", databaseError.toException());
+            }
+        });
     }
 
     public void remove(int index, StorageArea s) {
+        FoodItem f = get(s).get(index);
 
-        ArrayList<FoodItem> area = get(s);
+        removeFromFirebase(f.getName(), s.toString());
+        get(s).remove(index);
 
-        if (area == null) {
-            return;
-        }
-
-        area.remove(index);
-
+        updateLists(s);
     }
 
     public void decrement(int index, StorageArea s) {
 
         ArrayList<FoodItem> area = get(s);
-
-        if (area == null) {
-            return;
-        }
-
         FoodItem f = area.get(index);
 
         int qty = f.getQty();
         if (qty == 1) {
             remove(index,s);
         } else {
-            f.setQty(qty - 1); // decrement quantity
+            // f.setQty(qty - 1); // decrement quantity
+            Log.d(TAG, "TODO Implement decrementing");
         }
+
     }
 
     public void remove(FoodItem f) {
         StorageArea s = f.getLocation();
         ArrayList area = get(s);
 
-        if (s == null) {
-            return;
-        }
-
         int index = area.indexOf(f);
 
-        decrement(index,s);
+        remove(index,s);
     }
 
     public void decrement(FoodItem f) {
         StorageArea s = f.getLocation();
         ArrayList area = get(s);
-
-        if (s == null) {
-            return;
-        }
-
         int index = area.indexOf(f);
 
         decrement(index,s);
@@ -148,6 +195,9 @@ public class FoodStorageData {
 
 
     public ArrayList<FoodItem> findByName(String query) {
+        if (query.equals("")) { // no query gets empty list.
+            return new ArrayList<FoodItem>();
+        }
         // very basic approach where it goes through all items and finds all with the given string in the name.
         ArrayList<FoodItem> allItems = getAllItems();
         ArrayList<FoodItem> searchResults = new ArrayList<FoodItem>();
@@ -176,9 +226,28 @@ public class FoodStorageData {
         return food;
     }
 
-    public static final String TAG = "FoodStorageData";
-    private ArrayList<FoodItem> fridge = new ArrayList<FoodItem>();
-    private ArrayList<FoodItem> freezer = new ArrayList<FoodItem>();
-    private ArrayList<FoodItem> cupboard = new ArrayList<FoodItem>();
+    /**
+     * Creates a new instance of the food storage database (or interface with the Firebase)
+     * @param uID firebase user id, used to get access to user's data.
+     */
+    public FoodStorageData(String uID) {
+        this.userId = uID;
 
+        // Listen for changes on the firebae.
+        dbRef.child("users").child(userId).child(FRIDGE.toString()).addChildEventListener(this);
+        dbRef.child("users").child(userId).child(FREEZER.toString()).addChildEventListener(this);
+        dbRef.child("users").child(userId).child(CUPBOARD.toString()).addChildEventListener(this);
+
+        kitchen.put(FRIDGE, new ArrayList<FoodItem>());
+        kitchen.put(FREEZER, new ArrayList<FoodItem>());
+        kitchen.put(CUPBOARD, new ArrayList<FoodItem>());
+
+    }
+
+    public static final String TAG = "FoodStorageData";
+    private String userId;
+    private DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference();;
+
+    private HashMap<StorageArea,ArrayList<FoodItem>> kitchen = new HashMap<>(); // stored food data
+    private HashMap<String,HasListView> listUpdate = new HashMap<>(); // list views that need updating.
 }

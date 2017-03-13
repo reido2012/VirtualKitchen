@@ -13,7 +13,6 @@ public class VirtualKitchenProfile implements Parcelable {
     private String firstName;
     private String lastName;
     private String uID;
-    private FoodStorageData foodDB; // TODO 25/02/16 (Hollie) - please could someone integrate this into our firebase, or if it's wrong tell me :)
 
     public VirtualKitchenProfile(FirebaseUser acct, String fname, String lname) {
         this.email = acct.getEmail();
@@ -29,6 +28,11 @@ public class VirtualKitchenProfile implements Parcelable {
         this.uID = acct.getId();
     }
 
+    public VirtualKitchenProfile(){
+        //Default constructor needed for snapshot
+    }
+
+
     protected VirtualKitchenProfile(Parcel in) {
     }
 
@@ -36,24 +40,32 @@ public class VirtualKitchenProfile implements Parcelable {
         return email;
     }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public String getFirstName() {
         return firstName;
+    }
+
+    public void setFirstName(String fname) {
+        this.firstName = fname;
     }
 
     public String getLastName() {
         return lastName;
     }
 
+    public void setLastName(String lname) {
+        this.lastName = lname;
+    }
+
     public String getUid() {
         return uID;
     }
 
-    public FoodStorageData getFoodDB() {
-        return foodDB;
-    }
-
-    public void setFoodDB(FoodStorageData fsd) {
-        this.foodDB = fsd;
+    public void setUid(String uid) {
+        this.uID = uid;
     }
 
     @Override

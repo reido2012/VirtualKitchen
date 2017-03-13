@@ -24,6 +24,12 @@
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/colorAccent" />
 
+        <provider
+            android:authorities="com.example.oreid.virtualkitchen.KitchenRecentSuggestionsProvider"
+            android:name=".KitchenRecentSuggestionsProvider" >
+        </provider>
+
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,11 +41,7 @@
         <activity
             android:name=".MainKitchenActivity"
             android:label="@string/title_activity_main_kitchen"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
-
-
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".SortedTab"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -53,10 +55,10 @@
             android:name=".CupboardTab"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ItemDetailActivity" />
-        <activity android:name=".KitchenSearchActivity"
+        <activity
+            android:name=".KitchenSearchActivity"
             android:launchMode="singleTop"
             android:parentActivityName=".MainKitchenActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
@@ -64,8 +66,8 @@
             <meta-data
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
-
         </activity>
+        <activity android:name=".AddItemActivity"></activity>
     </application>
 
 </manifest>

@@ -13,14 +13,10 @@ public class FreezerTab extends KitchenTab {
     public void onCreate(Bundle savedInstanceState) {
         setTabName("Freezer");
         super.onCreate(savedInstanceState);
-        super.setStorageArea(StorageArea.FREEZER, false);
+        super.setStorageArea(StorageArea.FREEZER);
 
         updateUI();
     }
 
-    public void updateUI() {
-        updateListData();
-        super.updateUI();
-    }
 
 }

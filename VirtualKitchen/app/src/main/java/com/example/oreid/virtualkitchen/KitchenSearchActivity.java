@@ -3,6 +3,7 @@ package com.example.oreid.virtualkitchen;
 import android.app.SearchManager;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.SearchRecentSuggestions;
 import android.view.View;
 
 import java.util.ArrayList;
@@ -32,8 +33,28 @@ public class KitchenSearchActivity extends KitchenTab {
         // handles search query being passed to the activity via an intent
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             String query = intent.getStringExtra(SearchManager.QUERY);
+            saveSuggestion(query);
             doSearch(query);
+        } else if (Intent.ACTION_VIEW.equals(intent.getAction())) {
+            // TODO hollie 8/03/17 show item in detail view once we have one.
+//            Uri detailUri = intent.getData();
+//            String id = detailUri.getLastPathSegment();
+//            Intent detailsIntent = new Intent(getApplicationContext(), DetailsActivity.class);
+//            detailsIntent.putExtra("ID", id);
+//            startActivity(detailsIntent);
+//            finish();
         }
+
+    }
+
+    // saves recent search suggestion so that it can be displayed.
+    private void saveSuggestion(String query) {
+        SearchRecentSuggestions suggestions =
+                new SearchRecentSuggestions(this,
+                        KitchenRecentSuggestionsProvider.AUTHORITY,
+                        KitchenRecentSuggestionsProvider.MODE);
+        suggestions.saveRecentQuery(query, null);
+
     }
 
     public void doSearch(String query) {
