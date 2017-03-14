@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -52,13 +52,6 @@
         <activity
             android:name=".CupboardTab"
             android:theme="@style/AppTheme.NoActionBar" />
-<<<<<<< HEAD
-        <activity android:name=".SortedTab" />
-        <activity android:name=".FridgeTab" />
-        <activity android:name=".FreezerTab" />
-        <activity android:name=".CupboardTab" />
-        <activity android:name=".AddItem"></activity>
-=======
         <activity android:name=".ItemDetailActivity" />
         <activity android:name=".KitchenSearchActivity"
             android:launchMode="singleTop"
@@ -73,7 +66,9 @@
                 android:resource="@xml/searchable" />
 
         </activity>
->>>>>>> c63497da129fba6db191cb2e3f96675d31b0f18f
+        <activity android:name=".AddItem"
+            android:label="Add Item" />
+
     </application>
 
 </manifest>
