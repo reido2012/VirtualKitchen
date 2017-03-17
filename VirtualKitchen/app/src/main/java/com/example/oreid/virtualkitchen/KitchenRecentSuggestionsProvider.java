@@ -36,7 +36,6 @@ public class KitchenRecentSuggestionsProvider extends SearchRecentSuggestionsPro
     public Cursor query(Uri uri, String[] projection, String selection,
                         String[] selectionArgs, String sortOrder) {
         String query = selectionArgs[0];
-        Log.d(TAG, query);
         if (!SearchManager.SUGGEST_URI_PATH_QUERY.equals(query)) {
             MatrixCursor cursor = new MatrixCursor(COLUMNS);
 
@@ -47,7 +46,6 @@ public class KitchenRecentSuggestionsProvider extends SearchRecentSuggestionsPro
                     cursor.addRow(createRow(new Integer(n), obj.getName()));
                     n++;
                 }
-                Log.d(TAG, "Search suggestions generated: " + Integer.toString(n));
 
             } catch (Exception e) {
                 Log.e(TAG, "Failed to lookup " + query, e);

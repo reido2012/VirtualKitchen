@@ -2,6 +2,8 @@ package com.example.oreid.virtualkitchen;
 
 import android.os.Bundle;
 
+import static com.example.oreid.virtualkitchen.StorageArea.FRIDGE;
+
 /**
  * Fridge view in kitchen view
  *
@@ -15,7 +17,9 @@ public class FridgeTab extends KitchenTab {
     public void onCreate(Bundle savedInstanceState) {
         setTabName("Fridge");
         super.onCreate(savedInstanceState);
-        super.setStorageArea(StorageArea.FRIDGE);
+        super.setStorageArea(FRIDGE);
+
+        setListData(db.get(FRIDGE));
         updateUI();
     }
 
