@@ -12,6 +12,6 @@
     <item android:id="@+id/add"
         android:title="@string/add"
         android:icon="@drawable/ic_add"
-        android:showAsAction="collapseActionView|ifRoom"/>
+        yourapp:showAsAction="always"/>
 
 </menu>

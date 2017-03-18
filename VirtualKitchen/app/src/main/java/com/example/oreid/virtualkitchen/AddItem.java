@@ -9,17 +9,25 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.view.View.OnFocusChangeListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-public class AddItem extends AppCompatActivity {
+import static com.example.oreid.virtualkitchen.StorageArea.stringValues;
+import static java.lang.Integer.parseInt;
+
+public class AddItem extends AppCompatActivity implements OnFocusChangeListener {
 
     private static final String TAG = "AddItem";
 
@@ -30,9 +38,20 @@ public class AddItem extends AppCompatActivity {
     private EditText textExpiry;
     private Button btnAddFav;
     private Button btnSaveItem;
+    private Button btnCancel;
     private Spinner spinnerCat;
+    private Spinner spinnerStoragearea;
     private  EditText textDate;
     private Button btnChangeDate;
+    private TextView errorMessage;
+
+    private boolean textExpiryFocus = false;
+    private boolean textDateFocus = false;
+    private boolean fav = false;
+
+    private DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+
+
 
     private int year;
     private int month;
@@ -47,6 +66,59 @@ public class AddItem extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(contentViewId);
         initialiseComponents();
+        setStorageArea();
+
+    }
+
+    private void setStorageArea() {
+        String storageArea = getIntent().getStringExtra("STORAGEAREA");
+        if (storageArea != null) {
+            String[] areas = stringValues();
+            for (int i = 0; i < areas.length; i++) {
+                if (storageArea.equals(areas[i])) {
+                    spinnerStoragearea.setSelection(i);
+                    break;
+                }
+            }
+        }
+    }
+
+    private boolean validate() {
+
+        String msg = "";
+
+        if (textName.getText().toString().length() == 0) {
+            msg += "Please provide a name for your item. ";
+        }
+
+        if (textQuan.getText().toString().length() == 0) {
+            msg += "Please provide a quantity. ";
+        } else {
+            try {
+                int qty = Integer.parseInt(textQuan.getText().toString());
+                if (qty <= 0) {
+                    msg += "Please provide a positive quantity - you can only add one or more items to the kitchen. ";
+                }
+            } catch (NumberFormatException e) {
+                msg += "Please enter a number for item quantity. ";
+            }
+        }
+
+        if (textExpiry.getText().toString().length() == 0) {
+            msg += "Please provide a shelf life, or select an expiry date. ";
+        } else {
+            try {
+                int exp = Integer.parseInt(textExpiry.getText().toString());
+                if (exp <= 0) {
+                    msg += "Please provide a positive shelf life - you can't keep out of date food in the kitchen. ";
+                }
+            } catch (NumberFormatException e) {
+                msg += "Please enter a number for item quantity. ";
+            }
+        }
+
+        errorMessage.setText(msg);
+        return msg.length() == 0;
     }
 
     public void  initialiseComponents(){
@@ -56,10 +128,13 @@ public class AddItem extends AppCompatActivity {
         textExpiry = (EditText) findViewById(R.id.editTextExpiry);
         textChangeListener(textExpiry);
         btnAddFav = (Button) findViewById(R.id.addFavourite);
+        btnFavListener(btnAddFav);
         //on click add to fav
         btnSaveItem = (Button) findViewById(R.id.doneItem);
         btnSaveItem.setText("Add Item");
         btnSaveListener(btnSaveItem);
+        btnCancel = (Button)findViewById(R.id.cancelButton);
+        btnCancelListener(btnCancel);
         //add text to button
         //on click save the data
         spinnerCat = (Spinner) findViewById(R.id.spinnerCategory);
@@ -67,44 +142,96 @@ public class AddItem extends AppCompatActivity {
                 this, R.array.array_category, R.layout.spinner_layout);
         catAdapter.setDropDownViewResource(R.layout.spinner_layout);
         spinnerCat.setAdapter(catAdapter);
+        spinnerStoragearea = (Spinner) findViewById(R.id.spinnerStoragearea);
+        ArrayAdapter<String> storageAdapter = new ArrayAdapter<>(this, R.layout.spinner_layout, StorageArea.stringValues());
+        storageAdapter.setDropDownViewResource(R.layout.spinner_layout);
+        spinnerStoragearea.setAdapter(storageAdapter);
         textDate = (EditText) findViewById(R.id.editTextDate);
+        dateChangeListener(textDate);
         setCurrentDateOnView();
         addListenerOnButton();
-
+        errorMessage = (TextView) findViewById(R.id.error_message);
     }
 
     private void btnSaveListener(Button btnSaveItem) {
         btnSaveItem.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
+                if (!validate()) {
+                    // validation failed. do nothing so the user can correct their mistakes.
+                    return;
+                }
+
                 String name = String.valueOf(textName.getText());
                 String quantity = String.valueOf(textQuan.getText());
                 String expiry = String.valueOf(textExpiry.getText());
+                String category = spinnerCat.getSelectedItem().toString();
+                String storage = spinnerStoragearea.getSelectedItem().toString();
+                String favourite = fav ? "True" : "False";
+
                 Intent returnIntent = new Intent(AddItem.this, MainKitchenActivity.class);
                 returnIntent.putExtra("NAME",name);
                 returnIntent.putExtra("QUAN",quantity);
                 returnIntent.putExtra("EXP",expiry);
+                returnIntent.putExtra("CAT", category);
+                returnIntent.putExtra("STORAGE", storage);
+                returnIntent.putExtra("FAV", favourite);
                 setResult(Activity.RESULT_OK,returnIntent);
                 finish();
             }
         });
     }
 
-    private void textChangeListener(final EditText textExpiry) {
-        textExpiry.addTextChangedListener(new TextWatcher() {
+    private void btnCancelListener(Button btnCancel) {
+        btnCancel.setOnClickListener(new Button.OnClickListener() {
+            public void onClick(View v) {
+                Intent cancelIntent = new Intent(AddItem.this, MainKitchenActivity.class);
+                setResult(Activity.RESULT_CANCELED,cancelIntent);
+                finish();
+            }
+        });
+    }
+
+    private void btnFavListener(Button btnCancel) {
+        btnCancel.setOnClickListener(new Button.OnClickListener() {
+            public void onClick(View v) {
+                String msg = "";
+                if (fav) {
+                    msg = "This item is no longer a favourite.";
+                    fav = false;
+                } else {
+                    msg = "Adding to favourites...";
+                    fav = true;
+                }
+                Toast.makeText(AddItem.this,msg,Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    private void dateChangeListener(final EditText textDate) {
+        textDate.setOnFocusChangeListener(this);
+        textDate.addTextChangedListener(new TextWatcher() {
+
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
 
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                int expDays = Integer.parseInt(String.valueOf(textExpiry.getText()));
-                SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-                Calendar c = Calendar.getInstance();
-                c.setTime(new Date()); // Now use today date.
-                c.add(Calendar.DATE, expDays); // Adding 5 days
-                textDate.setText(sdf.format(c.getTime()));
+                if (!textDateFocus) {
+                    return; // do not change if no focus.
+                }
+
+                String expDateString = textDate.getText().toString();
+                Date currExp;
+                try {
+                    currExp = dateFormat.parse(expDateString);
+                } catch (ParseException e) {
+                    return;
+                }
+                long diff = currExp.getTime() - (new Date()).getTime();
+                long days = diff / (24 * 60 * 60 * 1000);
+                textExpiry.setText(Integer.toString((int)days));
             }
 
             @Override
@@ -114,22 +241,53 @@ public class AddItem extends AppCompatActivity {
         });
     }
 
-    // display current date
-    public void setCurrentDateOnView() {
+    @Override
+    // Checking if the textviews have focus. Used in the text change listener to only update fields
+    // with focus.
+    public void onFocusChange(View v, boolean hasFocus)  {
 
-        //dpResult = (DatePicker) findViewById(R.id.dpResult);
+        textExpiryFocus = false;
+        textDateFocus = false;
 
-        final Calendar currCal = Calendar.getInstance();
-        year = currCal.get(Calendar.YEAR);
-        month = currCal.get(Calendar.MONTH);
-        day = currCal.get(Calendar.DAY_OF_MONTH);
+        if (v.equals(textExpiry)) {
+            textExpiryFocus = true;
+        } else if (v.equals(textDate)) {
+            textDateFocus = true;
+        }
 
-        // set current date into textview
-        textDate.setText(new StringBuilder()
-                // Month is 0 based, just add 1
-                .append(day).append("-").append(month + 1).append("-")
-                .append(year).append(" "));
+    }
 
+    private void textChangeListener(final EditText textExpiry) {
+        textExpiry.setOnFocusChangeListener(this);
+        textExpiry.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (!textExpiryFocus) {
+                    return; // no focus, no change.
+                }
+                String txtVal = textExpiry.getText().toString();
+                int expDays;
+                try {
+                    expDays = parseInt(txtVal);
+                } catch (NumberFormatException e) {
+                    return; // do nothing. they entered an invalide value.
+                }
+                Calendar c = Calendar.getInstance();
+                c.setTime(new Date()); // Now use today date.
+                c.add(Calendar.DATE, expDays); // Adding 5 days
+                textDate.setText(dateFormat.format(c.getTime()));
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
     }
 
     public void addListenerOnButton() {
@@ -160,6 +318,36 @@ public class AddItem extends AppCompatActivity {
         return null;
     }
 
+    // display current date
+    public void setCurrentDateOnView() {
+        Date now = new Date();
+        Calendar nowCal = Calendar.getInstance();
+        nowCal.setTime(now);
+        int year = nowCal.get(Calendar.YEAR);
+        int month = nowCal.get(Calendar.MONTH);
+        int day = nowCal.get(Calendar.DAY_OF_MONTH);
+        setDateOnView(day,month,year);
+        textExpiry.setText("");
+    }
+
+    public void setDateOnView(int day, int month, int year) {
+        final Calendar currCal = Calendar.getInstance();
+
+        Calendar expCal = Calendar.getInstance();
+        expCal.set(year,month,day);
+
+        Date expDate = expCal.getTime();
+        Date currDate = currCal.getTime();
+
+        long diff = expDate.getTime() - currDate.getTime();
+        long days = diff / (24 * 60 * 60 * 1000);
+
+        textExpiry.setText(Integer.toString((int)days));
+
+        //set selected date into textview
+        textDate.setText(dateFormat.format(expDate));
+    }
+
     private DatePickerDialog.OnDateSetListener datePickerListener
             = new DatePickerDialog.OnDateSetListener() {
 
@@ -167,27 +355,8 @@ public class AddItem extends AppCompatActivity {
         public void onDateSet(DatePicker view, int selectedYear,
                               int selectedMonth, int selectedDay) {
 
-            final Calendar currCal = Calendar.getInstance();
+            setDateOnView(selectedDay, selectedMonth, selectedYear);
 
-            year = selectedYear;
-            month = selectedMonth;
-            day = selectedDay;
-            /*
-            Calendar expCal = Calendar.getInstance();
-            expCal.set(year,month+1,day);
-
-            Date expDate = expCal.getTime();
-            Date currDate= currCal.getTime();
-
-            long diff = expDate.getTime() - currDate.getTime();
-            long days = diff / (24 * 60 * 60 * 1000);
-
-            textExpiry.setText((int) days);
-*/
-            // set selected date into textview
-            textDate.setText(new StringBuilder().append(day)
-                    .append("-").append(month+1).append("-").append(year)
-                    .append(" "));
         }
     };
 

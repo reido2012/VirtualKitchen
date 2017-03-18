@@ -19,12 +19,13 @@ public class FoodItem implements Serializable {
 
     public FoodItem() {}
 
-    public FoodItem(String name, int qty, StorageArea storedWhere, int shelfLife) {
+    public FoodItem(String name, int qty, StorageArea storedWhere, int shelfLife, String cat) {
         this.name = name;
         this.qty = qty;
         this.storedWhere = storedWhere;
         this.shelfLife = shelfLife;
         this.dateAdded = new Date(); // now
+        this.category = cat;
     }
 
     public void setDateAdded(Date dateAdded) {
@@ -86,6 +87,22 @@ public class FoodItem implements Serializable {
         this.shelfLife = shelfLife;
     }
 
+    public boolean getFavourite() {
+        return this.favourite;
+    }
+
+    public void setFavourite(boolean fav) {
+        this.favourite = fav;
+    }
+
+    public void setCategory(String cat) {
+        this.category = cat;
+    }
+
+    public String getCategory() {
+        return this.category;
+    }
+
     /**
      * Comparator, used in sorting, that allows items to be sorted by name.
      * Compares item names lexicographically to sort in alphabetical order.
@@ -118,6 +135,8 @@ public class FoodItem implements Serializable {
     private Date dateAdded;
     private int shelfLife;
     private StorageArea storedWhere;
+    private String category;
+    private Boolean favourite = false;
     // TODO 17/02/17 add photo
 
 }

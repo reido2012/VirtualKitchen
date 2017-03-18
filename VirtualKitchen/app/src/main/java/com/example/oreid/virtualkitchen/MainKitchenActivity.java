@@ -20,6 +20,7 @@ import android.widget.TabHost.TabSpec;
 
 import static android.icu.util.MeasureUnit.CUP;
 import static com.example.oreid.virtualkitchen.KitchenTab.REQUEST_CODE;
+import static com.example.oreid.virtualkitchen.R.string.storage;
 import static com.example.oreid.virtualkitchen.StorageArea.CUPBOARD;
 import static com.example.oreid.virtualkitchen.StorageArea.FREEZER;
 import static com.example.oreid.virtualkitchen.StorageArea.FRIDGE;
@@ -32,7 +33,6 @@ public class MainKitchenActivity extends AppCompatActivity {
 
     // Information about the tabs
     private final int NUM_TABS = 4;
-    private final StorageArea[] storageAreas = {null, StorageArea.FRIDGE, StorageArea.FREEZER, StorageArea.CUPBOARD};
     private final String[] TAB_NAMES = {"All",
                                         StorageArea.FRIDGE.toString(),
                                         FREEZER.toString(),
@@ -56,16 +56,6 @@ public class MainKitchenActivity extends AppCompatActivity {
         tabHost.setup(mLocalActivityManager);
 
         setupTabs();
-
-    }
-
-    private void addSampleData() {
-        FoodStorageData fsd = VKData.getInstance().getFoodDB();
-
-        fsd.add(new FoodItem("Chicken", 1, FRIDGE, 3));
-        fsd.add(new FoodItem("Eggs", 6, FRIDGE, 10));
-        fsd.add(new FoodItem("Bananas", 3, CUPBOARD, 6));
-        fsd.add(new FoodItem("Ice Cream", 2, FREEZER, 60));
 
     }
 
@@ -113,8 +103,15 @@ public class MainKitchenActivity extends AppCompatActivity {
                 String name = data.getStringExtra("NAME");
                 String quan = data.getStringExtra("QUAN");
                 String expiry = data.getStringExtra("EXP");
-                StorageArea storage = storageAreas[tabHost.getCurrentTab()];
-                FoodItem newFood = new FoodItem(name, Integer.parseInt(quan), storage, Integer.parseInt(expiry));
+                StorageArea storage = StorageArea.fromString(data.getStringExtra("STORAGE"));
+                if (storage == null) {
+                    return;
+                }
+                String cat = data.getStringExtra("CAT");
+                boolean fav = data.getStringExtra("FAV").equals("True");
+
+                FoodItem newFood = new FoodItem(name, Integer.parseInt(quan), storage, Integer.parseInt(expiry), cat);
+                newFood.setFavourite(fav);
                 VKData.getInstance().getFoodDB().add(newFood);
             }
         }
@@ -124,10 +121,8 @@ public class MainKitchenActivity extends AppCompatActivity {
 
         switch (item.getItemId()) {
             case R.id.add:
-                if (storageAreas[tabHost.getCurrentTab()] == null) {
-                    break; // TODO adding items from 'all' page - possible fix: add 'storage area' box to add screen?
-                }
                 Intent intentItem = new Intent(MainKitchenActivity.this, AddItem.class);
+                intentItem.putExtra("STORAGEAREA", TAB_NAMES[tabHost.getCurrentTab()]);
                 startActivityForResult(intentItem,REQUEST_CODE);
                 break;
             default:
