@@ -15,7 +15,6 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.DateFormat;
@@ -41,9 +40,9 @@ public class AddItem extends AppCompatActivity implements OnFocusChangeListener 
     private Button btnCancel;
     private Spinner spinnerCat;
     private Spinner spinnerStoragearea;
-    private  EditText textDate;
+    private EditText textDate;
     private Button btnChangeDate;
-    private TextView errorMessage;
+    private Button btnScanBarcode;
 
     private boolean textExpiryFocus = false;
     private boolean textDateFocus = false;
@@ -85,44 +84,52 @@ public class AddItem extends AppCompatActivity implements OnFocusChangeListener 
 
     private boolean validate() {
 
-        String msg = "";
+        boolean passed = true;
 
         if (textName.getText().toString().length() == 0) {
-            msg += "Please provide a name for your item. ";
+            textName.setError("Please provide a name for your item.");
+            passed = false;
         }
 
         if (textQuan.getText().toString().length() == 0) {
-            msg += "Please provide a quantity. ";
+            textQuan.setError("Please provide a quantity. ");
+            passed = false;
         } else {
             try {
                 int qty = Integer.parseInt(textQuan.getText().toString());
                 if (qty <= 0) {
-                    msg += "Please provide a positive quantity - you can only add one or more items to the kitchen. ";
+                    textQuan.setError("Please provide a positive quantity - you can only add one or more items to the kitchen. ");
+                    passed = false;
                 }
             } catch (NumberFormatException e) {
-                msg += "Please enter a number for item quantity. ";
+                textQuan.setError("Please enter a number for item quantity. ");
+                passed = false;
             }
         }
 
         if (textExpiry.getText().toString().length() == 0) {
-            msg += "Please provide a shelf life, or select an expiry date. ";
+            textExpiry.setError("Please provide a shelf life, or select an expiry date.");
+            passed = false;
         } else {
             try {
                 int exp = Integer.parseInt(textExpiry.getText().toString());
                 if (exp <= 0) {
-                    msg += "Please provide a positive shelf life - you can't keep out of date food in the kitchen. ";
+                    textExpiry.setError("Please provide a positive shelf life - you can't keep out of date food in the kitchen.");
+                    passed = false;
                 }
             } catch (NumberFormatException e) {
-                msg += "Please enter a number for item quantity. ";
+                textExpiry.setError("Please enter a number for item quantity.");
+                passed = false;
             }
         }
 
-        errorMessage.setText(msg);
-        return msg.length() == 0;
+        return passed;
     }
 
     public void  initialiseComponents(){
 
+        btnScanBarcode = (Button)findViewById(R.id.scanBarcode);
+        btnBarcodeListener(btnScanBarcode);
         textName = (EditText) findViewById(R.id.editTextName);
         textQuan = (EditText) findViewById(R.id.editTextQuan);
         textExpiry = (EditText) findViewById(R.id.editTextExpiry);
@@ -150,7 +157,14 @@ public class AddItem extends AppCompatActivity implements OnFocusChangeListener 
         dateChangeListener(textDate);
         setCurrentDateOnView();
         addListenerOnButton();
-        errorMessage = (TextView) findViewById(R.id.error_message);
+    }
+
+    private void btnBarcodeListener(Button btnScanBarcode) {
+        btnScanBarcode.setOnClickListener(new Button.OnClickListener() {
+            public void onClick(View v) {
+                Toast.makeText(AddItem.this,"SCAN BARCODE",Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void btnSaveListener(Button btnSaveItem) {

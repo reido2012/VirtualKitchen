@@ -16,12 +16,11 @@
     <!-- what are we going to do about same item with different expiry dates like avocados - based on how ripe it it ,
     or bought different times -->
 
-    <TextView
-        android:id="@+id/error_message"
+    <Button
+        android:id="@+id/scanBarcode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""/>
-
+        android:text="Scan Barcode..." />
 
     <EditText
         android:layout_width="wrap_content"

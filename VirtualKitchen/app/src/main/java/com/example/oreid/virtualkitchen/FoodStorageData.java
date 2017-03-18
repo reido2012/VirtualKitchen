@@ -53,11 +53,15 @@ public class FoodStorageData implements ChildEventListener {
         }
     }
 
+    private boolean clearMyKitchen = true;
+
     @Override
     public void onChildAdded(DataSnapshot dataSnapshot, String s) {
         FoodItem f = dataSnapshot.getValue(FoodItem.class);
         kitchen.get(f.getLocation()).add(f);
         updateLists(f.getLocation());
+
+
     }
 
     @Override
@@ -112,7 +116,6 @@ public class FoodStorageData implements ChildEventListener {
 
     public void addToCupboard(FoodItem f) {
         dbRef.child("users").child(userId).child(CUPBOARD.toString()).push().setValue(f);
-
     }
 
     public ArrayList<FoodItem> getAllItems() {
@@ -130,6 +133,31 @@ public class FoodStorageData implements ChildEventListener {
      */
     public void add(FoodItem f) {
         dbRef.child("users").child(userId).child(f.getLocation().toString()).push().setValue(f);
+    }
+
+    // a really bad way of updating an item.
+    private void firebaseReplaceQuery(String foodName, String storageArea, FoodItem newItem) {
+        removeFromFirebase(foodName, storageArea);
+        add(newItem);
+    }
+
+    private void firebaseQuery(String foodName, String storageName, final FoodItem newFood) {
+        // Query firebase for the data
+        Query removeQuery = dbRef.child("users").child(userId).child(storageName).orderByChild("name").equalTo(foodName);
+
+        removeQuery.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for (DataSnapshot s: dataSnapshot.getChildren()) {
+                    s.getRef().setValue(newFood);
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Log.e(TAG, "onCancelled", databaseError.toException());
+            }
+        });
     }
 
     private void removeFromFirebase(String foodName, String storageName) {
@@ -166,11 +194,13 @@ public class FoodStorageData implements ChildEventListener {
         FoodItem f = area.get(index);
 
         int qty = f.getQty();
-        if (qty == 1) {
+        if (qty <= 1) {
             remove(index,s);
         } else {
-            // f.setQty(qty - 1); // decrement quantity
-            Log.d(TAG, "TODO Implement decrementing");
+            f.setQty(qty - 1); // decrement quantity
+            firebaseQuery(f.getName(), s.toString(), f);
+            kitchen.get(s).set(index,f);
+            updateLists(s);
         }
 
     }
@@ -202,8 +232,7 @@ public class FoodStorageData implements ChildEventListener {
         ArrayList<FoodItem> allItems = getAllItems();
         ArrayList<FoodItem> searchResults = new ArrayList<FoodItem>();
 
-        query =
-                query.toUpperCase();
+        query = query.toUpperCase();
 
         for (int i = 0; i < allItems.size(); i++) {
             FoodItem currentItem = allItems.get(i);
@@ -241,6 +270,12 @@ public class FoodStorageData implements ChildEventListener {
         kitchen.put(FRIDGE, new ArrayList<FoodItem>());
         kitchen.put(FREEZER, new ArrayList<FoodItem>());
         kitchen.put(CUPBOARD, new ArrayList<FoodItem>());
+
+//        if (clearMyKitchen) {
+//            dbRef.child("users").child(userId).child(StorageArea.CUPBOARD.toString()).removeValue();
+//            dbRef.child("users").child(userId).child(StorageArea.FRIDGE.toString()).removeValue();
+//            dbRef.child("users").child(userId).child(StorageArea.FREEZER.toString()).removeValue();
+//        }
 
     }
 
