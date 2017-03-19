@@ -47,6 +47,7 @@ public class AddItem extends AppCompatActivity implements OnFocusChangeListener 
     private boolean textExpiryFocus = false;
     private boolean textDateFocus = false;
     private boolean fav = false;
+    private static final int BARCODE_REQUEST_CODE = 3;
 
     private DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 
@@ -162,7 +163,8 @@ public class AddItem extends AppCompatActivity implements OnFocusChangeListener 
     private void btnBarcodeListener(Button btnScanBarcode) {
         btnScanBarcode.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
-                Toast.makeText(AddItem.this,"SCAN BARCODE",Toast.LENGTH_SHORT).show();
+                Intent scanIntent = new Intent(AddItem.this, ScanBarcodeActivity.class);
+                startActivityForResult(scanIntent, BARCODE_REQUEST_CODE);
             }
         });
     }
@@ -291,10 +293,7 @@ public class AddItem extends AppCompatActivity implements OnFocusChangeListener 
                 } catch (NumberFormatException e) {
                     return; // do nothing. they entered an invalide value.
                 }
-                Calendar c = Calendar.getInstance();
-                c.setTime(new Date()); // Now use today date.
-                c.add(Calendar.DATE, expDays); // Adding 5 days
-                textDate.setText(dateFormat.format(c.getTime()));
+                updateDateBasedOnExpiry(expDays);
             }
 
             @Override
@@ -374,5 +373,28 @@ public class AddItem extends AppCompatActivity implements OnFocusChangeListener 
         }
     };
 
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == BARCODE_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
+            String barcode = data.getStringExtra("BARCODE");
+            if (barcode.equals("1234567891231")) { // sample barcode
+                Toast.makeText(this, "Barcode recognised.", Toast.LENGTH_SHORT).show();
+                textName.setText("Barcode Food");
+                textQuan.setText("2");
+                setCurrentDateOnView();
+
+                updateDateBasedOnExpiry(10);
+                textExpiry.setText("10");
+            } else {
+                Toast.makeText(this, "Barcode not recognised, please try another or enter manually.", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    private void updateDateBasedOnExpiry(int expDays) {
+        Calendar c = Calendar.getInstance();
+        c.setTime(new Date()); // Now use today date.
+        c.add(Calendar.DATE, expDays); // Adding 5 days
+        textDate.setText(dateFormat.format(c.getTime()));
+    }
 
 }

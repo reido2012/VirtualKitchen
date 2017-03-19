@@ -11,6 +11,15 @@
         <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/pre-dexed/debug/classes_7ea0b410183a55940743b94301ce00170fc03250.jar" />
     </item>
     <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/abf608fdfcd9e8984f0dbc763d8edacc1054558f/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a1e9a4e10fa7fa230b32e939bec34f6f53e9010c/classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="/Users/hollie/.android/build-cache/1242039f0e99b815a7faabc3d22eaeb4a0cbd5c8/output/jars/libs/internal_impl-24.2.1.jar"
         jumboMode="false"
@@ -48,6 +57,42 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/a4da3cf5803c619bba6af1115dca82ef94b8ea9f/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b955cb3a1ad6f1b6ff728ce1e0cd592c1717b440">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e1d4e2b340903d88242ded742a7e723724842603/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/65ff6928c1284b62606afe27fa5363a380a03a8b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7a64bf6dc775198eed9db9468a133adf7dfe6562">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d7a27518f8522268f4f0c1ad2d1cd65eb85ac6c3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/2e85ba6e951b1de2b91e5d0780e30ff81b52986d/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ffc15e965a9e8c28f24455eedd4cac215c45d1fc">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_bfd33f8957cbf6a473bdd2b4ef857d405d33b4af/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/199fc63597c11b44343ef1f4323e10b7fb3ae5d8/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4c829ff0ccfecb28a999ee46d9e75948dfc777a4">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_dab4a4e3d147d4c958254a784bbd11a766249727/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/hollie/.android/build-cache/d2c66cc397aee638740b0bacb97d6ed2112a588f/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -75,12 +120,39 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/295e891ac755c8cd67acf48cd48abcc3cb83bc0e/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6bb5d347ebc0c6ef3c83a905222a688da5d2f7b4">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ce15a522ec9a05910951c64fb4d335a065934380/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/hollie/.android/build-cache/a5c50e8ed6ff81b609d80c7647cd6a312d31a4dc/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
         <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a490f0efc5953a8e2c5dce92da3e46f06190b1d3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/546cdd9f0518c9f91f6d4b6d5a51e1afebf6a776/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="df1cb17511aabbb63264a0024949d1e42502a512">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b4303f69f2dec637195adcb839f4a59e94bbbaa7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/22bfbb2678a27fa2d55b7dc64fd2d90ecaaeb81b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="971509bbe30bb7b971fc1c49d7b23d0d818830ac">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e999bca6d2252f6c25e7904ecda6a9204f0e772a/classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -128,6 +200,15 @@
         <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/pre-dexed/debug/classes_8c27a686b73805f09c178682141ea89cf3ff8d78.jar" />
     </item>
     <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/5882b9ae50e449798932a1120c578d56fc9f0861/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="408a599ac77cd17fe8e8919326bec617b3d005bd">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_bbf7d6a7d753b5154578eef17eb4e563e04f4e39/classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="/Users/hollie/.android/build-cache/c7602053e7e01ef05b75dd966bdcefb369c03b94/output/jars/classes.jar"
         jumboMode="false"
@@ -135,6 +216,24 @@
         revision="25.0.0"
         sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
         <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/pre-dexed/debug/classes_7aca25757003964762101b4fa073c61c1da41ad9.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/dd8a5239f02b7439e705f1ca6889ad4aae9ef004/output/jars/libs/internal_impl-24.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.0.0_13d7502d5811214e55b00c72d5886dd1c7a61841/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/a84813894c586292c597caf18be0eba7b7909760/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ba6aa5e69ef31dee57208125323cee958fc67565">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4b6f0d338e6e026531317133119577ff73fffed2/classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -146,6 +245,51 @@
         <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/pre-dexed/debug/classes_1e654c6c4422434b8e2a93a32b3d5aa4b28dd111.jar" />
     </item>
     <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/0ec0aa7e6c4e16279df0cb43d04885b4404cddab/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f23ad0f8e58713ff4b55f61c0bbde3830378347c">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_66853f7e4e4318d4edfc203a24b714511da49609/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/08dd65ecfaaa99eb50c66c6d0662a399a61e441f/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d0460bf07cc3657e0be518ca01c174493951c6b8">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_82e16492427ca645d2149aa4fe8d93e209ab6f5c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/5a91ddf16962abdfedadaf383a88e0657435a361/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1d193729baf37df3d902a423291423a0df7e3779">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_597d414ad328bd4ef0b6e79d353e5561d0c1314b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/3f3b5512d02a5f0591052ac2332f5efa84b65033/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f3e51e9c5233b8897f61e08a6a27bc36283c2724">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e1266bd32ea05ddb64d7f310042c6862f36ae976/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/275b10fe2973645aedfadfd82dce1e7165be42a9/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="44a694d4095be84c2888764b1f7256b385c030ad">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b4ccedabb85006a6770634c83a2fc29bdbe5f30e/classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="/Users/hollie/.android/build-cache/bee5659f861d54a2fb8effbca0182a7dbbddac0d/output/jars/classes.jar"
         jumboMode="false"
@@ -153,6 +297,24 @@
         revision="25.0.0"
         sha1="486371f97baad8e607f332f20fee1d3dd00a731a">
         <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/pre-dexed/debug/classes_ecb7bae70de9ed0e2ad136aac0067720a1811bba.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/833bc648f2ae02200fc6b1706ffb8354a305b00d/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="27777b3cad3c20b1acab19f6e37fe3e03371bf6e">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_2ad0a119276efd5becd2865505b1b7da46ea4673/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/a628bdfb65e98b09ebcee913b3dbf523dd77f984/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b1df8fa3d372a27e4e969ce00b00689ee1eed031">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_cb97b789cb298b57aaf3360f63715d6648e5bd03/classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -173,6 +335,15 @@
         <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/pre-dexed/debug/classes_123c0d6a52fb27936e07a8a55b3893b3aa61f1ed.jar" />
     </item>
     <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/8e8d80e7666f66444fe35898f5724436385cac27/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="92c871a22463a247e8a77a9f3fd231c278788c4a">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0ad0768ba0ecbf32ac1a610c9644824062199724/classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="/Users/hollie/.android/build-cache/487cb6d1f81d1a74bd68b88ec07bcf0fcf0eceff/output/jars/libs/internal_impl-24.2.1.jar"
         jumboMode="false"
@@ -180,6 +351,15 @@
         revision="25.0.0"
         sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
         <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_7c93a32d74868f95a33a19560f92175d65465fdb.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/dd8a5239f02b7439e705f1ca6889ad4aae9ef004/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b327fbe2fad414bc38cf0ce8f7efe1a38f572837">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_bddc7a80db19f7fe956168ac07b5c7e1243c59d9/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -191,6 +371,24 @@
         <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_cbe60de5febec2dc7baa84a46c90473a6df89d38/classes.dex" />
     </item>
     <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/cbfe0b407ea6a72d5d8c29ac403eaac412035651/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8308ed003522a2ee8958311afcc4cfd0470377cd">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_eafccd9a2110858d7b0f432b98a4772ee2b530f0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/59026a2ce3f51806be2c842b3521855506306ee1/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c14f0c89f28cf782e42581ab0aba5f63af39b3d2">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0d8e41b4b0cf36067741c870c0c4074a534c1b20/classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="/Users/hollie/.android/build-cache/6cd599cf7088836addc6d3396fc9100eedb2659b/output/jars/classes.jar"
         jumboMode="false"
@@ -198,6 +396,33 @@
         revision="25.0.0"
         sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
         <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/pre-dexed/debug/classes_b8fc16e8a76260863df9c7dde71b9998012770a4.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/aeb483c5ee9c070782364c925bfd5cd86c13ca0e/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="de29a39f9260f88151b1ef453140e71c76b6c415">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9a75091614f123d8076946ea53d6dfaf31de0f74/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/787fc073377edfe3300c705f1f35626b2aa5874b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="45305e6af414dab5aba6c3225081c2f15c3bdd1e">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0ebd8185ab9f3e684aa1013dffbb2005fe6bb635/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/25c8b50e3728a541d84a3a2b8cfe81af034818b5/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e871881b36b32e6bfd271a830c6eeb54ff0fc185">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_61cd03d4a5e63272425e47f6554df02ce788f956/classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -209,6 +434,24 @@
         <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/pre-dexed/debug/classes_4f47e7bcf64f7d720f03c9ae89571732adb463bf.jar" />
     </item>
     <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/f06d717527ab0b2358b0df9952171166ad960d6a/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2d5d113b0352ab60946fc44c518cf68fd26cbb79">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a36b3cfa650294751f6a4c9bdbea1dadd313734f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/fad6158a63a1512dd643d6a1d4c2f2d354bbf56a/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4385ccc0a88b33d182a836eadb47be55c8eb1107">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_98bc9e5356441488a0243db1372e0ead75f933a6/classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="/Users/hollie/.android/build-cache/e4121c8f05933b19b9bfd3567f4a1b3d1cf8fae8/output/jars/classes.jar"
         jumboMode="false"
@@ -216,6 +459,15 @@
         revision="25.0.0"
         sha1="9cca2818594cc5348806d6662133491e7ea0fa8d">
         <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/pre-dexed/debug/classes_576f368809efab6d764a9e38220426e1bcbae6f2.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/32307e212acea59cb6467104f630f25c4fe0d601/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f6cf557be4dbd0282ea2388633e5378634423226">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_58afb06eb525423f80180fe76ef8260501a6fdee/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -272,6 +524,24 @@
         <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/pre-dexed/debug/classes_708c9a7ecb204565137cc85e097fb03297f97ed4.jar" />
     </item>
     <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/05289e329325b9c3fd095605388a3ba492a238b6/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ae80d328a8548b4610ead6c624bab8c6a6984f5b">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6ac4d8420f8f6491d897818062c040df5813ebf9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/f4e0048e212cf92d2dedd643d00168c49e6239a5/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="771267c5b0c7a5b348d3205dcfa1f871af7e0177">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7dbf772ea437385be1122e3184320263e16bea5b/classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="/Users/hollie/.android/build-cache/a1d0032e43055c6964ae9831e43ac507fcacaf31/output/jars/classes.jar"
         jumboMode="false"
@@ -317,6 +587,15 @@
         <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_01b29771926c404db789000df9260d89d13eb60c.jar" />
     </item>
     <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/d997c43d3fc6c68b9ddb854070b7f29aa2771fc7/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1e11c68fec92a17c84dd8d1dd80e74c4e67b12e2">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_eb6d0131bca65eb9e623d32caad5d4adabbc9e68/classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="/Users/hollie/.android/build-cache/9e10807f89a77c0656cb150b9770c20b13fdb15b/output/jars/classes.jar"
         jumboMode="false"
@@ -342,6 +621,24 @@
         revision="25.0.0"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
         <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/pre-dexed/debug/classes_0360d7379058097d88ca2267f8e7b537bf0d9792.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/9d53dbfbe449edd01935db48d629a5bde1071403/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a48dc0b148059764d32500be558702d5ff932058">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7d8ebcac68d449fd29f4d806bf0af5ad39413417/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/4499e9d6b7973ea4b0d7c38ccae1c0b46caec458/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="09cf6aa1390f95157e8295d02be7868f568825fc">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d9846e39deb83276ed2e62277bc41278689e14db/classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -399,12 +696,30 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/698f4f230277bc6986581fa65e9d2477d7005750/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c6e1f361e9d61aece9dac39b77fcc98a337a144d">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8d880e4a4000e167908fbba9dcef3e7d367350f2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="fab9bd337d7d220a4c0e2b4b7a00b0aa5c3d9670">
+        sha1="dfd12c76d0fe2741cffeee8c3fab23f6f0de7490">
         <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_d754a288d5a99fc15340f5488d1b8532910395c4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/103bd04ebc84181d8049a10a72c1543be6562d5a/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="dd39827d2067497e60e21da48a7926000b6d4b0c">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e3419de77a43ab151b39a2b15953994ea7e558df/classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -414,6 +729,24 @@
         revision="25.0.0"
         sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
         <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_ce410a6a0b9b446aff1c1fa82ee77b1461c3ef68.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/354445c8c3d4bd8f311b946a0a9889d4a8655ef3/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="39907d5c8f5902fffef30160ca7447c93b82405c">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_2305454305df06391b578f9ed6f8b2ee4a3d9c39/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/c0572b5dafff0a91a2fe445048a72a2cfea22991/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="57c2eceb8548de84509d1ebc293fedec53231f6c">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_13576ab658be60eadbd97d8051ddaaf7b16cd3dc/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -441,6 +774,15 @@
         revision="25.0.0"
         sha1="433f4d6aa5f21f19552afe0e6c5eff0fedba73ad">
         <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/pre-dexed/debug/classes_452b05720ba50ff37dc4cca310479fb8a4abdea0.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/hollie/.android/build-cache/9af8dba5ab44a5ea7cbe70354009f1a35289df97/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="028f8255cb977b29cdffbfcf05caa0459686120c">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ba5abbc15ed25a01a45d3426e38fa6839d8a6bcd/classes.dex" />
     </item>
     <item
         is-multidex="true"
