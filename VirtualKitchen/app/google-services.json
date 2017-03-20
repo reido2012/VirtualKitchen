@@ -15,11 +15,35 @@
       },
       "oauth_client": [
         {
+          "client_id": "240865901307-3titjf6grfdlulit7kt7sp7nr0g9d6cn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.oreid.virtualkitchen",
+            "certificate_hash": "c6f63fdbee81f0c4fe07a811084b1b900cb83ed7"
+          }
+        },
+        {
+          "client_id": "240865901307-os1aft8r6mtp0fsn7rmqgmgddhj0duqd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.oreid.virtualkitchen",
+            "certificate_hash": "b9e924ae91c3690e8957c3c3947ac6a6a03e530c"
+          }
+        },
+        {
+          "client_id": "240865901307-srbrdo0avafpmk34r88m5d63egpg9839.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.oreid.virtualkitchen",
+            "certificate_hash": "6ca315c6c32c0999873c5400f21550cd99d87b13"
+          }
+        },
+        {
           "client_id": "240865901307-ispomalg183amo1ki0sd7q3afdklatih.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.oreid.virtualkitchen",
-            "certificate_hash": "F739B1E4A0B34D92B1C89E8ECBB311B46CC05093"
+            "certificate_hash": "f739b1e4a0b34d92b1c89e8ecbb311b46cc05093"
           }
         },
         {
@@ -27,7 +51,7 @@
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.oreid.virtualkitchen",
-            "certificate_hash": "A01CABB7C5BD3686162F9C366B3A0D06842A9E97"
+            "certificate_hash": "a01cabb7c5bd3686162f9c366b3a0d06842a9e97"
           }
         },
         {
@@ -35,7 +59,7 @@
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.oreid.virtualkitchen",
-            "certificate_hash": "CE14FA1CBF10C0BA436D10F19B5C13DC0AB82CF0"
+            "certificate_hash": "ce14fa1cbf10c0ba436d10f19b5c13dc0ab82cf0"
           }
         },
         {

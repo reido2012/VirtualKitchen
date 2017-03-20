@@ -24,6 +24,7 @@ import static com.example.oreid.virtualkitchen.R.string.storage;
 import static com.example.oreid.virtualkitchen.StorageArea.CUPBOARD;
 import static com.example.oreid.virtualkitchen.StorageArea.FREEZER;
 import static com.example.oreid.virtualkitchen.StorageArea.FRIDGE;
+import static com.example.oreid.virtualkitchen.StorageArea.SHOPPINGLIST;
 
 public class MainKitchenActivity extends AppCompatActivity {
 
@@ -32,15 +33,18 @@ public class MainKitchenActivity extends AppCompatActivity {
     private TabHost tabHost;
 
     // Information about the tabs
-    private final int NUM_TABS = 4;
+    private final int NUM_TABS = 5;
+    private final StorageArea[] storageAreas = {null, StorageArea.FRIDGE, StorageArea.FREEZER, StorageArea.CUPBOARD, StorageArea.SHOPPINGLIST};
     private final String[] TAB_NAMES = {"All",
                                         StorageArea.FRIDGE.toString(),
                                         FREEZER.toString(),
-                                        CUPBOARD.toString()};
+                                        CUPBOARD.toString(),
+                                        SHOPPINGLIST.toString()};
     private final Class[] TAB_ACTIVITIES = {SortedTab.class,
                                             FridgeTab.class,
                                             FreezerTab.class,
-                                            CupboardTab.class};
+                                            CupboardTab.class,
+                                            ShoppingListTab.class};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

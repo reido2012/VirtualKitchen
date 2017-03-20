@@ -118,7 +118,7 @@ public class FoodItem implements Serializable {
 
     private int findImgByCat(String cat) {
         switch(cat) {
-            case "Fruit":
+            case "Fruits":
                 return IMG_FRUIT;
             case "Vegetables":
                 return IMG_VEGETABLES;
