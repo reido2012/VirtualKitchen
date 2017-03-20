@@ -25,7 +25,7 @@ public class KitchenTab extends AppCompatActivity implements HasListView {
 
     private static final String TAG = "KitchenTab";
 
-    protected FoodStorageData db = VKData.getInstance().getFoodDB();;
+    protected FoodStorageData db = VKData.getInstance().getFoodDB();
 
     private int contentViewId = R.layout.activity_kitchen_tab;
     private int listViewId  = R.id.list_view;
@@ -74,6 +74,7 @@ public class KitchenTab extends AppCompatActivity implements HasListView {
         listAdapter.addAll(listData);
         listAdapter.notifyDataSetChanged();
     }
+
 
 
     public void deleteButtonHandler(View v) {
