@@ -1,14 +1,16 @@
 package com.example.oreid.virtualkitchen;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 
 /**
  * Base Kitchen View Tab Class
@@ -19,16 +21,17 @@ import java.util.ArrayList;
  *
  */
 
-public class KitchenTab extends AppCompatActivity {
+public class KitchenTab extends AppCompatActivity implements HasListView {
 
     private static final String TAG = "KitchenTab";
 
-    protected FoodStorageData db;
+    protected FoodStorageData db = VKData.getInstance().getFoodDB();
 
     private int contentViewId = R.layout.activity_kitchen_tab;
     private int listViewId  = R.id.list_view;
     private String tabName = "Kitchen";
     private StorageArea storageArea = null;
+    public static final int REQUEST_CODE = 5;
 
     private ArrayList<FoodItem> listData = new ArrayList<FoodItem>();
 
@@ -40,13 +43,27 @@ public class KitchenTab extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(contentViewId);
 
-        db = VKData.getInstance().getFoodDB();
-
         listView = (ListView)findViewById(listViewId);
         listAdapter = new FoodItemAdapter(this,
                 R.layout.food_list_item,
                 listData);
         listView.setAdapter(listAdapter);
+
+
+    }
+
+
+    protected void onCreate(Bundle savedInstanceState, String sl) {
+        if (sl == "ShoppingList") {
+            super.onCreate(savedInstanceState);
+            setContentView(contentViewId);
+
+            listView = (ListView) findViewById(listViewId);
+            listAdapter = new FoodItemAdapter(this,
+                    R.layout.activity_shoppinglist,
+                    listData);
+            listView.setAdapter(listAdapter);
+        }
 
     }
 
@@ -59,15 +76,9 @@ public class KitchenTab extends AppCompatActivity {
     }
     public ArrayList<FoodItem> getListData() { return this.listData; }
 
-    /**
-     * Updates list data based on the specified storage area. If null, then all items are retrieved.
-     */
-    public void updateListData() {
-        if (this.storageArea == null) {
-            this.setListData(db.getAllItems());
-        } else { // get items based on specified storage area.
-            this.setListData(db.get(this.storageArea));
-        }
+    public void setUpdatedList(ArrayList<FoodItem> newFood) {
+        setListData(newFood);
+        updateUI();
     }
 
     /**
@@ -79,26 +90,7 @@ public class KitchenTab extends AppCompatActivity {
         listAdapter.notifyDataSetChanged();
     }
 
-    // called when add button is pressed.
-    // TODO hollie 22/02/17 this should lead to a new intent where the food can be created properly.
-    public void addFood(View v) {
-        final EditText txtField = new EditText(this);
-        AlertDialog dialog = new AlertDialog.Builder(this)
-                .setTitle("Add an item.")
-                .setMessage("Name of item to add to the " + tabName)
-                .setView(txtField)
-                .setPositiveButton("Add", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        String name = String.valueOf(txtField.getText());
-                        db.add(new FoodItem(name, 1, storageArea, 3));
-                        updateUI();
-                    }
-                })
-                .setNegativeButton("Cancel", null)
-                .create();
-        dialog.show();
-    }
+
 
     public void deleteButtonHandler(View v) {
 
@@ -109,6 +101,18 @@ public class KitchenTab extends AppCompatActivity {
 
         updateUI();
 
+    }
+    //adds one of the selected items to shopping list. Doesn't work in ALL tab as no location is set
+    public void addToShoppingListHandler(View v) {
+        int position = listView.getPositionForView((View)v.getParent());
+        db.storageItemToShoppingList(position, this.storageArea);
+        updateUI();
+    }
+    //Takes all items selected from shopping list and adds to storage
+    public void checkOffShoppingListHandler(View v) {
+        int position = listView.getPositionForView((View)v.getParent());
+        db.shoppingListItemToStorage(position);
+        updateUI();
     }
 
     public void setContentViewId(int id) {
@@ -129,19 +133,12 @@ public class KitchenTab extends AppCompatActivity {
      * @param sa storage area associated with this tab
      * @param updateList update the list based on the storage area?
      */
-    public void setStorageArea(StorageArea sa, boolean updateList) {
+    public void setStorageArea(StorageArea sa) {
         this.storageArea = sa;
-        if (updateList) {
-            this.updateListData();
-        }
+        db.setListUpdater(this.storageArea, this);
     }
 
-    // activity is resumed when it's tab is selected.
-    // Lists may have changed while in another tab, so update them.
-    public void onResume() {
-        super.onResume();
-        updateUI();
+    public StorageArea getStorageArea() {
+        return this.storageArea;
     }
-
-
 }
