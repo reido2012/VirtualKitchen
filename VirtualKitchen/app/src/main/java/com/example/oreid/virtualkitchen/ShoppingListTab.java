@@ -26,4 +26,3 @@ public class ShoppingListTab extends KitchenTab {
 
 
 }
-
