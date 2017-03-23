@@ -18,6 +18,7 @@ import java.util.HashMap;
 import static com.example.oreid.virtualkitchen.StorageArea.CUPBOARD;
 import static com.example.oreid.virtualkitchen.StorageArea.FREEZER;
 import static com.example.oreid.virtualkitchen.StorageArea.FRIDGE;
+import static com.example.oreid.virtualkitchen.StorageArea.SHOPPINGLIST;
 
 /**
  * This class manages storage of items in the virtual kitchen.
@@ -118,6 +119,15 @@ public class FoodStorageData implements ChildEventListener {
         dbRef.child("users").child(userId).child(CUPBOARD.toString()).push().setValue(f);
     }
 
+    public ArrayList<FoodItem> getShoppingListItems() {
+        return kitchen.get(SHOPPINGLIST);
+    }
+
+    public void addToShoppingList(FoodItem f) {
+        dbRef.child("users").child(userId).child(SHOPPINGLIST.toString()).push().setValue(f);
+
+    }
+
     public ArrayList<FoodItem> getAllItems() {
         ArrayList<FoodItem> allItems = new ArrayList<FoodItem>();
         allItems.addAll(getFridgeItems());
@@ -126,6 +136,42 @@ public class FoodStorageData implements ChildEventListener {
 
         return allItems;
     }
+
+    /**
+     *  Mass moves every shopping list item to storage. Currently only adds to fridge as no storage data kept for
+     *  shoppinglist items.
+     *  TODO Add a button for this feature.
+     *
+     */
+    public void allShoppingListToStorage() {
+        ArrayList<FoodItem> tempList = getShoppingListItems();
+        for (int i=0;i<tempList.size();i++) {
+            addToFridge(tempList.get(i));
+            remove(i,SHOPPINGLIST);
+        }
+    }
+
+    /**
+     * Adds a single food item to fridge from shoppinglist
+     * @param f item to add to fridge and remove from shoppinglist.
+     * TODO Add button for this
+     */
+    public void shoppingListItemToStorage(FoodItem f) {
+        addToFridge(f);
+        removeFromFirebase(f.getName(), SHOPPINGLIST.toString());
+    }
+
+    /**
+     * Adds single food item to shoppinglist from a storage location
+     * @param f a single food item to add to shopping list
+     * @param storageName storage location to take item from
+     *  TODO add functionality to button
+     */
+    public void storageItemToShoppingList(FoodItem f, String storageName) {
+        addToShoppingList(f);
+        removeFromFirebase(f.getName(), storageName.toString());
+    }
+
 
     /**
      * General add. Determines where to put the item based on it's location.
@@ -266,10 +312,12 @@ public class FoodStorageData implements ChildEventListener {
         dbRef.child("users").child(userId).child(FRIDGE.toString()).addChildEventListener(this);
         dbRef.child("users").child(userId).child(FREEZER.toString()).addChildEventListener(this);
         dbRef.child("users").child(userId).child(CUPBOARD.toString()).addChildEventListener(this);
+        dbRef.child("users").child(userId).child(SHOPPINGLIST.toString()).addChildEventListener(this);
 
         kitchen.put(FRIDGE, new ArrayList<FoodItem>());
         kitchen.put(FREEZER, new ArrayList<FoodItem>());
         kitchen.put(CUPBOARD, new ArrayList<FoodItem>());
+        kitchen.put(SHOPPINGLIST, new ArrayList<FoodItem>());
 
 //        if (clearMyKitchen) {
 //            dbRef.child("users").child(userId).child(StorageArea.CUPBOARD.toString()).removeValue();
@@ -281,7 +329,7 @@ public class FoodStorageData implements ChildEventListener {
 
     public static final String TAG = "FoodStorageData";
     private String userId;
-    private DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference();;
+    private DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference();
 
     private HashMap<StorageArea,ArrayList<FoodItem>> kitchen = new HashMap<>(); // stored food data
     private HashMap<String,HasListView> listUpdate = new HashMap<>(); // list views that need updating.
