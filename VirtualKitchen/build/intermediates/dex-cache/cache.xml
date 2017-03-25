@@ -11,6 +11,15 @@
         <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/pre-dexed/debug/classes_7ea0b410183a55940743b94301ce00170fc03250.jar" />
     </item>
     <item
+        is-multidex="true"
+        jar="C:\Users\daniel\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.1_08e51211dc25928976e66fd0f7fec1e3694f02ee\classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="/Users/hollie/.android/build-cache/6133694af88fd987ded5af74b1d83dab8b78a74b/output/jars/classes.jar"
         jumboMode="false"
@@ -20,6 +29,51 @@
         <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/pre-dexed/debug/classes_08594bc5e6eefef21fb7c61fe20ac164a4c9d10a.jar" />
     </item>
     <item
+        is-multidex="true"
+        jar="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_ce9cb6c7c24742145db0b9802d1c4018cf4c96d5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\daniel\.android\build-cache\da71bc1f45c2a1ece4313a4a6337c0aa60d5d164\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_fea139e8814d426e676f4fce7be4166868872fb8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\daniel\.android\build-cache\8e1e152ef1d99c93da6a11eae54355b2a04eb6d4\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d30519066f09d353611ace2bdc02b6060982a77a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\daniel\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.0\constraint-layout-solver-1.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="90493f2ea15ff3f57416368123e5d4d180e0c6fd">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.0_bcaa8138bd6432020c5768b011f8aeff4ac8e8cb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\daniel\.android\build-cache\c2ee8c80b6f09e5fb70e4670a62c28f8ddfe55a8\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_29a0ce02d6212518013f928afec4943fe94c247f\classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="/Users/hollie/.android/build-cache/e8cfd146355a42d3ac01dfaa2a87da427ab4a900/output/jars/classes.jar"
         jumboMode="false"
@@ -27,6 +81,15 @@
         revision="25.0.0"
         sha1="25438f55fc6d906a0e72f30b21487541430ede43">
         <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/pre-dexed/debug/classes_5c0360e5db091580897b3f3ea1f179dc4ede2f01.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\daniel\.android\build-cache\c9df588fcde169b4aa11c64504aa9f1d270f7261\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="756f6297eef79784f5e356dcd4f39865028b2bd0">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_214a9996c7ee9d4208d3114252c2bd300a17c1d6\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -47,6 +110,15 @@
         <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/pre-dexed/debug/classes_8c27a686b73805f09c178682141ea89cf3ff8d78.jar" />
     </item>
     <item
+        is-multidex="true"
+        jar="C:\Users\daniel\.android\build-cache\dd3816737221754390401744dbad01c2139a81ed\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8f128aeeb7e31271b28a7adb9dac1f3a6ed9f5e7">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_732255bccf234c885931733424f03d6ce9cb3836\classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="/Users/hollie/.android/build-cache/c7602053e7e01ef05b75dd966bdcefb369c03b94/output/jars/classes.jar"
         jumboMode="false"
@@ -54,6 +126,24 @@
         revision="25.0.0"
         sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
         <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/pre-dexed/debug/classes_7aca25757003964762101b4fa073c61c1da41ad9.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\daniel\.android\build-cache\da71bc1f45c2a1ece4313a4a6337c0aa60d5d164\output\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_e4574fd2c12d8c8d6c061c3e0bff36062d9c145d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\daniel\.android\build-cache\38d2ace152693a8a85f707ece16879e8c08fdf11\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d430109f4c5865ff0d592799e9378c7172950116\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -65,6 +155,51 @@
         <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/pre-dexed/debug/classes_1e654c6c4422434b8e2a93a32b3d5aa4b28dd111.jar" />
     </item>
     <item
+        is-multidex="true"
+        jar="C:\Users\daniel\.android\build-cache\d11b2dfa34c241b92b189d32166e01873668bb77\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_3d7a33ef56c785fbcd17ede28177cfec4ecc92f8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\daniel\.android\build-cache\314aa9c496f9d38c19f99eae2fbf5aabe03eb698\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_4b5da2a1b00cc525f9b0f3a31e1aad8dcbae9e4e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\daniel\.android\build-cache\d2fecbdc008ad70d80e1d0fe5680493f391f28e3\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5ef4a16c5c704f2417dac07c9740d3c052c878a3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\daniel\.android\build-cache\ae8e03f50dc900984b23b4730971bb8eaded8d1c\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e96c6974cf924e7ee3b230e6847d5731423388c9">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5ad6cab2695bfd1e240fabb61cf2ac84cf2fc88d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\daniel\.android\build-cache\85876de06d26273ef149753b5cff699faca8b5be\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9cca2818594cc5348806d6662133491e7ea0fa8d">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_01cccb91b7a07e4bcb0f50ef7950f8382fa4999f\classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="/Users/hollie/.android/build-cache/bee5659f861d54a2fb8effbca0182a7dbbddac0d/output/jars/classes.jar"
         jumboMode="false"
@@ -72,6 +207,33 @@
         revision="25.0.0"
         sha1="486371f97baad8e607f332f20fee1d3dd00a731a">
         <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/pre-dexed/debug/classes_ecb7bae70de9ed0e2ad136aac0067720a1811bba.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\daniel\.android\build-cache\2a0dfad38f086fc58ac32ec4f0318ba75313c0f5\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a5b2a5f12a72b89fec344f816aa8a50c22ff0de5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\daniel\.android\build-cache\20f9ef6fb7e0cf97520027d047e5c8790774ca20\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="eb0d830e3eabb9deb9ec44869cf7ac7ea1ad794c">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_7d799d0098e69dae54b0fdb7ee57200af800ccbf\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\daniel\.android\build-cache\57dd70a22d7b7a01cab4284299962bc104684694\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_90ec22e269b92030d9dd5c17601a8747287d76c9\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -83,6 +245,33 @@
         <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/pre-dexed/debug/classes_b8fc16e8a76260863df9c7dde71b9998012770a4.jar" />
     </item>
     <item
+        is-multidex="true"
+        jar="C:\Users\daniel\.android\build-cache\106074cbd4eced53f56ec9643c33d9e4f0e9fb9c\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e2185aff89caeb337b1ffc36d5e525d8318e7cfe">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_14f4d9b4d4daec73860bb0993ff8876558d6d967\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8c4b039c39c3b073ea91b23d73c4e16a389eb6df">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_846e833badb1526741bb958af46c9e1e076513a7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\daniel\.android\build-cache\c2ee8c80b6f09e5fb70e4670a62c28f8ddfe55a8\output\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_e9faea9db9ef7878b219b5a70271e12280f80f13\classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="/Users/hollie/.android/build-cache/e6a13d5da5ac5b8303d240476153be96ea6924b7/output/jars/classes.jar"
         jumboMode="false"
@@ -90,6 +279,24 @@
         revision="25.0.0"
         sha1="d20672631818754557255886d3feb43e7fe75a66">
         <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/pre-dexed/debug/classes_4f47e7bcf64f7d720f03c9ae89571732adb463bf.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\daniel\.android\build-cache\ed8985f457110f88dc49ccd97bbf4e51769e8d94\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_651353b95e6e45b6ea35a604ae476f2c513b316d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\daniel\.android\build-cache\8e1e152ef1d99c93da6a11eae54355b2a04eb6d4\output\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_d028bd1a76bda0aba27b86dd9d3a3548fd960f1b\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -101,6 +308,33 @@
         <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/pre-dexed/debug/classes_576f368809efab6d764a9e38220426e1bcbae6f2.jar" />
     </item>
     <item
+        is-multidex="true"
+        jar="C:\Users\daniel\.android\build-cache\faca961787b05ec2bf36ca802725e363c4e29ea6\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="433f4d6aa5f21f19552afe0e6c5eff0fedba73ad">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_ddeea6d6e8122b3de3e9011079de21658f2b0581\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\daniel\.android\build-cache\d01669ff3640e87ffa205e257543ad3b07cd28f4\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="25438f55fc6d906a0e72f30b21487541430ede43">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_675fdc1180d7047f7d7479fa959d0e8cf266ad5c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\daniel\.android\build-cache\9b0b5d717e109a05ddc1404da754e7a1d28d7e2a\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6116e0e7069de7fc259aac8e08b84f32c2038231">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_4d813d4df594b2bedddebd95f79482896537c400\classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="/Users/hollie/.android/build-cache/e4f66832f6140f038b733116f99cd2e42321f1bb/output/jars/classes.jar"
         jumboMode="false"
@@ -108,6 +342,15 @@
         revision="25.0.0"
         sha1="d5c731fc64c03dfe04d51134955b483551c35849">
         <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/pre-dexed/debug/classes_b31976fc1a90d1fad3a9c591771bbad789fa0fdf.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\daniel\.android\build-cache\bfb473a337fa9169fb21a0704456756713e308d1\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6addaba208e21c6da776d0ca75b6b23a6ccd5499">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_1f11184578bc7d8c0ff68da3471015616aa7879d\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -128,6 +371,24 @@
         <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/pre-dexed/debug/classes_708c9a7ecb204565137cc85e097fb03297f97ed4.jar" />
     </item>
     <item
+        is-multidex="true"
+        jar="C:\Users\daniel\.android\build-cache\f6530ac02ce2c78e6b11fdaa1be9f32abc33f25e\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4b17463c814bdc562fb0392fa3494063623a0904">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d1952dd58851e2fe39f3497f05f5ddac22569dc8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\daniel\.android\build-cache\6aee4bce1be3de8a784f6f5cf1a3f4749908565a\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8010ae6ed32828a145b25ec97bc07b7a83c6318f">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d2111c660403b44327db82fe3bc78ad957a28e09\classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="/Users/hollie/.android/build-cache/a1d0032e43055c6964ae9831e43ac507fcacaf31/output/jars/classes.jar"
         jumboMode="false"
@@ -146,6 +407,24 @@
         <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/pre-dexed/debug/classes_4963ce8582f2bdec44ef3fd9561c0b597c290040.jar" />
     </item>
     <item
+        is-multidex="true"
+        jar="C:\Users\daniel\.android\build-cache\ed8985f457110f88dc49ccd97bbf4e51769e8d94\output\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_973488b7d407108017053dccdff9934718ac43e2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\daniel\.android\build-cache\f707dd6df1e7327cc131bae6ae92e7875b207378\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="486371f97baad8e607f332f20fee1d3dd00a731a">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_572fbdd09e9c68828fa0798654bf0b14cf135d40\classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="/Users/hollie/.android/build-cache/35fb7a9bd70974a2a64791582e3aa2840b55dbf4/output/jars/libs/internal_impl-24.2.1.jar"
         jumboMode="false"
@@ -153,6 +432,15 @@
         revision="25.0.0"
         sha1="867dad63c33388ff8c7644b236579355036d075f">
         <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_01b29771926c404db789000df9260d89d13eb60c.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\daniel\.android\build-cache\dd101bc77781dc50dd08c2be0285b44ae7640c79\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_f8337c42daf9ca8f8a2796f3158d149adf941cf3\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -183,12 +471,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="C:\Users\daniel\.android\build-cache\d11b2dfa34c241b92b189d32166e01873668bb77\output\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="bcb1eebaf97348f9812579dabaeed54f929ef8c5">
-        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_d754a288d5a99fc15340f5488d1b8532910395c4/classes.dex" />
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_4f01c5391e8e6ac6ae6752b6e1a1edd527fb031f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\daniel\.android\build-cache\5a3418bc0ab58e7dfed8b740194a67d4f21862c7\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d20672631818754557255886d3feb43e7fe75a66">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_60f4178bc7b88a11697eb64a267d2cdd6479b113\classes.dex" />
     </item>
 
 </items>

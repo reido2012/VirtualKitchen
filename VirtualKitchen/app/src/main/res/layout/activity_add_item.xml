@@ -124,7 +124,7 @@
             android:layout_alignBaseline="@+id/doneItem"
             android:layout_alignBottom="@+id/doneItem"
             android:layout_toLeftOf="@+id/doneItem"
-            android:text="Cancel" />
+            android:text="Discard" />
         <!-- add a field specified by the user? -->
     </RelativeLayout>
 

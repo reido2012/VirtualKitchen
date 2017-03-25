@@ -139,7 +139,7 @@ public class AddItem extends AppCompatActivity implements OnFocusChangeListener 
         btnFavListener(btnAddFav);
         //on click add to fav
         btnSaveItem = (Button) findViewById(R.id.doneItem);
-        btnSaveItem.setText("Add Item");
+        btnSaveItem.setText("Save");
         btnSaveListener(btnSaveItem);
         btnCancel = (Button)findViewById(R.id.cancelButton);
         btnCancelListener(btnCancel);
