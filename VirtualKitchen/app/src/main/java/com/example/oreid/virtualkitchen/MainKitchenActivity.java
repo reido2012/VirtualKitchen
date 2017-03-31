@@ -101,6 +101,7 @@ public class MainKitchenActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult (int requestCode, int resultCode, Intent data){
         super.onActivityResult (requestCode, resultCode, data);
+        Log.d(TAG, "Activity result: request_code = " + requestCode);
         if(requestCode==REQUEST_CODE){
             if (resultCode == Activity.RESULT_OK){
                 String name = data.getStringExtra("NAME");

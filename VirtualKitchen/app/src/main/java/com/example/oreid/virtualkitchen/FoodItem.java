@@ -1,5 +1,7 @@
 package com.example.oreid.virtualkitchen;
 
+import android.util.Log;
+
 import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Comparator;
@@ -100,6 +102,7 @@ public class FoodItem implements Serializable {
     public void setCategory(String cat) {
         this.category = cat;
         this.img = findImgByCat(cat);
+        Log.d("FoodItem", this.category + ": " + this.img);
     }
 
     public String getCategory() {
@@ -110,13 +113,13 @@ public class FoodItem implements Serializable {
         return this.img;
     }
 
-//    public void setImage(int img) {
-//        this.img = img;
-//    }
+    public void setImage(int img) {
+        this.img = img;
+    }
 
     private int findImgByCat(String cat) {
         switch(cat) {
-            case "Fruits":
+            case "Fruit":
                 return IMG_FRUIT;
             case "Vegetables":
                 return IMG_VEGETABLES;

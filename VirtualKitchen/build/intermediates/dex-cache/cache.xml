@@ -14,6 +14,7 @@
     <item
         is-multidex="true"
         jar="C:\Users\daniel\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+<<<<<<< HEAD
 =======
         is-multidex="true"
 <<<<<<< HEAD
@@ -39,6 +40,10 @@
         jumboMode="true"
         optimize="true"
 <<<<<<< HEAD
+=======
+        jumboMode="true"
+        optimize="true"
+>>>>>>> parent of 918f51a... Changed how storage area lists are updated
         revision="25.0.0"
         sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
         <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.1_08e51211dc25928976e66fd0f7fec1e3694f02ee\classes.dex" />
@@ -235,12 +240,16 @@
     <item
         is-multidex="true"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 918f51a... Changed how storage area lists are updated
         jar="C:\Users\daniel\.android\build-cache\2a0dfad38f086fc58ac32ec4f0318ba75313c0f5\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
         <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a5b2a5f12a72b89fec344f816aa8a50c22ff0de5\classes.dex" />
+<<<<<<< HEAD
 =======
         jar="/Users/hollie/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
 =======
@@ -394,6 +403,8 @@
 <<<<<<< HEAD
         <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.1_e80707c00537c0a6b23ac1796844eddb7ccb03a4/classes.dex" />
 >>>>>>> bal28-master
+=======
+>>>>>>> parent of 918f51a... Changed how storage area lists are updated
     </item>
     <item
         is-multidex="true"
@@ -650,6 +661,7 @@
     <item
         is-multidex="true"
         jar="C:\Users\daniel\.android\build-cache\d11b2dfa34c241b92b189d32166e01873668bb77\output\jars\libs\internal_impl-24.2.1.jar"
+<<<<<<< HEAD
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
@@ -816,6 +828,22 @@
         <dex dex="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_05007e5efd80d5c8902ae4d6cca1ea686460e132\classes.dex" />
 >>>>>>> 0341198285ebee5e3e65cc679beb862fd4a7bdb9
 >>>>>>> bal28-master
+=======
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_4f01c5391e8e6ac6ae6752b6e1a1edd527fb031f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\daniel\.android\build-cache\5a3418bc0ab58e7dfed8b740194a67d4f21862c7\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d20672631818754557255886d3feb43e7fe75a66">
+        <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_60f4178bc7b88a11697eb64a267d2cdd6479b113\classes.dex" />
+>>>>>>> parent of 918f51a... Changed how storage area lists are updated
     </item>
 
 </items>

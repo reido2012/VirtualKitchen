@@ -14,7 +14,6 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
 import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 
 /**
@@ -83,6 +82,7 @@ public class KitchenTab extends AppCompatActivity implements HasListView {
         listAdapter.notifyDataSetChanged();
     }
 
+<<<<<<< HEAD
 
     public void shoppingListHandler(View v) {
 
@@ -117,6 +117,9 @@ public class KitchenTab extends AppCompatActivity implements HasListView {
 */
 
     }
+=======
+
+>>>>>>> parent of 918f51a... Changed how storage area lists are updated
 
     @Override
     protected void onActivityResult (int requestCode, int resultCode, Intent data){
