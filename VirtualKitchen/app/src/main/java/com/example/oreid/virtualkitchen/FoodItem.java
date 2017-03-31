@@ -19,7 +19,7 @@ import java.util.Date;
 
 public class FoodItem implements Serializable {
 
-    public FoodItem() {}
+    public FoodItem(String name, int i, StorageArea storageArea, int parseInt) {}
 
     public FoodItem(String name, int qty, StorageArea storedWhere, int shelfLife, String cat) {
         this.name = name;

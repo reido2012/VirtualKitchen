@@ -127,7 +127,7 @@ public class KitchenTab extends AppCompatActivity implements HasListView {
                 String name = data.getStringExtra("NAME");
                 String quan = data.getStringExtra("QUAN");
                 String expiry = data.getStringExtra("EXP");
-                db.add(new FoodItem (name,Integer.parseInt(quan),storageArea,Integer.parseInt(expiry)));
+                db.add(new FoodItem (name,Integer.parseInt(quan),storageArea,Integer.parseInt(expiry) ));
                 updateUI();
             }
         }
@@ -159,7 +159,6 @@ public class KitchenTab extends AppCompatActivity implements HasListView {
      * Sets storage area associated with this tab. Also updates the list based on this data,
      * depending on the boolean passed in.
      * @param sa storage area associated with this tab
-     * @param updateList update the list based on the storage area?
      */
     public void setStorageArea(StorageArea sa) {
         this.storageArea = sa;

@@ -68,18 +68,14 @@
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
-<<<<<<< HEAD
 
-        <activity android:name=".AddItem"
-            android:label="Add Item" />
-
-=======
         <activity
-            android:name=".AddItem"
+            android:name="AddItem"
             android:label="Add Item"
             android:launchMode="singleTop" />
+
         <activity android:name=".ScanBarcodeActivity"></activity>
->>>>>>> parent of 4aeeb8c... Hollie's Stuff
+
     </application>
 
 </manifest>
