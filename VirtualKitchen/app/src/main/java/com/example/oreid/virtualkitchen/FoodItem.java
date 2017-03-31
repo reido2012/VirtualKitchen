@@ -101,7 +101,7 @@ public class FoodItem implements Serializable {
     // set category and also image based on category
     public void setCategory(String cat) {
         this.category = cat;
-        this.img = findImgByCat(cat);
+//        this.img = findImgByCat(cat);
         Log.d("FoodItem", this.category + ": " + this.img);
     }
 
@@ -117,23 +117,23 @@ public class FoodItem implements Serializable {
         this.img = img;
     }
 
-    private int findImgByCat(String cat) {
-        switch(cat) {
-            case "Fruit":
-                return IMG_FRUIT;
-            case "Vegetables":
-                return IMG_VEGETABLES;
-            case "Protein":
-                return IMG_PROTEIN;
-            case "Dairy":
-                return IMG_DAIRY;
-            case "Grains":
-                return IMG_GRAINS;
-            case "Other":
-                return IMG_OTHER;
-            default:
-                return IMG_DEFAULT;
-        }
+    private void findImgByCat(String cat) {
+//        switch(cat) {
+//            case "Fruit":
+//                return IMG_FRUIT;
+//            case "Vegetables":
+//                return IMG_VEGETABLES;
+//            case "Protein":
+//                return IMG_PROTEIN;
+//            case "Dairy":
+//                return IMG_DAIRY;
+//            case "Grains":
+//                return IMG_GRAINS;
+//            case "Other":
+//                return IMG_OTHER;
+//            default:
+//                return IMG_DEFAULT;
+//        }
     }
 
     /**
@@ -172,13 +172,13 @@ public class FoodItem implements Serializable {
     private Boolean favourite = false;
     private int img;
 
-    public static final int IMG_DEFAULT = R.drawable.img_default;
-    public static final int IMG_OTHER = R.drawable.img_other;
-    public static final int IMG_FRUIT = R.drawable.img_fruit;
-    public static final int IMG_VEGETABLES = R.drawable.img_veg;
-    public static final int IMG_DAIRY = R.drawable.img_dairy;
-    public static final int IMG_PROTEIN = R.drawable.img_protein;
-    public static final int IMG_GRAINS = R.drawable.img_grain;
+//    public static final int IMG_DEFAULT = R.drawable.img_default;
+//    public static final int IMG_OTHER = R.drawable.img_other;
+//    public static final int IMG_FRUIT = R.drawable.img_fruit;
+//    public static final int IMG_VEGETABLES = R.drawable.img_veg;
+//    public static final int IMG_DAIRY = R.drawable.img_dairy;
+//    public static final int IMG_PROTEIN = R.drawable.img_protein;
+//    public static final int IMG_GRAINS = R.drawable.img_grain;
 
 
 

@@ -25,6 +25,8 @@ public class SortedTab extends KitchenTab {
     private Spinner selectSortingMethod;
     private ArrayAdapter<String> spinnerAdapter;
     private int sortingType = 0; // sorting type corresponds to items in the drop-down menu.
+    private FoodStorageData db = VKData.getInstance().getFoodDB();
+
 
     public void onCreate(Bundle savedInstanceState) {
         // different layout - with sorting spinner
