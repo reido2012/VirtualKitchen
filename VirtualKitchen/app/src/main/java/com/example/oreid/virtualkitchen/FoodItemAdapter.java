@@ -48,6 +48,7 @@ public class FoodItemAdapter extends ArrayAdapter {
             holder.txtSubtitle = (TextView)row.findViewById(R.id.list_subtitle);
             holder.btnShoppingList = (ImageButton)row.findViewById(R.id.list_btn_shoppinglist);
             holder.btnDelete = (ImageButton)row.findViewById(R.id.list_btn_deletefood);
+            holder.imgIcon = (ImageView)row.findViewById(R.id.list_image);
 
             row.setTag(holder);
         }
@@ -64,10 +65,10 @@ public class FoodItemAdapter extends ArrayAdapter {
     private void setItemData(FoodItem d, FoodItemHolder h) {
         String title = d.getName() + " x " + d.getQty(); // name + quantity in brakcets
         String subtitle = "Expires in " + d.getDaysLeft() + " days."; // number of days remaining
-        // TODO 18/02/17 set image
 
         h.txtTitle.setText(title);
         h.txtSubtitle.setText(subtitle);
+        h.imgIcon.setImageResource(d.getImage());
     }
 
     private void removeItemAtIndex(int i) {

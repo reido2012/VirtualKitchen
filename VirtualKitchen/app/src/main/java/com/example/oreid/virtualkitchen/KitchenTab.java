@@ -10,6 +10,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
 import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 
 /**
@@ -75,7 +76,17 @@ public class KitchenTab extends AppCompatActivity implements HasListView {
         listAdapter.notifyDataSetChanged();
     }
 
+    public void shoppingListHandler(View v) {
 
+        // index of where the item can be found in the list's data.
+        int position = listView.getPositionForView((View)v.getParent());
+
+        db.addToShoppingList(position, this.storageArea);
+
+        updateUI();
+
+
+    }
 
     public void deleteButtonHandler(View v) {
 

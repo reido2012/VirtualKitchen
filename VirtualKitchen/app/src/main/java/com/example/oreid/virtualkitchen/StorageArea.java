@@ -22,4 +22,28 @@ public enum StorageArea {
         return storageName;
     }
 
+    public static StorageArea fromString(String val) {
+        switch(val) {
+            case "Fridge":
+                return FRIDGE;
+            case "Freezer":
+                return FREEZER;
+            case "Pantry":
+                return CUPBOARD;
+            default:
+                return null;
+        }
+    }
+
+    public static String[] stringValues() {
+        StorageArea[] states = values();
+        String[] names = new String[states.length];
+
+        for (int i = 0; i < states.length; i++) {
+            names[i] = states[i].toString();
+        }
+
+        return names;
+    }
+
 }
