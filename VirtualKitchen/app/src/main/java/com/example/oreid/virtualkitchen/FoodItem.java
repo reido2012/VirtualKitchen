@@ -19,12 +19,13 @@ public class FoodItem implements Serializable {
 
     public FoodItem() {}
 
-    public FoodItem(String name, int qty, StorageArea storedWhere, int shelfLife) {
+    public FoodItem(String name, int qty, StorageArea storedWhere, int shelfLife, String cat) {
         this.name = name;
         this.qty = qty;
         this.storedWhere = storedWhere;
         this.shelfLife = shelfLife;
         this.dateAdded = new Date(); // now
+        this.setCategory(cat);
     }
 
     public void setDateAdded(Date dateAdded) {
@@ -86,6 +87,51 @@ public class FoodItem implements Serializable {
         this.shelfLife = shelfLife;
     }
 
+    public boolean getFavourite() {
+        return this.favourite;
+    }
+
+    public void setFavourite(boolean fav) {
+        this.favourite = fav;
+    }
+
+    // set category and also image based on category
+    public void setCategory(String cat) {
+        this.category = cat;
+        this.img = findImgByCat(cat);
+    }
+
+    public String getCategory() {
+        return this.category;
+    }
+
+    public int getImage() {
+        return this.img;
+    }
+
+//    public void setImage(int img) {
+//        this.img = img;
+//    }
+
+    private int findImgByCat(String cat) {
+        switch(cat) {
+            case "Fruits":
+                return IMG_FRUIT;
+            case "Vegetables":
+                return IMG_VEGETABLES;
+            case "Protein":
+                return IMG_PROTEIN;
+            case "Dairy":
+                return IMG_DAIRY;
+            case "Grains":
+                return IMG_GRAINS;
+            case "Other":
+                return IMG_OTHER;
+            default:
+                return IMG_DEFAULT;
+        }
+    }
+
     /**
      * Comparator, used in sorting, that allows items to be sorted by name.
      * Compares item names lexicographically to sort in alphabetical order.
@@ -118,6 +164,21 @@ public class FoodItem implements Serializable {
     private Date dateAdded;
     private int shelfLife;
     private StorageArea storedWhere;
-    // TODO 17/02/17 add photo
+    private String category;
+    private Boolean favourite = false;
+    private int img;
+
+    public static final int IMG_DEFAULT = R.drawable.img_default;
+    public static final int IMG_OTHER = R.drawable.img_other;
+    public static final int IMG_FRUIT = R.drawable.img_fruit;
+    public static final int IMG_VEGETABLES = R.drawable.img_veg;
+    public static final int IMG_DAIRY = R.drawable.img_dairy;
+    public static final int IMG_PROTEIN = R.drawable.img_protein;
+    public static final int IMG_GRAINS = R.drawable.img_grain;
+
+
+
+
+
 
 }
