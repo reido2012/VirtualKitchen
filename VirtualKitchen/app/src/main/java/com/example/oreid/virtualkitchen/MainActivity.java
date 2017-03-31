@@ -117,6 +117,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         emailRegister = (Button) findViewById(R.id.registration_button);
         emailRegister.setOnClickListener(this);
 
+
         emailField = (EditText) findViewById(R.id.email_edit_text);
         passwordField = (EditText) findViewById(R.id.password_edit_text);
     }

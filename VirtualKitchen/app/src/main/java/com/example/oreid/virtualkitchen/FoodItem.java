@@ -19,7 +19,7 @@ import java.util.Date;
 
 public class FoodItem implements Serializable {
 
-    public FoodItem(String name, int i, StorageArea storageArea, int parseInt) {}
+    public FoodItem() {}
 
     public FoodItem(String name, int qty, StorageArea storedWhere, int shelfLife, String cat) {
         this.name = name;
@@ -28,7 +28,6 @@ public class FoodItem implements Serializable {
         this.shelfLife = shelfLife;
         this.dateAdded = new Date(); // now
         this.setCategory(cat);
-
     }
 
     public void setDateAdded(Date dateAdded) {
@@ -113,27 +112,27 @@ public class FoodItem implements Serializable {
         return this.img;
     }
 
-    public void setImage(int img) {
-        this.img = img;
-    }
+//    public void setImage(int img) {
+//        this.img = img;
+//    }
 
-    private void findImgByCat(String cat) {
-//        switch(cat) {
-//            case "Fruit":
-//                return IMG_FRUIT;
-//            case "Vegetables":
-//                return IMG_VEGETABLES;
-//            case "Protein":
-//                return IMG_PROTEIN;
-//            case "Dairy":
-//                return IMG_DAIRY;
-//            case "Grains":
-//                return IMG_GRAINS;
-//            case "Other":
-//                return IMG_OTHER;
-//            default:
-//                return IMG_DEFAULT;
-//        }
+    private int findImgByCat(String cat) {
+        switch(cat) {
+            case "Fruits":
+                return IMG_FRUIT;
+            case "Vegetables":
+                return IMG_VEGETABLES;
+            case "Protein":
+                return IMG_PROTEIN;
+            case "Dairy":
+                return IMG_DAIRY;
+            case "Grains":
+                return IMG_GRAINS;
+            case "Other":
+                return IMG_OTHER;
+            default:
+                return IMG_DEFAULT;
+        }
     }
 
     /**
@@ -172,13 +171,13 @@ public class FoodItem implements Serializable {
     private Boolean favourite = false;
     private int img;
 
-//    public static final int IMG_DEFAULT = R.drawable.img_default;
-//    public static final int IMG_OTHER = R.drawable.img_other;
-//    public static final int IMG_FRUIT = R.drawable.img_fruit;
-//    public static final int IMG_VEGETABLES = R.drawable.img_veg;
-//    public static final int IMG_DAIRY = R.drawable.img_dairy;
-//    public static final int IMG_PROTEIN = R.drawable.img_protein;
-//    public static final int IMG_GRAINS = R.drawable.img_grain;
+    public static final int IMG_DEFAULT = R.drawable.img_default;
+    public static final int IMG_OTHER = R.drawable.img_other;
+    public static final int IMG_FRUIT = R.drawable.img_fruit;
+    public static final int IMG_VEGETABLES = R.drawable.img_veg;
+    public static final int IMG_DAIRY = R.drawable.img_dairy;
+    public static final int IMG_PROTEIN = R.drawable.img_protein;
+    public static final int IMG_GRAINS = R.drawable.img_grain;
 
 
 

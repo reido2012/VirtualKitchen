@@ -14,4 +14,31 @@
         android:icon="@drawable/ic_add"
         yourapp:showAsAction="always"/>
 
+    <item android:id="@+id/action_kitchen"
+        android:title="Kitchen"
+        yourapp:showAsAction="ifRoom"
+        android:orderInCategory="100"/>
+
+    <item android:id="@+id/action_notifications"
+        android:title="Notifications"
+        yourapp:showAsAction="ifRoom"
+        android:orderInCategory="100"/>
+
+
+    <item android:id="@+id/action_shoppingList"
+        android:title="Shopping List"
+        yourapp:showAsAction="ifRoom"
+        android:orderInCategory="100"/>
+
+    <item android:id="@+id/action_recipes"
+        android:title="Recipes"
+        yourapp:showAsAction="ifRoom"
+        android:orderInCategory="100"/>
+
+    <item android:id="@+id/action_settings"
+        android:title="Settings"
+        yourapp:showAsAction="ifRoom"
+        android:orderInCategory="100"/>
+
+
 </menu>

@@ -101,7 +101,6 @@ public class MainKitchenActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult (int requestCode, int resultCode, Intent data){
         super.onActivityResult (requestCode, resultCode, data);
-        Log.d(TAG, "Activity result: request_code = " + requestCode);
         if(requestCode==REQUEST_CODE){
             if (resultCode == Activity.RESULT_OK){
                 String name = data.getStringExtra("NAME");
@@ -122,12 +121,48 @@ public class MainKitchenActivity extends AppCompatActivity {
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
+        Intent newIntent;
+
         switch (item.getItemId()) {
             case R.id.add:
                 Intent intentItem = new Intent(MainKitchenActivity.this, AddItem.class);
                 intentItem.putExtra("STORAGEAREA", TAB_NAMES[tabHost.getCurrentTab()]);
                 startActivityForResult(intentItem,REQUEST_CODE);
                 break;
+            case R.id.action_kitchen:
+
+                newIntent = new Intent(MainKitchenActivity.this, MainKitchenActivity.class);
+                startActivity(newIntent);
+
+                return true;
+
+            case R.id.action_notifications:
+
+                newIntent = new Intent(MainKitchenActivity.this, MainKitchenActivity.class);
+                startActivity(newIntent);
+
+                return true;
+
+            case R.id.action_recipes:
+
+                newIntent = new Intent(MainKitchenActivity.this, MainKitchenActivity.class);
+                startActivity(newIntent);
+
+                return true;
+
+            case R.id.action_shoppingList:
+
+                newIntent = new Intent(MainKitchenActivity.this, MainKitchenActivity.class);
+                startActivity(newIntent);
+
+                return true;
+
+            case R.id.action_settings:
+
+                newIntent = new Intent(MainKitchenActivity.this, MainKitchenActivity.class);
+                startActivity(newIntent);
+
+                return true;
             default:
                 break;
         }
