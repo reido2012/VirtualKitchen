@@ -1,5 +1,7 @@
 package com.example.oreid.virtualkitchen;
 
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -26,7 +28,7 @@ import java.util.Date;
 import static com.example.oreid.virtualkitchen.StorageArea.stringValues;
 import static java.lang.Integer.parseInt;
 
-public class AddItem extends AppCompatActivity implements OnFocusChangeListener {
+public class AddItem extends AppCompatActivity implements View.OnFocusChangeListener {
 
     private static final String TAG = "AddItem";
 
@@ -139,7 +141,7 @@ public class AddItem extends AppCompatActivity implements OnFocusChangeListener 
         btnFavListener(btnAddFav);
         //on click add to fav
         btnSaveItem = (Button) findViewById(R.id.doneItem);
-        btnSaveItem.setText("Add Item");
+        btnSaveItem.setText("Save");
         btnSaveListener(btnSaveItem);
         btnCancel = (Button)findViewById(R.id.cancelButton);
         btnCancelListener(btnCancel);

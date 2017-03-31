@@ -20,6 +20,7 @@ public class ShoppingListTab extends KitchenTab {
         super.onCreate(savedInstanceState);
         super.setStorageArea(SHOPPINGLIST);
 
+
         setListData(db.get(SHOPPINGLIST));
         updateUI();
     }
