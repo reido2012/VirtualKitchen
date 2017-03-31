@@ -1,11 +1,10 @@
 package com.example.oreid.virtualkitchen;
 
 import android.app.Activity;
-<<<<<<< HEAD
-=======
+
 import android.app.AlertDialog;
 import android.content.DialogInterface;
->>>>>>> bal28-master
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -41,7 +40,6 @@ public class KitchenTab extends AppCompatActivity implements HasListView {
     private int listViewId  = R.id.list_view;
     private String tabName = "Kitchen";
     private StorageArea storageArea = null;
-    public static final int REQUEST_CODE = 5;
 
     private ArrayList<FoodItem> listData = new ArrayList<FoodItem>();
 
@@ -85,18 +83,17 @@ public class KitchenTab extends AppCompatActivity implements HasListView {
         listAdapter.notifyDataSetChanged();
     }
 
-<<<<<<< HEAD
+
     public void shoppingListHandler(View v) {
 
         // index of where the item can be found in the list's data.
-        int position = listView.getPositionForView((View)v.getParent());
+        int position = listView.getPositionForView((View) v.getParent());
 
         db.addToShoppingList(position, this.storageArea);
 
         updateUI();
+    }
 
-
-=======
     // called when add button is pressed.
     // TODO hollie 22/02/17 this should lead to a new intent where the food can be created properly.
     public void addFood(View v) {
@@ -118,7 +115,7 @@ public class KitchenTab extends AppCompatActivity implements HasListView {
                 .create();
         dialog.show();
 */
->>>>>>> bal28-master
+
     }
 
     @Override
