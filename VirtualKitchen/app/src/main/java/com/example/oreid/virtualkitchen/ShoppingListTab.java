@@ -20,7 +20,11 @@ public class ShoppingListTab extends KitchenTab {
         super.onCreate(savedInstanceState);
         super.setStorageArea(SHOPPINGLIST);
 
+<<<<<<< HEAD
 //        setListData(db.get(SHOPPINGLIST));
+=======
+        setListData(db.get(SHOPPINGLIST));
+>>>>>>> parent of 4aeeb8c... Hollie's Stuff
         updateUI();
     }
 
