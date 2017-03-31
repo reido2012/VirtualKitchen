@@ -101,7 +101,6 @@ public class MainKitchenActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult (int requestCode, int resultCode, Intent data){
         super.onActivityResult (requestCode, resultCode, data);
-        Log.d(TAG, "Activity result: request_code = " + requestCode);
         if(requestCode==REQUEST_CODE){
             if (resultCode == Activity.RESULT_OK){
                 String name = data.getStringExtra("NAME");
@@ -122,6 +121,7 @@ public class MainKitchenActivity extends AppCompatActivity {
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
+
         switch (item.getItemId()) {
             case R.id.add:
                 Intent intentItem = new Intent(MainKitchenActivity.this, AddItem.class);

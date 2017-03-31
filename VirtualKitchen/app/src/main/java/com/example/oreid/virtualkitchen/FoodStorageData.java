@@ -28,7 +28,48 @@ import static com.example.oreid.virtualkitchen.StorageArea.SHOPPINGLIST;
  * Created by hollie on 25/02/2017.
  */
 
-public class FoodStorageData implements ChildEventListener {
+public class FoodStorageData {
+
+    class KitchenEventListener implements ChildEventListener {
+
+        private StorageArea storage;
+
+        /**
+         * Create new firebase ValueEventListener to update lists of data for the kitchen.
+         * @param s storage area to be connected to.
+         */
+        public KitchenEventListener(StorageArea s) {
+            this.storage = s;
+        }
+
+        @Override
+        public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+            FoodItem f = dataSnapshot.getValue(FoodItem.class);
+
+            kitchen.get(storage).add(f);
+            updateLists(storage);
+        }
+
+        @Override
+        public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+        }
+
+        @Override
+        public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+        }
+
+        @Override
+        public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+        }
+
+        @Override
+        public void onCancelled(DatabaseError databaseError) {
+
+        }
+    }
 
     /**
      * Attach a class with list view so it can be updated when a storage area is updated.
@@ -54,37 +95,6 @@ public class FoodStorageData implements ChildEventListener {
         }
     }
 
-    private boolean clearMyKitchen = true;
-
-    @Override
-    public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-        FoodItem f = dataSnapshot.getValue(FoodItem.class);
-        kitchen.get(f.getLocation()).add(f);
-        updateLists(f.getLocation());
-
-
-    }
-
-    @Override
-    public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-
-    }
-
-    @Override
-    public void onChildRemoved(DataSnapshot dataSnapshot) {
-
-    }
-
-    @Override
-    public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-
-    }
-
-    @Override
-    public void onCancelled(DatabaseError databaseError) {
-
-    }
-
     /**
      * A convenient method to get the items from a specific storage area
      * @param storageArea storage area to get items from.
@@ -108,7 +118,6 @@ public class FoodStorageData implements ChildEventListener {
 
     public void addToFreezer(FoodItem f) {
         dbRef.child("users").child(userId).child(FREEZER.toString()).push().setValue(f);
-
     }
 
     public ArrayList<FoodItem> getCupboardItems() {
@@ -123,9 +132,13 @@ public class FoodStorageData implements ChildEventListener {
         return kitchen.get(SHOPPINGLIST);
     }
 
-    public void addToShoppingList(FoodItem f) {
-        dbRef.child("users").child(userId).child(SHOPPINGLIST.toString()).push().setValue(f);
+    public void addToShoppingList(int index, StorageArea s) {
+        addToShoppingList(kitchen.get(s).get(index));
+    }
 
+    public void addToShoppingList(FoodItem f) {
+        Log.d(TAG, "adding item " + f.getName() + " to shopping list " + SHOPPINGLIST.toString());
+        dbRef.child("users").child(userId).child(SHOPPINGLIST.toString()).push().setValue(f);
     }
 
     public ArrayList<FoodItem> getAllItems() {
@@ -155,8 +168,8 @@ public class FoodStorageData implements ChildEventListener {
      * Adds a single food item to fridge from shoppinglist
      * @param f item to add to fridge and remove from shoppinglist.
      * TODO Add button for this
-     */
-    public void shoppingListItemToStorage(FoodItem f) {
+Log.d
+                public void shoppingListItemToStorage(FoodItem f) {
         addToFridge(f);
         removeFromFirebase(f.getName(), SHOPPINGLIST.toString());
     }
@@ -309,21 +322,15 @@ public class FoodStorageData implements ChildEventListener {
         this.userId = uID;
 
         // Listen for changes on the firebae.
-        dbRef.child("users").child(userId).child(FRIDGE.toString()).addChildEventListener(this);
-        dbRef.child("users").child(userId).child(FREEZER.toString()).addChildEventListener(this);
-        dbRef.child("users").child(userId).child(CUPBOARD.toString()).addChildEventListener(this);
-        dbRef.child("users").child(userId).child(SHOPPINGLIST.toString()).addChildEventListener(this);
+        dbRef.child("users").child(userId).child(FRIDGE.toString()).addChildEventListener(new KitchenEventListener(FRIDGE));
+        dbRef.child("users").child(userId).child(FREEZER.toString()).addChildEventListener(new KitchenEventListener(FREEZER));
+        dbRef.child("users").child(userId).child(CUPBOARD.toString()).addChildEventListener(new KitchenEventListener(CUPBOARD));
+        dbRef.child("users").child(userId).child(SHOPPINGLIST.toString()).addChildEventListener(new KitchenEventListener(SHOPPINGLIST));
 
         kitchen.put(FRIDGE, new ArrayList<FoodItem>());
         kitchen.put(FREEZER, new ArrayList<FoodItem>());
         kitchen.put(CUPBOARD, new ArrayList<FoodItem>());
         kitchen.put(SHOPPINGLIST, new ArrayList<FoodItem>());
-
-//        if (clearMyKitchen) {
-//            dbRef.child("users").child(userId).child(StorageArea.CUPBOARD.toString()).removeValue();
-//            dbRef.child("users").child(userId).child(StorageArea.FRIDGE.toString()).removeValue();
-//            dbRef.child("users").child(userId).child(StorageArea.FREEZER.toString()).removeValue();
-//        }
 
     }
 

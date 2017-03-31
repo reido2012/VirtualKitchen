@@ -16,6 +16,11 @@
     <!-- what are we going to do about same item with different expiry dates like avocados - based on how ripe it it ,
     or bought different times -->
 
+    <Button
+        android:id="@+id/scanBarcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scan Barcode..." />
 
     <EditText
         android:layout_width="wrap_content"
@@ -76,6 +81,13 @@
 
     </RelativeLayout>
 
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:prompt="@string/storage"
+        android:id="@+id/spinnerStoragearea"
+        android:layout_marginTop="20dp" />
+
 
     <Spinner
         android:layout_width="match_parent"
@@ -89,23 +101,30 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:text="Add to Favourites"
+            android:id="@+id/addFavourite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:id="@+id/addFavourite" />
+            android:text="Add to Favourites" />
 
         <Button
-            android:text=""
+            android:id="@+id/doneItem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/doneItem"
+            android:layout_alignBaseline="@+id/addFavourite"
             android:layout_alignBottom="@+id/addFavourite"
-            android:layout_toRightOf="@+id/addFavourite"
-            android:layout_toEndOf="@+id/addFavourite"
-            android:layout_marginLeft="90dp"
-            android:layout_marginStart="90dp"
-            android:layout_alignTop="@+id/addFavourite" />
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="" />
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/doneItem"
+            android:layout_alignBottom="@+id/doneItem"
+            android:layout_toLeftOf="@+id/doneItem"
+            android:text="Cancel" />
         <!-- add a field specified by the user? -->
     </RelativeLayout>
 

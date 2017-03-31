@@ -7,5 +7,3 @@
 /build
 /captures
 .externalNativeBuild
-/build/intermediates/dex-cache/cache.xml
-/.gradle/
