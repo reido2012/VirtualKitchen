@@ -11,4 +11,14 @@
     <string name="first_name">First Name - Registration Only</string>
     <string name="last_name">Last Name - Registration Only</string>
     <string name="search_kitchen_hint">Search your kitchen</string>
+    <string name="cat">Category</string>
+    <string-array name="array_category">
+        <item>Category - Default</item>
+        <item>Fruits</item>
+        <item>Vegetables</item>
+        <item>Protein</item>
+        <item>Dairy</item>
+        <item>Grains</item>
+        <item>Other</item>
+    </string-array>
 </resources>
