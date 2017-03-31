@@ -121,6 +121,7 @@ public class MainKitchenActivity extends AppCompatActivity {
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
+        Intent newIntent;
 
         switch (item.getItemId()) {
             case R.id.add:
@@ -128,6 +129,40 @@ public class MainKitchenActivity extends AppCompatActivity {
                 intentItem.putExtra("STORAGEAREA", TAB_NAMES[tabHost.getCurrentTab()]);
                 startActivityForResult(intentItem,REQUEST_CODE);
                 break;
+            case R.id.action_kitchen:
+
+                newIntent = new Intent(MainKitchenActivity.this, MainKitchenActivity.class);
+                startActivity(newIntent);
+
+                return true;
+
+            case R.id.action_notifications:
+
+                newIntent = new Intent(MainKitchenActivity.this, MainKitchenActivity.class);
+                startActivity(newIntent);
+
+                return true;
+
+            case R.id.action_recipes:
+
+                newIntent = new Intent(MainKitchenActivity.this, MainKitchenActivity.class);
+                startActivity(newIntent);
+
+                return true;
+
+            case R.id.action_shoppingList:
+
+                newIntent = new Intent(MainKitchenActivity.this, MainKitchenActivity.class);
+                startActivity(newIntent);
+
+                return true;
+
+            case R.id.action_settings:
+
+                newIntent = new Intent(MainKitchenActivity.this, MainKitchenActivity.class);
+                startActivity(newIntent);
+
+                return true;
             default:
                 break;
         }
