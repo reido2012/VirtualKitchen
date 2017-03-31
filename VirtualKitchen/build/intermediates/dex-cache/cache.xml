@@ -2,6 +2,7 @@
 <items version="2" >
 
     <item
+<<<<<<< HEAD
         is-multidex="false"
         jar="/Users/hollie/.android/build-cache/d1b5efe44abdeaae2324ba00b6a4a16ca4a56504/output/jars/classes.jar"
         jumboMode="false"
@@ -13,8 +14,31 @@
     <item
         is-multidex="true"
         jar="C:\Users\daniel\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+=======
+        is-multidex="true"
+<<<<<<< HEAD
+        jar="/Users/hollie/.android/build-cache/e4121c8f05933b19b9bfd3567f4a1b3d1cf8fae8/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
+        revision="25.0.0"
+        sha1="9cca2818594cc5348806d6662133491e7ea0fa8d">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_576f368809efab6d764a9e38220426e1bcbae6f2/classes.dex" />
+=======
+        jar="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\10.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="e2185aff89caeb337b1ffc36d5e525d8318e7cfe">
+        <dex dex="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-10.0.1_e114a4ba5d6ea08e125dd56250353c4ca43e0860\classes.dex" />
+>>>>>>> 0341198285ebee5e3e65cc679beb862fd4a7bdb9
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+>>>>>>> bal28-master
+        jumboMode="true"
+        optimize="true"
+<<<<<<< HEAD
         revision="25.0.0"
         sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
         <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.1_08e51211dc25928976e66fd0f7fec1e3694f02ee\classes.dex" />
@@ -210,12 +234,166 @@
     </item>
     <item
         is-multidex="true"
+<<<<<<< HEAD
         jar="C:\Users\daniel\.android\build-cache\2a0dfad38f086fc58ac32ec4f0318ba75313c0f5\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
         <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a5b2a5f12a72b89fec344f816aa8a50c22ff0de5\classes.dex" />
+=======
+        jar="/Users/hollie/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
+=======
+        revision="24.0.0"
+        sha1="58576647950dc0e002866422d4eca80d1f046713">
+        <dex dex="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_808d4ba6cfed8f982a2b18d0c4785d6a502aea01\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\10.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="486371f97baad8e607f332f20fee1d3dd00a731a">
+        <dex dex="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-iid-10.0.1_4de8aa4e029d035f745caeb9e49bdef58739f7ff\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\10.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="756f6297eef79784f5e356dcd4f39865028b2bd0">
+        <dex dex="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-10.0.1_65b602346c46b6d8ba0f9a15863328f44eeb382c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_0aa8677291e62159ac00044d3dfd46310912dec7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\10.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="8010ae6ed32828a145b25ec97bc07b7a83c6318f">
+        <dex dex="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-connection-10.0.1_6d322af8c8e905d2b909b9c56447be00c0c77680\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-base\10.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="e96c6974cf924e7ee3b230e6847d5731423388c9">
+        <dex dex="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-base-10.0.1_a441c8a5917c19052e182aca1536c9c2708f3353\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.1_c5cfe87705c7a07c5279062efca7a72876c1e55b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_2fd628dee3cd28c371a2676bca09f2e08fd0529b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database\10.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="8f128aeeb7e31271b28a7adb9dac1f3a6ed9f5e7">
+        <dex dex="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-10.0.1_5efb012c7c0fac202be1a074c41030a010494c7e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_da0685fcde16643aaf496daeebb4d426bf32e9fc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\10.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="6addaba208e21c6da776d0ca75b6b23a6ccd5499">
+        <dex dex="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-10.0.1_dff33ae9b32415b02697f345911e359bb66a6f79\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\10.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="9cca2818594cc5348806d6662133491e7ea0fa8d">
+        <dex dex="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-10.0.1_1a021e739b7826f4a9e2d78e4d4615213f876215\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\10.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="25438f55fc6d906a0e72f30b21487541430ede43">
+        <dex dex="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-10.0.1_c677de55880b03d5ded1d4d9fb4d0e072f41a255\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.1_aecc8a7eaea82728b4abdfb3df70b7c4dd4c80f3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\10.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="6116e0e7069de7fc259aac8e08b84f32c2038231">
+        <dex dex="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-impl-10.0.1_26035fd612c07ab00217aaf201b3b6c14e9e5a05\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\exploded-aar\com.google.firebase\firebase-messaging\10.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="4b17463c814bdc562fb0392fa3494063623a0904">
+        <dex dex="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-messaging-10.0.1_bab58ec3411023f1d3eb1a5bf0bd1b9da5eebf8b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bdour\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+>>>>>>> 0341198285ebee5e3e65cc679beb862fd4a7bdb9
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+<<<<<<< HEAD
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.1_e80707c00537c0a6b23ac1796844eddb7ccb03a4/classes.dex" />
+>>>>>>> bal28-master
     </item>
     <item
         is-multidex="true"
@@ -484,8 +662,160 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
+<<<<<<< HEAD
         sha1="d20672631818754557255886d3feb43e7fe75a66">
         <dex dex="C:\Users\daniel\Documents\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_60f4178bc7b88a11697eb64a267d2cdd6479b113\classes.dex" />
+=======
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="/Users/hollie/Documents/IP/VirtualKitchen/VirtualKitchen/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_87b7c9f7eb704aaf40daaa194f9beeff083d2869/classes.dex" />
+=======
+        <dex dex="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.1_c5326f0ee51defa663fb95f0e41626149a4563ef\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.1_1e6900791356ba0f3010e2fd2d4bc3d369b98fb9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\10.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="eb0d830e3eabb9deb9ec44869cf7ac7ea1ad794c">
+        <dex dex="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-common-10.0.1_fbc9356da42bb2e014c8d84a97ba2569b08e05fd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.1_b4b4a0235384ebe6dc130c95dfccc602c0ff5bcf\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.1_ee3ef9afa87392dbefe96d6f8b35cf4837066727\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.1_d40273591e2ae95d14ed0d60d5f2b447eb1ca138\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_d8f18ae5a00e04056880ad38007f912f8a7049a9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.1_cc6ba62817e018b4d401a88872ace38e07eda3e7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.1_f838a5ec75bf640c99285de58c1226af644e8f45\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-24.2.1_351f84fe90b729fac641f31b195c0f25a99b6621\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\exploded-aar\com.android.support.constraint\constraint-layout\1.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="d20672631818754557255886d3feb43e7fe75a66">
+        <dex dex="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support.constraint-constraint-layout-1.0.0_e4aa3c3cc36462d64c4de92161178a2687e7a24e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bdour\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.0\constraint-layout-solver-1.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="90493f2ea15ff3f57416368123e5d4d180e0c6fd">
+        <dex dex="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.0_3b006bdad83edc7408aee9e8e2b74173e99a02ee\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\10.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="433f4d6aa5f21f19552afe0e6c5eff0fedba73ad">
+        <dex dex="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-10.0.1_aebb29dec973e6c149aa13a80b9e3b8e5585239c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="b03a955c31e4d60418c8c27461004b937b97dec6">
+        <dex dex="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_b35a19ce959532799ba9ed850683b0dde29be227\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_78a2b37dd7366c1bf0f27361887434ab7e949afd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-24.2.1_12b9a4a2ae7aaea73cb13bc679fcbf2b82b396f2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="C:\Users\Bdour\Documents\GitHub\VirtualKitchen\VirtualKitchen\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_05007e5efd80d5c8902ae4d6cca1ea686460e132\classes.dex" />
+>>>>>>> 0341198285ebee5e3e65cc679beb862fd4a7bdb9
+>>>>>>> bal28-master
     </item>
 
 </items>

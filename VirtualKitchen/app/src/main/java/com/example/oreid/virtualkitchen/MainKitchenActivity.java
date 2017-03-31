@@ -121,7 +121,6 @@ public class MainKitchenActivity extends AppCompatActivity {
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
-
         switch (item.getItemId()) {
             case R.id.add:
                 Intent intentItem = new Intent(MainKitchenActivity.this, AddItem.class);

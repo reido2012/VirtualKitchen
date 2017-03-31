@@ -14,7 +14,6 @@
     <string name="cat">Category</string>
     <string name="add">Add Food</string>
     <string name="storage">Storage Area</string>
-
     <string-array name="array_category">
         <item>Category - Default</item>
         <item>Fruits</item>

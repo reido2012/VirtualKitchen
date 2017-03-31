@@ -26,6 +26,7 @@ public class FoodItem implements Serializable {
         this.shelfLife = shelfLife;
         this.dateAdded = new Date(); // now
         this.setCategory(cat);
+
     }
 
     public void setDateAdded(Date dateAdded) {

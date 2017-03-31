@@ -1,0 +1,37 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is ahead of 'origin/master' by 22 commits.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#	modified:   VirtualKitchen/.gradle/2.14.1/taskArtifacts/cache.properties.lock
+#	modified:   VirtualKitchen/.gradle/2.14.1/taskArtifacts/fileHashes.bin
+#	modified:   VirtualKitchen/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin
+#	modified:   VirtualKitchen/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin
+#	modified:   VirtualKitchen/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin
+#	modified:   VirtualKitchen/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin
+#	modified:   VirtualKitchen/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock
+#	modified:   VirtualKitchen/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin
+#	modified:   VirtualKitchen/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock
+#	modified:   VirtualKitchen/app/app.iml
+#	modified:   VirtualKitchen/app/src/main/AndroidManifest.xml
+#	modified:   VirtualKitchen/app/src/main/java/com/example/oreid/virtualkitchen/AddItem.java
+#	modified:   VirtualKitchen/app/src/main/java/com/example/oreid/virtualkitchen/FoodItem.java
+#	modified:   VirtualKitchen/app/src/main/java/com/example/oreid/virtualkitchen/KitchenTab.java
+#	modified:   VirtualKitchen/app/src/main/java/com/example/oreid/virtualkitchen/MainActivity.java
+#	modified:   VirtualKitchen/app/src/main/java/com/example/oreid/virtualkitchen/MainKitchenActivity.java
+#	modified:   VirtualKitchen/app/src/main/res/layout/activity_add_item.xml
+#	modified:   VirtualKitchen/app/src/main/res/values/strings.xml
+#	modified:   VirtualKitchen/build/intermediates/dex-cache/cache.xml
+#
+# Untracked files:
+#	VirtualKitchen/.idea/inspectionProfiles/
+#	VirtualKitchen/app/src/main/res/drawable-hdpi/
+#	VirtualKitchen/app/src/main/res/drawable-mdpi/
+#	VirtualKitchen/app/src/main/res/drawable-xhdpi/
+#	VirtualKitchen/app/src/main/res/drawable-xxhdpi/
+#	VirtualKitchen/app/src/main/res/layout/spinner_layout.xml
+#
+

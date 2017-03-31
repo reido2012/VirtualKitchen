@@ -1,6 +1,11 @@
 package com.example.oreid.virtualkitchen;
 
 import android.app.Activity;
+<<<<<<< HEAD
+=======
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+>>>>>>> bal28-master
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -27,6 +32,10 @@ public class KitchenTab extends AppCompatActivity implements HasListView {
     private static final String TAG = "KitchenTab";
 
     protected FoodStorageData db = VKData.getInstance().getFoodDB();
+
+    static final int REQUEST_CODE=1;
+    protected FoodStorageData db;
+
 
     private int contentViewId = R.layout.activity_kitchen_tab;
     private int listViewId  = R.id.list_view;
@@ -76,6 +85,7 @@ public class KitchenTab extends AppCompatActivity implements HasListView {
         listAdapter.notifyDataSetChanged();
     }
 
+<<<<<<< HEAD
     public void shoppingListHandler(View v) {
 
         // index of where the item can be found in the list's data.
@@ -86,8 +96,43 @@ public class KitchenTab extends AppCompatActivity implements HasListView {
         updateUI();
 
 
+=======
+    // called when add button is pressed.
+    // TODO hollie 22/02/17 this should lead to a new intent where the food can be created properly.
+    public void addFood(View v) {
+        Intent intentItem = new Intent(KitchenTab.this, AddItem.class);
+        startActivityForResult(intentItem,REQUEST_CODE);
+       /* final EditText txtField = new EditText(this);
+        AlertDialog dialog = new AlertDialog.Builder(this)
+                .setTitle("Add an item.")
+                .setMessage("Name of item to add to the " + tabName)
+                .setView(txtField)
+                .setPositiveButton("Add", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        String name = String.valueOf(txtField.getText());
+                        db.add(new FoodItem(name, 1, storageArea, 3));
+                    }
+                })
+                .setNegativeButton("Cancel", null)
+                .create();
+        dialog.show();
+*/
+>>>>>>> bal28-master
     }
 
+    @Override
+    protected void onActivityResult (int requestCode, int resultCode, Intent data){
+        if(requestCode==1){
+            if (resultCode == Activity.RESULT_OK){
+                String name = data.getStringExtra("NAME");
+                String quan = data.getStringExtra("QUAN");
+                String expiry = data.getStringExtra("EXP");
+                db.add(new FoodItem (name,Integer.parseInt(quan),storageArea,Integer.parseInt(expiry)));
+                updateUI();
+            }
+        }
+    }
     public void deleteButtonHandler(View v) {
 
         // index of where the item can be found in the list's data.

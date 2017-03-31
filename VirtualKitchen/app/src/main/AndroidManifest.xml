@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -67,7 +67,13 @@
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
+<<<<<<< HEAD
         <activity android:name=".AddItemActivity"></activity>
+=======
+        <activity android:name=".AddItem"
+            android:label="Add Item" />
+
+>>>>>>> 0341198285ebee5e3e65cc679beb862fd4a7bdb9
     </application>
 
 </manifest>
