@@ -6,6 +6,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -90,7 +91,19 @@ public class SortedTab extends KitchenTab {
         FoodItem toDecrement = getListData().get(position);
 
         db.decrement(toDecrement);
+    }
 
+    public void shoppingListHandler(View v) {
+
+        // index of where the item can be found in the list's data.
+        int position = listView.getPositionForView((View)v.getParent());
+
+        // get the item from the list and let the database figure out where to delete it from.
+        FoodItem toAdd = getListData().get(position);
+
+        db.addToShoppingList(toAdd);
+
+        Toast.makeText(this,"Adding " + toAdd.getName() + " to shopping list.", Toast.LENGTH_SHORT).show();
     }
 
 }

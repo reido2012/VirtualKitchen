@@ -26,7 +26,7 @@
 
         <provider
             android:name=".KitchenRecentSuggestionsProvider"
-            android:authorities="com.example.oreid.virtualkitchen.KitchenRecentSuggestionsProvider"></provider>
+            android:authorities="com.example.oreid.virtualkitchen.KitchenRecentSuggestionsProvider" />
 
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -52,9 +52,7 @@
         <activity
             android:name=".CupboardTab"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".ShoppingListTab"
-            android:theme="@style/AppTheme.NoActionBar" />
+
         <activity android:name=".ItemDetailActivity" />
         <activity
             android:name=".KitchenSearchActivity"
@@ -68,14 +66,12 @@
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
-
         <activity
-            android:name="AddItem"
+            android:name=".AddItem"
             android:label="Add Item"
             android:launchMode="singleTop" />
-
-        <activity android:name=".ScanBarcodeActivity"></activity>
-
+        <activity android:name=".ScanBarcodeActivity" />
+        <activity android:name=".ShoppinglistActivity"></activity>
     </application>
 
 </manifest>

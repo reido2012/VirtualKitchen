@@ -19,7 +19,6 @@ import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 
 import static android.icu.util.MeasureUnit.CUP;
-import static com.example.oreid.virtualkitchen.KitchenTab.REQUEST_CODE;
 import static com.example.oreid.virtualkitchen.R.string.storage;
 import static com.example.oreid.virtualkitchen.StorageArea.CUPBOARD;
 import static com.example.oreid.virtualkitchen.StorageArea.FREEZER;
@@ -31,20 +30,19 @@ public class MainKitchenActivity extends AppCompatActivity {
     private static final String TAG = "MainKitchenActivity";
 
     private TabHost tabHost;
+    private static final int REQUEST_CODE = 3;
 
     // Information about the tabs
-    private final int NUM_TABS = 5;
-    private final StorageArea[] storageAreas = {null, StorageArea.FRIDGE, StorageArea.FREEZER, StorageArea.CUPBOARD, StorageArea.SHOPPINGLIST};
+    private final int NUM_TABS = 4;
+    private final StorageArea[] storageAreas = {null, StorageArea.FRIDGE, StorageArea.FREEZER, StorageArea.CUPBOARD};
     private final String[] TAB_NAMES = {"All",
-                                        StorageArea.FRIDGE.toString(),
+                                        FRIDGE.toString(),
                                         FREEZER.toString(),
-                                        CUPBOARD.toString(),
-                                        SHOPPINGLIST.toString()};
+                                        CUPBOARD.toString()};
     private final Class[] TAB_ACTIVITIES = {SortedTab.class,
                                             FridgeTab.class,
                                             FreezerTab.class,
-                                            CupboardTab.class,
-                                            ShoppingListTab.class};
+                                            CupboardTab.class};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -152,7 +150,7 @@ public class MainKitchenActivity extends AppCompatActivity {
 
             case R.id.action_shoppingList:
 
-                newIntent = new Intent(MainKitchenActivity.this, MainKitchenActivity.class);
+                newIntent = new Intent(MainKitchenActivity.this, ShoppinglistActivity.class);
                 startActivity(newIntent);
 
                 return true;
