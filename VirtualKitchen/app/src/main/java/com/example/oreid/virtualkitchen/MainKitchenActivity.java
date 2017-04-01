@@ -145,7 +145,7 @@ public class MainKitchenActivity extends AppCompatActivity {
 
             case R.id.action_recipes:
 
-                newIntent = new Intent(MainKitchenActivity.this, MainKitchenActivity.class);
+                newIntent = new Intent(MainKitchenActivity.this, RecipeFinderActivity.class);
                 startActivity(newIntent);
 
                 return true;
