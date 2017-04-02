@@ -30,6 +30,8 @@ public enum StorageArea {
                 return FREEZER;
             case "Pantry":
                 return CUPBOARD;
+            case "Shopping List":
+                return SHOPPINGLIST;
             default:
                 return null;
         }

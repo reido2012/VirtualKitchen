@@ -54,9 +54,7 @@
         <activity
             android:name=".CupboardTab"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".ShoppingListTab"
-            android:theme="@style/AppTheme.NoActionBar" />
+
         <activity android:name=".ItemDetailActivity" />
         <activity
             android:name=".KitchenSearchActivity"
@@ -75,6 +73,7 @@
             android:label="Add Item"
             android:launchMode="singleTop" />
         <activity android:name=".ScanBarcodeActivity" />
+        <activity android:name=". ShoppinglistActivity"></activity>
         <activity android:name=".RecipeFinderActivity"></activity>
     </application>
 

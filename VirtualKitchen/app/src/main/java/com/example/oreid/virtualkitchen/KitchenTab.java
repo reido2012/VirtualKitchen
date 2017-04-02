@@ -1,21 +1,12 @@
 package com.example.oreid.virtualkitchen;
 
-import android.app.Activity;
-
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
-
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 
 /**
  * Base Kitchen View Tab Class
@@ -87,7 +78,7 @@ public class KitchenTab extends AppCompatActivity implements HasListView {
 
         db.addToShoppingList(position, this.storageArea);
 
-        updateUI();
+        Toast.makeText(this,"Adding " + getListData().get(position).getName() + " to shopping list.", Toast.LENGTH_SHORT).show();
 
 
     }
