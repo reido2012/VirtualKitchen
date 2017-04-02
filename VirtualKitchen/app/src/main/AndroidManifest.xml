@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.oreid.virtualkitchen">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo"
@@ -71,7 +73,8 @@
             android:label="Add Item"
             android:launchMode="singleTop" />
         <activity android:name=".ScanBarcodeActivity" />
-        <activity android:name=".ShoppinglistActivity"></activity>
+        <activity android:name=". ShoppinglistActivity"></activity>
+        <activity android:name=".RecipeFinderActivity"></activity>
     </application>
 
 </manifest>
