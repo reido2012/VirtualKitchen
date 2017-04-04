@@ -27,10 +27,10 @@
             android:resource="@color/colorAccent" />
 
         <provider
-            android:name=".KitchenRecentSuggestionsProvider"
+            android:name="com.example.oreid.virtualkitchen.KitchenRecentSuggestionsProvider"
             android:authorities="com.example.oreid.virtualkitchen.KitchenRecentSuggestionsProvider" />
 
-        <activity android:name=".MainActivity">
+        <activity android:name="com.example.oreid.virtualkitchen.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -39,27 +39,27 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainKitchenActivity"
+            android:name="com.example.oreid.virtualkitchen.MainKitchenActivity"
             android:label="@string/title_activity_main_kitchen"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".SortedTab"
+            android:name="com.example.oreid.virtualkitchen.SortedTab"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".FridgeTab"
+            android:name="com.example.oreid.virtualkitchen.FridgeTab"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".FreezerTab"
+            android:name="com.example.oreid.virtualkitchen.FreezerTab"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".CupboardTab"
+            android:name="com.example.oreid.virtualkitchen.CupboardTab"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity android:name=".ItemDetailActivity" />
         <activity
-            android:name=".KitchenSearchActivity"
+            android:name="com.example.oreid.virtualkitchen.KitchenSearchActivity"
             android:launchMode="singleTop"
-            android:parentActivityName=".MainKitchenActivity">
+            android:parentActivityName="com.example.oreid.virtualkitchen.MainKitchenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
@@ -73,7 +73,7 @@
             android:label="Add Item"
             android:launchMode="singleTop" />
         <activity android:name=".ScanBarcodeActivity" />
-        <activity android:name=". ShoppinglistActivity"></activity>
+        <activity android:name="com.example.oreid.virtualkitchen.ShoppinglistActivity"></activity>
         <activity android:name=".RecipeFinderActivity"></activity>
     </application>
 
