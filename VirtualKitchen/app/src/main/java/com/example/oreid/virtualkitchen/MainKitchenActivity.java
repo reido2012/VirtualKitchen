@@ -2,11 +2,14 @@ package com.example.oreid.virtualkitchen;
 
 import android.app.Activity;
 import android.app.LocalActivityManager;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.app.SearchManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.NotificationCompat;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -18,14 +21,11 @@ import android.widget.SearchView;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 
-import static android.icu.util.MeasureUnit.CUP;
-import static com.example.oreid.virtualkitchen.R.string.storage;
 import static com.example.oreid.virtualkitchen.StorageArea.CUPBOARD;
 import static com.example.oreid.virtualkitchen.StorageArea.FREEZER;
 import static com.example.oreid.virtualkitchen.StorageArea.FRIDGE;
-import static com.example.oreid.virtualkitchen.StorageArea.SHOPPINGLIST;
 
-public class MainKitchenActivity extends AppCompatActivity {
+public class MainKitchenActivity extends AppCompatActivity implements NotificationSenderActivity {
 
     private static final String TAG = "MainKitchenActivity";
 
@@ -44,6 +44,9 @@ public class MainKitchenActivity extends AppCompatActivity {
                                             FreezerTab.class,
                                             CupboardTab.class};
 
+    private NotificationManager notificationManager;
+    private int notificationNo = 0; // each notification needs a unique number (apparently)
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,8 +60,54 @@ public class MainKitchenActivity extends AppCompatActivity {
         mLocalActivityManager.dispatchCreate(savedInstanceState);
         tabHost.setup(mLocalActivityManager);
 
+        notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+
         setupTabs();
 
+        VKData.getInstance().getFoodDB().setNotificationActivity(this);
+
+        update(); // notifications
+    }
+
+    // update notifications
+    public void update() {
+        Notification n = null;
+        while ((n = VKData.getInstance().getFoodDB().getNextNotification()) != null) {
+            sendNotification(n);
+        }
+    }
+
+    private void sendNotification(Notification n) {
+        String title = "";
+        String msg = n.food.getQty() + "x " + n.food.getName() + " in the " + n.food.getLocation();
+
+        switch (n.category) {
+            case EXPIRED:
+                title = (0 - n.food.getDaysLeft()) + " days out of date";
+                break;
+            case TODAY:
+                title = "Expiring today";
+                break;
+            case TOMORROW:
+                title = "Expiring tomorrow";
+                break;
+            case SOON:
+                title = (n.food.getDaysLeft()) + " days left";
+                break;
+            default:
+
+        }
+
+        Intent intent = new Intent(this, NotificationsActivity.class);
+        PendingIntent pIntent = PendingIntent.getActivity(this, (int) System.currentTimeMillis(), intent, 0);
+        NotificationCompat.Builder mBuilder =
+                new NotificationCompat.Builder(this)
+                        .setSmallIcon(R.drawable.logo2)
+                        .setContentTitle(title)
+                        .setContentText(msg)
+                        .setContentIntent(pIntent);
+        notificationManager.notify(notificationNo++, mBuilder.build());
+        Log.d(TAG, "Sending notification for " + n.food.getName());
     }
 
     private void setupTab(int i) {
@@ -128,7 +177,6 @@ public class MainKitchenActivity extends AppCompatActivity {
                 startActivityForResult(intentItem,REQUEST_CODE);
                 break;
             case R.id.action_kitchen:
-
                 newIntent = new Intent(MainKitchenActivity.this, MainKitchenActivity.class);
                 startActivity(newIntent);
 
@@ -136,7 +184,7 @@ public class MainKitchenActivity extends AppCompatActivity {
 
             case R.id.action_notifications:
 
-                newIntent = new Intent(MainKitchenActivity.this, MainKitchenActivity.class);
+                newIntent = new Intent(MainKitchenActivity.this, NotificationsActivity.class);
                 startActivity(newIntent);
 
                 return true;

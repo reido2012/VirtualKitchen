@@ -1,7 +1,5 @@
 package com.example.oreid.virtualkitchen;
 
-import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -11,7 +9,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
-import android.view.View.OnFocusChangeListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -116,10 +113,10 @@ public class AddItem extends AppCompatActivity implements View.OnFocusChangeList
         } else {
             try {
                 int exp = Integer.parseInt(textExpiry.getText().toString());
-                if (exp <= 0) {
-                    textExpiry.setError("Please provide a positive shelf life - you can't keep out of date food in the kitchen.");
-                    passed = false;
-                }
+//                if (exp <= 0) {
+//                    textExpiry.setError("Please provide a positive shelf life - you can't keep out of date food in the kitchen.");
+//                    passed = false;
+//                }
             } catch (NumberFormatException e) {
                 textExpiry.setError("Please enter a number for item quantity.");
                 passed = false;
