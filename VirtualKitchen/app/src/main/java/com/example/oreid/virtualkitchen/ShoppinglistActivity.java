@@ -144,14 +144,14 @@ public class ShoppinglistActivity extends AppCompatActivity implements HasListVi
 
             case R.id.action_notifications:
 
-                newIntent = new Intent(ShoppinglistActivity.this, MainKitchenActivity.class);
+                newIntent = new Intent(ShoppinglistActivity.this, NotificationsActivity.class);
                 startActivity(newIntent);
 
                 return true;
 
             case R.id.action_recipes:
 
-                newIntent = new Intent(ShoppinglistActivity.this, MainKitchenActivity.class);
+                newIntent = new Intent(ShoppinglistActivity.this, RecipeFinderActivity.class);
                 startActivity(newIntent);
 
                 return true;

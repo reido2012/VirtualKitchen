@@ -81,9 +81,9 @@ public class FoodItem implements Serializable {
     }
 
     public void setShelfLife(int shelfLife) {
-        if (shelfLife <= 0) {
-            return; // invalid
-        }
+//        if (shelfLife <= 0) {
+//            return; // invalid
+//        }
         this.shelfLife = shelfLife;
     }
 

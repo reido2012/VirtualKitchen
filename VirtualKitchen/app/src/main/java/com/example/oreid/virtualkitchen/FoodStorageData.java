@@ -48,6 +48,8 @@ public class FoodStorageData {
 
             kitchen.get(storage).add(f);
             updateLists(storage);
+            notificationForFood(f);
+            notificationSender.update();
         }
 
         @Override
@@ -281,7 +283,42 @@ Log.d
         decrement(index,s);
     }
 
+    /**
+     * Get the oldest notification in the list.
+     * @return oldest notification in the list, or null if there are  none.
+     */
+    public Notification getNextNotification() {
+        if (notifications.size() <= 0) {
+            return null;
+        }
 
+        Notification n = notifications.get(0);
+        notifications.remove(0);
+        displayedNotifications.add(n);
+        return n;
+    }
+
+    public ArrayList<Notification> getAllNotifications() {
+        return displayedNotifications;
+    }
+
+    public void notificationForFood(FoodItem f) {
+        int daysLeft = f.getDaysLeft();
+        Log.d(TAG, daysLeft + "");
+        if (daysLeft == 0) {
+            notifications.add(new Notification(f,
+                    Notification.NotificationCategory.EXPIRED));
+        } else if (daysLeft < 0) {
+            notifications.add(new Notification(f,
+                    Notification.NotificationCategory.EXPIRED));
+        } else if (daysLeft == 1) {
+            notifications.add(new Notification(f,
+                    Notification.NotificationCategory.TOMORROW));
+        } else if (daysLeft <= 3) {
+            notifications.add(new Notification(f,
+                    Notification.NotificationCategory.SOON));
+        }
+    }
 
     public ArrayList<FoodItem> findByName(String query) {
         if (query.equals("")) { // no query gets empty list.
@@ -314,6 +351,10 @@ Log.d
         return food;
     }
 
+    public void setNotificationActivity(NotificationSenderActivity na) {
+        this.notificationSender = na;
+    }
+
     /**
      * Creates a new instance of the food storage database (or interface with the Firebase)
      * @param uID firebase user id, used to get access to user's data.
@@ -340,4 +381,7 @@ Log.d
 
     private HashMap<StorageArea,ArrayList<FoodItem>> kitchen = new HashMap<>(); // stored food data
     private HashMap<String,HasListView> listUpdate = new HashMap<>(); // list views that need updating.
+    private NotificationSenderActivity notificationSender;
+    private ArrayList<Notification> notifications = new ArrayList<>();
+    private ArrayList<Notification> displayedNotifications = new ArrayList<>();
 }
