@@ -1,11 +1,14 @@
 package com.example.oreid.virtualkitchen;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -23,7 +26,7 @@ public class RecipeFinderActivity extends AppCompatActivity {
     private String TAG = MainActivity.class.getSimpleName();
     private static String query;
     //URL to get recipes from - hard coding it for now.
-    private static String url;
+    private static String searchURL;
 
     ArrayList<HashMap<String, String>> recipeList;
     ArrayList<String> queryStrings;
@@ -38,8 +41,8 @@ public class RecipeFinderActivity extends AppCompatActivity {
 
         queryStrings = getIntent().getStringArrayListExtra("FOOD");
         query = formatQuery(queryStrings);
-        System.out.println(url);
-        url = "http://food2fork.com/api/search?key="+ API_KEY + "&q="+query;
+        System.out.println(searchURL);
+        searchURL = "http://food2fork.com/api/search?key="+ API_KEY + "&q="+query;
 
         recipeList = new ArrayList<>();
         lv = (ListView) findViewById(R.id.recipe_list);
@@ -76,6 +79,13 @@ public class RecipeFinderActivity extends AppCompatActivity {
 
     public void goToURL(View view) {
 
+        int position = lv.getPositionForView((View)view.getParent());
+        //recipe
+        HashMap<String, String>  hm = recipeList.get(position);
+        String url = hm.get("url");
+        System.out.println("URL: " + url);
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        startActivity(browserIntent);
 
     }
 
@@ -100,7 +110,7 @@ public class RecipeFinderActivity extends AppCompatActivity {
             HttpHandler sh = new HttpHandler();
 
             // Request to url and getting response
-            String jsonStr = sh.makeServiceCall(url);
+            String jsonStr = sh.makeServiceCall(searchURL);
 
             Log.e(TAG, "Response from url: " + jsonStr);
 
@@ -121,7 +131,7 @@ public class RecipeFinderActivity extends AppCompatActivity {
                         String rating = r.getString("social_rank");
                         ;
 
-                        // tmp hash map for single contact
+                        // tmp hash map for single recipe
                         HashMap<String, String> recipe = new HashMap<>();
 
                         // adding each child node to HashMap key => value
@@ -179,6 +189,7 @@ public class RecipeFinderActivity extends AppCompatActivity {
                     R.id.recipe_publisher, R.id.recipe_rating});
 
             lv.setAdapter(adapter);
+
         }
 
     }
