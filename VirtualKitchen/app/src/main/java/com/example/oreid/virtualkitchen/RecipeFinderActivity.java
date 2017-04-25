@@ -5,6 +5,7 @@ import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -20,10 +21,12 @@ import java.util.HashMap;
 public class RecipeFinderActivity extends AppCompatActivity {
     private static final String API_KEY = "4d9e0ece3328370e056b669b9634c731";
     private String TAG = MainActivity.class.getSimpleName();
+    private static String query;
     //URL to get recipes from - hard coding it for now.
-    private static String url = "http://food2fork.com/api/search?key="+ API_KEY + "&q=shredded%20chicken";
+    private static String url;
 
     ArrayList<HashMap<String, String>> recipeList;
+    ArrayList<String> queryStrings;
 
     private ProgressDialog pDialog;
     private ListView lv;
@@ -33,10 +36,46 @@ public class RecipeFinderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe_finder);
 
+        queryStrings = getIntent().getStringArrayListExtra("FOOD");
+        query = formatQuery(queryStrings);
+        System.out.println(url);
+        url = "http://food2fork.com/api/search?key="+ API_KEY + "&q="+query;
+
         recipeList = new ArrayList<>();
         lv = (ListView) findViewById(R.id.recipe_list);
 
         new GetRecipes().execute();
+
+    }
+
+    private String formatQuery(ArrayList<String> queryStrings){
+        StringBuilder sb = new StringBuilder();
+        for(String str: queryStrings){
+            str = toURL(str, str.length());
+            sb.append(str + "%20");
+        }
+
+        return sb.toString();
+    }
+
+    public String toURL(String s1, int length){
+        StringBuilder sb = new StringBuilder();
+        char[] letters = s1.toCharArray();
+        for (int i = 0; i < length; i++) {
+
+            if(letters[i] == ' '){
+                sb.append("%20");
+            }else{
+                sb.append(letters[i]);
+            }
+
+        }
+
+        return sb.toString();
+    }
+
+    public void goToURL(View view) {
+
 
     }
 
@@ -80,7 +119,7 @@ public class RecipeFinderActivity extends AppCompatActivity {
                         String title = r.getString("title");
                         String url = r.getString("source_url");
                         String rating = r.getString("social_rank");
-;
+                        ;
 
                         // tmp hash map for single contact
                         HashMap<String, String> recipe = new HashMap<>();

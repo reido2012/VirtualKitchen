@@ -36,13 +36,13 @@ public class MainKitchenActivity extends AppCompatActivity implements Notificati
     private final int NUM_TABS = 4;
     private final StorageArea[] storageAreas = {null, StorageArea.FRIDGE, StorageArea.FREEZER, StorageArea.CUPBOARD};
     private final String[] TAB_NAMES = {"All",
-                                        FRIDGE.toString(),
-                                        FREEZER.toString(),
-                                        CUPBOARD.toString()};
+            FRIDGE.toString(),
+            FREEZER.toString(),
+            CUPBOARD.toString()};
     private final Class[] TAB_ACTIVITIES = {SortedTab.class,
-                                            FridgeTab.class,
-                                            FreezerTab.class,
-                                            CupboardTab.class};
+            FridgeTab.class,
+            FreezerTab.class,
+            CupboardTab.class};
 
     private NotificationManager notificationManager;
     private int notificationNo = 0; // each notification needs a unique number (apparently)
@@ -191,7 +191,8 @@ public class MainKitchenActivity extends AppCompatActivity implements Notificati
 
             case R.id.action_recipes:
 
-                newIntent = new Intent(MainKitchenActivity.this, RecipeFinderActivity.class);
+//                newIntent = new Intent(MainKitchenActivity.this, RecipeFinderActivity.class);
+                newIntent = new Intent(MainKitchenActivity.this, FoodSearch.class);
                 startActivity(newIntent);
 
                 return true;

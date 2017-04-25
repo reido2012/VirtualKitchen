@@ -72,11 +72,14 @@
             android:label="Add Item"
             android:launchMode="singleTop" />
         <activity android:name=".ScanBarcodeActivity" />
-        <activity android:name=".ShoppinglistActivity"
-            android:label="Shopping List"/>
+        <activity
+            android:name=".ShoppinglistActivity"
+            android:label="Shopping List" />
         <activity android:name=".RecipeFinderActivity" />
-        <activity android:name=".NotificationsActivity"
-            android:label="My Notifications"></activity>
+        <activity
+            android:name=".NotificationsActivity"
+            android:label="My Notifications" />
+        <activity android:name=".FoodSearch"></activity>
     </application>
 
 </manifest>

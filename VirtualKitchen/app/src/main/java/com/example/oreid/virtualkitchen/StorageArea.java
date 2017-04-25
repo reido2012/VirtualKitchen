@@ -10,7 +10,9 @@ public enum StorageArea {
     FRIDGE("Fridge"),
     FREEZER("Freezer"),
     CUPBOARD("Pantry"),
+    RECIPELIST("Recipe List"),
     SHOPPINGLIST("Shopping List");
+
 
     private final String storageName;
 
@@ -28,6 +30,8 @@ public enum StorageArea {
                 return FRIDGE;
             case "Freezer":
                 return FREEZER;
+            case "Recipe List":
+                return RECIPELIST;
             case "Pantry":
                 return CUPBOARD;
             case "Shopping List":
